@@ -4,13 +4,42 @@
 /* ================================= 
   Variables
 ==================================== */
+.productsCarouselWrapper,
+.testimonialsCarouselWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 500px;
+}
+.productsCarouselWrapper h2,
+.testimonialsCarouselWrapper h2 {
+  margin-top: 15px;
+  margin-bottom: 50px;
+  width: 100%;
+  text-align: center;
+  color: #52658f;
+}
+
 .productsCarouselWrapper {
   background-color: #f7f5e6;
 }
-.productsCarouselWrapper img {
+
+.slide {
+  width: 25%;
+  text-align: center;
+}
+.slide img {
   width: 200px;
   height: 200px;
+  border: 4px solid #52658f;
   border-radius: 50%;
+}
+.slide p {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 200px;
+  font-weight: bold;
+  color: #333a56;
 }
 
 /* ================================= 

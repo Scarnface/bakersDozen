@@ -1,8 +1,36 @@
+.productsCarouselWrapper,
+.testimonialsCarouselWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 500px;
+  h2 {
+    margin-top: 15px;
+    margin-bottom: 50px;
+    width: 100%;
+    text-align: center;
+    color: $brand-lightBlue;
+  }
+}
+
 .productsCarouselWrapper {
   background-color: $brand-yellow;
+}
+
+.slide {
+  width: 25%;
+  text-align: center;
   img {
     width: 200px;
     height: 200px;
+    border: 4px solid $brand-lightBlue;
     border-radius: 50%;
+  }
+  p {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 200px;
+    font-weight: bold;
+    color: $brand-darkBlue;
   }
 }
