@@ -4,6 +4,15 @@
 /* ================================= 
   Variables
 ==================================== */
+.productsCarouselWrapper {
+  background-color: #f7f5e6;
+}
+.productsCarouselWrapper img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
 /* ================================= 
   Base Element Styles
 ==================================== */
@@ -12,4 +21,4 @@
   margin: 0;
   -webkit-font-smoothing: antialiased;
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=maps/style.css.map */
