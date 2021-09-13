@@ -11,16 +11,14 @@
   width: 100%;
   height: fit-content;
   h2 {
-    padding-top: 15px;
-    padding-bottom: 30px;
     width: 100%;
     text-align: center;
     color: $brand-lightBlue;
   }
-  & .button {
-    margin-bottom: 20px;
+  .button {
     border-radius: 25px;
     padding: 15px 50px;
+    width: 300px;
     text-align: center;
     font-weight: bold;
     color: $brand-yellow;
@@ -31,30 +29,77 @@
 
 .productsCarouselWrapper {
   background-color: $brand-yellow;
-}
-
-.productsCarousel,
-.testimonialsCarousel {
-  width: 80%;
-}
-
-.slide {
-  width: 200px;
-  text-align: center;
-  img {
-    margin: 0 auto;
-    border: 4px solid $brand-lightBlue;
-    border-radius: 50%;
-    width: 300px;
-    height: 300px;
+  .button {
+    margin-bottom: 15px;
+    color: $brand-yellow;
+    background-color: $brand-lightBlue;
   }
-  p {
-    margin: 0 auto;
+  h2 {
     padding-top: 15px;
     padding-bottom: 30px;
-    width: 200px;
+  }
+}
+
+.testimonialsCarouselWrapper {
+  .button {
+    margin-bottom: 50px;
+    color: $brand-yellow;
+    background-color: $brand-orange;
+  }
+  h2 {
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
+  .testimonialText {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    width: 100%;
     font-weight: bold;
-    color: $brand-darkBlue;
+    text-align: center;
+    color: $brand-lightBlue;
+  }
+}
+
+.productsCarousel {
+  width: 80%;
+  .slide {
+    width: 200px;
+    text-align: center;
+    img {
+      margin: 0 auto;
+      border: 4px solid $brand-lightBlue;
+      border-radius: 50%;
+      width: 300px;
+      height: 300px;
+    }
+    p {
+      margin: 0 auto;
+      padding-top: 15px;
+      padding-bottom: 30px;
+      width: 200px;
+      font-weight: bold;
+      color: $brand-darkBlue;
+    }
+  }
+}
+
+.testimonialsCarousel {
+  width: 80%;
+  .slide {
+    p {
+      margin: 0 auto;
+      width: 80%;
+      text-align: center;
+      color: $brand-darkBlue;
+    }
+    .testimonialName {
+      padding-top: 30px;
+      padding-bottom: 20px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-align: right;
+      color: $brand-lightBlue;
+    }
   }
 }
 
@@ -62,4 +107,18 @@
   color: $brand-lightBlue;
   font-size: 2.5rem;
   cursor: pointer;
+}
+
+.slick-dots {
+  li {
+    &:not(:nth-of-type(4)) {
+      padding-right: 50px;
+    }
+    button {
+      &:before {
+        font-size: 2rem;
+        color: $brand-lightBlue;
+      }
+    }
+  }
 }
