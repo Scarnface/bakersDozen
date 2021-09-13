@@ -1,0 +1,30 @@
+{
+  "name": "bakersdozen",
+  "version": "1.0.0",
+  "description": "Pairs project for the Netmatters Scion Coalition Scheme course. Creating a bakery website using HTML, SCSS, PHP, JavaScript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Scarnface/bakersDozen.git"
+  },
+  "author": "Adam Pearson, Marc Clare",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Scarnface/bakersDozen/issues"
+  },
+  "homepage": "https://github.com/Scarnface/bakersDozen#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.15.4",
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "sass": "^1.39.2"
+  }
+}
