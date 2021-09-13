@@ -3,29 +3,17 @@
 $(document).ready(function () {
   //Load the slick carousel and apply the required options.
   $(".productsCarousel").slick({
-    infinite: true,
     autoplay: true,
     autoplaySpeed: 4000,
     arrows: true,
+    prevArrow: '<i class="slick-arrow fa-solid fa-circle-chevron-left"></i>',
+    nextArrow: '<i class="slick-arrow fa-solid fa-circle-chevron-right"></i>',
     dots: false,
+    infinite: true,
     slidesToShow: 3,
-    slidesToScroll: 3,
-    responsive: [{
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2
-      }
-    }, {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }]
+    slidesToScroll: 1
   });
   $(".testimonialsCarousel").slick({
-    infinite: true,
     autoplay: true,
     autoplaySpeed: 4000,
     arrows: false,
