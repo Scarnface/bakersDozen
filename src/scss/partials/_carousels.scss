@@ -21,6 +21,7 @@
     width: 300px;
     text-align: center;
     font-weight: bold;
+    letter-spacing: 2px;
     color: $brand-yellow;
     background-color: $brand-lightBlue;
     cursor: pointer;
@@ -56,7 +57,18 @@
     width: 100%;
     font-weight: bold;
     text-align: center;
+    letter-spacing: 2px;
     color: $brand-lightBlue;
+  }
+  .quoteLeft {
+    font-size: 3rem;
+    float: left;
+    padding-left: 5%;
+  }
+  .quoteRight {
+    font-size: 3rem;
+    float: right;
+    padding-right: 5%;
   }
 }
 
@@ -88,7 +100,10 @@
   .slide {
     p {
       margin: 0 auto;
+      padding-top: 10px;
       width: 80%;
+      letter-spacing: 2px;
+      line-height: 20px;
       text-align: center;
       color: $brand-darkBlue;
     }
@@ -96,7 +111,7 @@
       padding-top: 30px;
       padding-bottom: 20px;
       font-weight: bold;
-      letter-spacing: 1px;
+      letter-spacing: 2px;
       text-align: right;
       color: $brand-lightBlue;
     }
@@ -119,6 +134,9 @@
         font-size: 2rem;
         color: $brand-lightBlue;
       }
+    }
+    &.slick-active button:before {
+      color: $brand-lightBlue;
     }
   }
 }
