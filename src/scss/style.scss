@@ -5,6 +5,7 @@
 @import "partials/variables";
 @import "partials/mixins";
 @import "partials/functions";
+@import "partials/menu";
 @import "partials/about";
 @import "partials/carousels";
 @import "partials/footer";
@@ -23,7 +24,7 @@
 }
 
 .container {
-  width: 90%;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
 
@@ -36,27 +37,27 @@
   border: 1px solid $brand-orange;
   padding: 18px 15px 15px 15px;
   width: 50%;
-  font-family: 'Khula';
+  font-family: "Khula";
   font-weight: 700;
   letter-spacing: 1.19pt;
   text-transform: uppercase;
   background-color: $brand-orange;
   color: $white;
-  transition: .3s ease all;
+  transition: 0.3s ease all;
   cursor: pointer;
   &:hover {
-      background-color: $white;
-      color: tint($black, 25%);
+    background-color: $white;
+    color: tint($black, 25%);
   }
   &:focus {
-      border: 1px solid $brand-darkBlue;
-      background-color: $brand-darkBlue;
-      color: $white;
+    border: 1px solid $brand-darkBlue;
+    background-color: $brand-darkBlue;
+    color: $white;
   }
 }
 
 h1 {
-  font-family: 'Yellowtail', cursive;
+  font-family: "Yellowtail", cursive;
   color: $brand-darkBlue;
 }
 

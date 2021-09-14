@@ -1,0 +1,60 @@
+.mainMenu {
+  width: 100%;
+  color: $brand-yellow;
+  background-color: $brand-lightBlue;
+}
+
+.navWrapper {
+  width: 100%;
+  display: flex;
+}
+
+.logo {
+  width: 40%;
+  color: $brand-yellow;
+  font-size: 5rem;
+}
+
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  width: 60%;
+  a {
+    color: $brand-yellow;
+    text-decoration: none;
+    &:current {
+      border-bottom: 3px solid $brand-orange;
+    }
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    li {
+      padding-left: 20px;
+      padding-right: 20px;
+      display: inline;
+      font-family: "Khula";
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 1.14px;
+      line-height: 20px;
+    }
+  }
+}
+
+#phoneIcon {
+  a {
+    width: 75px;
+    height: 75px;
+    i {
+      border-radius: 50%;
+      padding: 20px;
+      color: $brand-orange;
+      background-color: $brand-darkBlue;
+      font-size: 2rem;
+      text-align: center;
+    }
+  }
+}
