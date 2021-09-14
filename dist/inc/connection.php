@@ -5,7 +5,7 @@ $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../../');
 $dotenv->load();
 
 
-//local variables
+// env variables
 $dsn = $_ENV['DB_DSN'];
 $host = $_ENV['DB_HOST'];
 $port = $_ENV['DB_PORT'];

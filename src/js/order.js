@@ -19,5 +19,5 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 
 var marker = L.marker([52.62147927683726, 1.2805286164869416]).addTo(mymap);
 
-marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
+marker.bindPopup("<b>Baker's Dozen</b><br>107 Gloucester Street<br>Norwich, Norfolk<br>NR2 2DY").openPopup();
 
