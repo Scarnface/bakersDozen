@@ -12,6 +12,11 @@
   height: fit-content;
   h2 {
     width: 100%;
+    font-family: "Khula";
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1.02px;
+    line-height: 20px;
     text-align: center;
     color: $brand-lightBlue;
   }
@@ -20,8 +25,11 @@
     padding: 15px 50px;
     width: 300px;
     text-align: center;
-    font-weight: bold;
+    font-family: "Khula";
+    font-size: 20px;
+    font-weight: 700;
     letter-spacing: 2px;
+    line-height: 20px;
     color: $brand-yellow;
     background-color: $brand-lightBlue;
     cursor: pointer;
@@ -31,41 +39,46 @@
 .productsCarouselWrapper {
   background-color: $brand-yellow;
   .button {
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     color: $brand-yellow;
     background-color: $brand-lightBlue;
   }
   h2 {
-    padding-top: 15px;
+    padding-top: 30px;
     padding-bottom: 30px;
   }
 }
 
 .testimonialsCarouselWrapper {
   .button {
-    margin-bottom: 50px;
+    margin-bottom: 75px;
     color: $brand-yellow;
     background-color: $brand-orange;
   }
   h2 {
-    padding-top: 50px;
+    padding-top: 75px;
     padding-bottom: 30px;
   }
   .testimonialText {
     padding-top: 50px;
     padding-bottom: 30px;
     width: 100%;
-    font-weight: bold;
+    font-family: "Khula";
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1.14px;
+    line-height: 20px;
     text-align: center;
-    letter-spacing: 2px;
     color: $brand-lightBlue;
   }
   .quoteLeft {
+    font-family: "Yellowtail";
     font-size: 3rem;
     float: left;
     padding-left: 5%;
   }
   .quoteRight {
+    font-family: "Yellowtail";
     font-size: 3rem;
     float: right;
     padding-right: 5%;
@@ -89,7 +102,11 @@
       padding-top: 15px;
       padding-bottom: 30px;
       width: 200px;
-      font-weight: bold;
+      font-family: "Khula";
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 1.14px;
+      line-height: 20px;
       color: $brand-darkBlue;
     }
   }
@@ -102,8 +119,10 @@
       margin: 0 auto;
       padding-top: 10px;
       width: 80%;
+      font-family: "Khula";
+      font-weight: 400;
       letter-spacing: 2px;
-      line-height: 20px;
+      line-height: 1.2;
       text-align: center;
       color: $brand-darkBlue;
     }
