@@ -1,0 +1,48 @@
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  color: $brand-yellow;
+  background-color: $brand-lightBlue;
+}
+
+.contact {
+  h3 {
+    padding: 30px 0 20px;
+    font-family: "Khula";
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1.14px;
+    line-height: 20px;
+  }
+  a {
+    color: $brand-yellow;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    li {
+      font-family: "Khula";
+      font-size: 16px;
+      font-weight: 300;
+      letter-spacing: 1.14px;
+      line-height: 20px;
+    }
+  }
+}
+
+.copyright {
+  width: 100%;
+  padding: 30px 0;
+  color: $brand-yellow;
+  text-align: center;
+  font-family: "Khula";
+  font-size: 12px;
+  letter-spacing: 1px;
+}

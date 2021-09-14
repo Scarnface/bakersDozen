@@ -1,0 +1,79 @@
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 50px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.aboutCategory {
+  padding-bottom: 50px;
+  width: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: $brand-lightBlue;
+  i {
+    padding-bottom: 15px;
+    font-size: 3rem;
+  }
+  h3 {
+    font-family: "Khula";
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1.02px;
+    line-height: 20px;
+    text-align: center;
+  }
+  &:nth-of-type(2) {
+    border-bottom: 3px solid $brand-lightBlue;
+  }
+}
+
+.aboutText {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width: 100%;
+  font-family: "Khula";
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1.02px;
+  line-height: 20px;
+  text-align: center;
+  color: $brand-lightBlue;
+}
+
+.aboutInnerWrapper {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 75px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.aboutImage {
+  width: 50%;
+  img {
+    border: 4px solid #fff;
+    border-radius: 50%;
+    object-fit: cover;
+    width: 300px;
+    height: 300px;
+  }
+}
+
+.aboutDescription {
+  padding-top: 50px;
+  width: 50%;
+  font-family: "Khula";
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1.02px;
+  line-height: 16px;
+  color: $brand-darkBlue;
+  p {
+    margin-bottom: 15px;
+  }
+}

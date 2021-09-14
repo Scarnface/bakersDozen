@@ -16,19 +16,185 @@
     <!-- ================================= 
       SITE RESOURCES
     ================================== -->
+    <!-- JQUERY -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js" defer></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js" defer></script>
     <!-- FONTAWESOME -->
-    <script src="https://kit.fontawesome.com/a36ca304f3.js" crossorigin="anonymous" defer></script>
+    <link type="text/css" rel="stylesheet" href="dist/assets/fa/css/all.css" />
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Khula:wght@300;400;700&family=Yellowtail&display=swap" rel="stylesheet">
+    <!-- SLICK -->
+    <link type="text/css" rel="stylesheet" href="dist/js/plugins/slick/css/slick.css" />
+    <link type="text/css" rel="stylesheet" href="dist/js/plugins/slick/css/slick-theme.css" />
+    <script type="text/javascript" src="dist/js/plugins/slick/slick.js" defer></script>
     <!-- CUSTOM CSS -->
-    <link type="text/css" rel="stylesheet" href="dist/css/order.css" />
+    <link type="text/css" rel="stylesheet" href="dist/css/style.css" />
+    <!-- CUSTOM JS -->
+    <script type="text/javascript" src="dist/js/plugins/carousel.js" defer></script>
     <!-- FAVICON -->
   </head>
 
   <body>
-    <!--<i class="fa-solid fa-bread-slice"></i>
-    <i class="fa-solid fa-cookie-bite"></i>
-    <i class="fa-solid fa-cake-candles"></i>
-    <i class="fa-solid fa-phone-flip"></i>
-    <i class="fa-solid fa-circle-chevron-left"></i>
-    <i class="fa-solid fa-circle-chevron-right"></i>-->
+    <!--<i class="fa-solid fa-phone-flip"></i>>-->
+
+    <section class="about">
+      <div class="aboutCategory">
+        <i class="fa-solid fa-bread-slice"></i>
+        <h3>BREAD BAKED DAILY</h3>
+      </div>
+
+      <div class="aboutCategory">
+        <i class="fa-solid fa-cookie-bite"></i>
+        <h3>HANDMADE SWEETS AND PATRIES</h3>
+      </div>
+
+      <div class="aboutCategory">
+        <i class="fa-solid fa-cake-candles"></i>
+        <h3>SPECIALLY MADE FOR YOUR EVENT</h3>
+      </div>
+
+      <h3 class="aboutText">ESTABLISHED IN 2011, OUR BREAD IS HAND-CRAFTED USING</br> THE FINEST LOCAL INGREDIENTS.</h3>
+
+      <div class="aboutInnerWrapper">
+        <div class="aboutImage">
+          <img src="dist/assets/img/cupcakes.jpg" alt="Cupcakes" />
+        </div>
+        <div class="aboutDescription">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate molestie lacus ac molestie. Sed commodo 
+            auctor suscipit. Donec feugiat purus justo, at vehicula mauris eleifend tempus. Duis consequat augue libero. 
+            Sed eu hendrerit est. Donec at nisi nec elit dapibus dapibus. In hac habitasse platea dictumst. Vestibulum ante 
+            ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;</p>
+          <p>Ut volutpat dui vitae mauris tincidunt, ut fermentum nisi lobortis. In volutpat varius feugiat. Morbi ac tortor 
+            lacus. Proin posuere metus urna, eget accumsan sapien congue vel. Praesent enim massa, volutpat at diam ac, 
+            tincidunt vulputate neque. Vivamus quis neque quis diam efficitur tincidunt placerat id nulla. Donec rutrum libero 
+            commodo nisl pellentesque facilisis.</p>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="productsCarouselWrapper">
+      <h2>OUR PRODUCTS</h2>
+
+      <div class="productsCarousel carousel">
+        <div class="slide">
+          <img src="dist/assets/img/bread.jpg" alt="Savoury breads" />
+          <p>SAVOURY BREADS</p>
+        </div>
+
+        <div class="slide">
+          <img src="dist/assets/img/pastries.jpg" alt="Pastries" />
+          <p>PASTRIES</p>
+        </div>
+
+        <div class="slide">
+          <img src="dist/assets/img/cakes.jpg" alt="Cakes" />
+          <p>CAKES</p>
+        </div>
+
+        <div class="slide">
+          <img src="dist/assets/img/birthday.jpg" alt="Birthday cakes" />
+          <p>BIRTHDAY CAKES</p>
+        </div>
+
+        <div class="slide">
+          <img src="dist/assets/img/wedding.jpg" alt="Wedding cakes" />
+          <p>WEDDING CAKES</p>
+        </div>
+
+        <div class="slide">
+          <img src="dist/assets/img/sandwiches.jpg" alt="Sandwiches" />
+          <p>SANDWICHES</p>
+        </div>
+      </div>
+
+      <div class="break"></div>
+
+      <p class="button">FIND OUT MORE</p>
+    </section>
+
+    <section class="testimonialsCarouselWrapper">
+      <h2>WHAT OUR CUSTOMERS ARE SAYING</h2>
+
+      <div class="testimonialsCarousel carousel">
+        <div class="slide">
+          <span class="quoteLeft">❝</span><span class="quoteRight">❞</span></br>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+            minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+          <p class="testimonialName">&#8212; ANNA DAVIS</p>
+        </div>
+
+        <div class="slide">
+          <span class="quoteLeft">❝</span><span class="quoteRight">❞</span></br>
+          <p>
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <p class="testimonialName">&#8212; FRANK MILLER</p>
+        </div>
+
+        <div class="slide">
+          <span class="quoteLeft">❝</span><span class="quoteRight">❞</span></br>
+          <p>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
+            illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+          </p>
+          <p class="testimonialName">&#8212; WARREN ELLIS</p>
+        </div>
+
+        <div class="slide">
+          <span class="quoteLeft">❝</span><span class="quoteRight">❞</span></br>
+          <p>
+            Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat
+            quo voluptas nulla pariatur?
+          </p>
+          <p class="testimonialName">&#8212; NEIL GAIMAN</p>
+        </div>
+      </div>
+
+      <p class="testimonialText">PROUDLY BAKING FOR YOUR PARTY, YOUR EVENT AND</br> YOUR BREAKFAST</p>
+
+      <p class="button">ORDER NOW</p>
+    </section>
+
+    <footer>
+      <div class="contact">
+        <h3>ADDRESS</h3>
+        <ul>
+          <li>107 Gloucester Street</li>
+          <li>Norwich, Norfolk</li>
+          <li>NR2 2DY</li>
+          <li>&nbsp;</li>
+          <li><a href="#">01603 123 987</a></li>
+          <li><a href="#">info@bakersdozen.co.uk</a></li>
+        </ul>
+      </div>
+
+      <div class="contact">
+        <h3>OPENING TIMES</h3>
+        <ul>
+          <li>Monday- Friday 8AM - 4PM</li>
+          <li>Saturday 8AM - 3PM</li>
+          <li>Closed Sunday</li>
+        </ul>
+      </div>
+
+      <div class="contact">
+        <h3>SECTIONS</h3>
+        <ul>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> About</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Products</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Testimonials</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Order</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <p class="copyright">Copyright &copy; Bakers Dozen. All Rights Reserved 2019</p>
+    </footer>
   </body>
 </html>
