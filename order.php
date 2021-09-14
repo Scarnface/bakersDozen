@@ -1,7 +1,62 @@
 <?php
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+require __DIR__ . "/dist/inc/connection.php";
+require __DIR__ . "/dist/inc/functions.php";
 require __DIR__ . '/vendor/autoload.php';
+
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
+
+$contactArray = [];
+
+
+
+if (isset($_POST['submit'])) {
+
+    if (!empty($_POST['name'])
+    && !empty($_POST['email'])
+    && !empty($_POST['phone'])
+    && !empty($_POST['subject'])
+    && !empty($_POST['message'])
+    && !empty($_POST['gdpr-checkbox'])) {
+
+       $name = $_POST['name'];
+       $email = $_POST['email'];
+       $phone = $_POST['phone'];
+       $subject = cleanHtml($_POST['subject']);
+       $message = cleanHtml($_POST['message']);
+       if (isset($_POST['newsletter-signup'])) {
+            $newsletter = true;
+       } else {
+            $newsletter = false;
+       }
+
+       $dt = new DateTime();
+       $today = $dt->format("Y-m-d H:i:s");
+
+       $contactArray = [
+        "name" => $name,
+        "email" => $email,
+        "phone" => $phone,
+        "subject" => $subject,
+        "message" => $message,
+        "newsletter" => $newsletter,
+        "date" => $today
+       ];
+
+       postContact($db, $contactArray);
+   }
+}
+
+var_dump($_POST['submit']);
+
+
+
+
 ?>
 
 <html lang="en-GB">
@@ -51,7 +106,7 @@ $dotenv->load();
       </p>
     </div>
     <div class="form-container">
-      <form id="contact" class="contact-form" action="dist/inc/connection.php">
+      <form method="post" id="contact" class="contact-form" action="/order.php">
         <div class="input-group name break">
           <input type="text" name="name" id="name" required>
           <label for="name" class="required">Name</label>
@@ -75,7 +130,7 @@ $dotenv->load();
         <div class="checkboxes-recaptcha">
           <label class="checkbox-container">
             <span>I would like to receive updates and special offers from Baker's Dozen.</span>
-            <input type="checkbox">
+            <input type="checkbox" id="newsletter-signup" name="newsletter-signup">
             <span class="checkmark"></span>
           </label>
           <label class="checkbox-container">
@@ -83,12 +138,12 @@ $dotenv->load();
               By submitting this form you agree with the storage and handling of your
               data by this website in accordance with our <a href="#">Privacy Policy</a>.
             </span>
-            <input type="checkbox">
+            <input type="checkbox" id="gdpr-checkbox" name="gdpr-checkbox">
             <span class="checkmark"></span>
           </label>
           <div class="g-recaptcha" data-sitekey="<?php echo $_ENV['RECAPTCHA_SITE'] ?>"></div>
           <div class="form-submit">
-            <input type="submit" value="Submit" class="btn">
+            <input type="submit" name="submit" value="Submit" class="btn">
           </div>
         </div>
       </form>
