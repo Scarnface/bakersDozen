@@ -12,4 +12,50 @@
   margin: 0;
   -webkit-font-smoothing: antialiased;
 }
+
+.container {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  border-radius: 999em;
+  border: 1px solid #f7882f;
+  padding: 18px 15px 15px 15px;
+  width: 50%;
+  font-family: "Khula";
+  font-weight: 700;
+  letter-spacing: 1.19pt;
+  text-transform: uppercase;
+  background-color: #f7882f;
+  color: #fff;
+  transition: 0.3s ease all;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #fff;
+  color: #404040;
+}
+.btn:focus {
+  border: 1px solid #333a56;
+  background-color: #333a56;
+  color: #fff;
+}
+
+h1 {
+  font-family: "Yellowtail", script;
+  color: #333a56;
+}
+
+p {
+  font-family: "Khula", sans-serif;
+  color: #333a56;
+}
+
+label {
+  font-family: "Khula", sans-serif;
+}
 /*# sourceMappingURL=maps/style.css.map */

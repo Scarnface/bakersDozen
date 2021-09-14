@@ -1,6 +1,117 @@
+/* ================================= 
+  Imports
+==================================== */
+/* ================================= 
+  Variables
+==================================== */
+/* ================================= 
+  Base Element Styles
+==================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  border-radius: 999em;
+  border: 1px solid #f7882f;
+  padding: 18px 15px 15px 15px;
+  width: 50%;
+  font-family: "Khula";
+  font-weight: 700;
+  letter-spacing: 1.19pt;
+  text-transform: uppercase;
+  background-color: #f7882f;
+  color: #fff;
+  transition: 0.3s ease all;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #fff;
+  color: #404040;
+}
+.btn:focus {
+  border: 1px solid #333a56;
+  background-color: #333a56;
+  color: #fff;
+}
+
+h1 {
+  font-family: "Yellowtail", script;
+  color: #333a56;
+}
+
+p {
+  font-family: "Khula", sans-serif;
+  color: #333a56;
+}
+
+label {
+  font-family: "Khula", sans-serif;
+}
+
 #map {
   height: 400px;
   width: 100%;
+}
+
+.contact-text h1 {
+  font-size: 2.5rem;
+}
+.contact-text p {
+  margin-top: 15px;
+}
+.contact-text p:last-child {
+  margin-bottom: 15px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+
+.input-group {
+  width: 100%;
+  position: relative;
+}
+.input-group input, .input-group textarea {
+  width: 100%;
+  border: 1px solid #333a56;
+  border-radius: 5px;
+  padding: 18px 10px 15px 10px;
+  margin-top: 15px;
+  font-family: "Khula", sans-serif;
+  outline: 0;
+}
+.input-group input:focus, .input-group textarea:focus {
+  outline: 0;
+  border: 1px solid #f7882f;
+}
+.input-group input:focus + label, .input-group textarea:focus + label {
+  color: #f7882f;
+}
+.input-group label {
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  background-color: #fff;
+  padding: 0 5px 0 5px;
+  font-size: 0.75rem;
+}
+
+.required::after {
+  content: " *";
+  color: tomato;
 }
 
 .checkbox-container {
@@ -9,11 +120,19 @@
   padding-left: 35px;
   margin-bottom: 12px;
   cursor: pointer;
-  font-size: 22px;
+  font-size: 1em;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+.checkbox-container:first-of-type {
+  margin-top: 25px;
+}
+.checkbox-container span:first-of-type {
+  display: block;
+  margin-top: 4px;
+  line-height: 1.5rem;
 }
 
 .checkbox-container input {
@@ -38,7 +157,7 @@
 }
 
 .checkbox-container input:checked ~ .checkmark {
-  background-color: #2196F3;
+  background-color: #f7882f;
 }
 
 .checkmark:after {
@@ -61,5 +180,9 @@
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+.g-recaptcha {
+  margin-bottom: 15px;
 }
 /*# sourceMappingURL=maps/order.css.map */
