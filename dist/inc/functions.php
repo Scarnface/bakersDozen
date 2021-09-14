@@ -1,7 +1,7 @@
 <?php
 
 require __DIR__ . '/../../vendor/autoload.php';
-
+require __DIR__ . "/connection.php";
 
 // post to contact database
 
@@ -31,8 +31,86 @@ function cleanHtml($dirty_html) {
 
     $config = HTMLPurifier_Config::createDefault();
     $purifier = new HTMLPurifier($config);
+
+    $html_purifier_cache_dir = sys_get_temp_dir() . '/HTMLPurifier/DefinitionCache';
+    if (!is_dir($html_purifier_cache_dir)) {
+      mkdir($html_purifier_cache_dir, 0770, TRUE);
+    }
+
+    $config->set('Cache.SerializerPath', $html_purifier_cache_dir);
     $clean_html = $purifier->purify($dirty_html);
     
     return $clean_html;
     
+}
+
+// verify and post contact form data
+
+function validateForm() {
+    $contactArray = [];
+    $errorArray = [];
+
+    if (isset($_POST['name'])) {
+        $name = $_POST['name'];
+    } else {
+        $errorArray[] = "name";
     }
+    if (isset($_POST['email'])) {
+        $email = $_POST['email'];
+    } else {
+        $errorArray[] = "email";
+    }
+    if (isset($_POST['phone'])) {
+        $phone = $_POST['phone'];
+    } else {
+        $errorArray[] = "phone";
+    }
+    if (isset($_POST['subject'])) {
+        $subject = cleanHtml($_POST['subject']);
+    }else {
+        $errorArray[] = "subject";
+    }
+    if (isset($_POST['message'])) {
+        $message = cleanHtml($_POST['message']);
+    } else {
+        $errorArray[] = "message";
+    }
+
+    if (isset($_POST['gdpr-checkbox'])) {
+        $gdpr = $_POST['gdpr-checkbox'];
+    } else {
+        $errorArray[] = "privacy policy checkbox";
+    }
+    if (isset($_POST['newsletter-signup'])) {
+        $newsletter = true;
+    } else {
+        $newsletter = false;
+    }
+    if (!empty($_POST['g-recaptcha-response'])) {
+        $captcha = $_POST['g-recaptcha-response'];
+    } else {
+        $errorArray[] = "captcha";
+    }
+
+    $dt = new DateTime();
+    $dt->setTimeZone(new DateTimeZone("Europe/London"));
+    $today = $dt->format("Y-m-d H:i:s");
+
+
+    if (empty($errorArray)) {
+        $contactArray = [
+        "name" => $name,
+        "email" => $email,
+        "phone" => $phone,
+        "subject" => $subject,
+        "message" => $message,
+        "newsletter" => $newsletter,
+        "date" => $today
+        ];
+
+        return postContact($GLOBALS["db"], $contactArray);
+    } else {
+        return $errorArray;
+    }
+}
+

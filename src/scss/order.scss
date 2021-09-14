@@ -1,4 +1,4 @@
-@import "style.scss";
+@import "partials/baseStyles";
 
 // styles for full-width map
 #map {
@@ -6,9 +6,7 @@
     width: 100%;
 }
 
-
 // contact text styles
-
 .contact-text {
     h1 {
         font-size: 2.5rem;
@@ -44,6 +42,7 @@
         margin-top: 15px;
         font-family: "Khula", sans-serif;
         outline: 0;
+        line-height: 1.4rem;
         &:focus {
             outline: 0;
             border: 1px solid $brand-orange;
@@ -126,6 +125,7 @@
 
 .checkbox-container input:checked ~ .checkmark {
     background-color: $brand-orange;
+    border: 1px solid $brand-orange;
 }
 
 .checkmark:after {
@@ -139,8 +139,8 @@
 }
 
 .checkbox-container .checkmark:after {
-    left: 9px;
-    top: 5px;
+    left: 8px;
+    top: 4px;
     width: 5px;
     height: 10px;
     border: solid white;
@@ -152,4 +152,52 @@
 
 .g-recaptcha {
     margin-bottom: 15px;
+}
+
+
+// success/error message and input styles
+.form-message {
+    display: none;
+    margin-top: 15px;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    border-radius: 5px;
+    p {
+        // line-height: 2rem;
+        margin: 0;
+        padding: 11px 15px 8px 15px;
+        color: $white;
+    }
+    &.error {
+        display: flex;
+        background-color: tomato;
+        p {
+            color: $brand-darkBlue;
+        }
+    }
+    &.success {
+        display: flex;
+        background-color: $brand-lightBlue;
+    }
+}
+
+.close-message {
+    background-color: transparent;
+    padding: 5px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: .3s ease all;
+    border-radius: 5px;
+    color: $white;
+    &:hover {
+        color: $white;
+        background-color: $brand-darkBlue;
+    }
+}
+
+input.error,
+span.error {
+    border: 1px solid tomato;
 }

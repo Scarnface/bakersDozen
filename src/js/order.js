@@ -4,7 +4,6 @@
  * set coordinates in .setView and set
  * marker coordinates in the marker
 */ 
-
 var mymap = L.map('map').setView([52.62147927683726, 1.2805286164869416], 14);
 mymap.scrollWheelZoom.disable();
 
@@ -21,3 +20,12 @@ var marker = L.marker([52.62147927683726, 1.2805286164869416]).addTo(mymap);
 
 marker.bindPopup("<b>Baker's Dozen</b><br>107 Gloucester Street<br>Norwich, Norfolk<br>NR2 2DY").openPopup();
 
+
+// close the message box 
+
+const closeMessage = document.getElementById("close-message");
+const messageDiv = document.getElementById("form-message");
+
+closeMessage.addEventListener("click", function(e) {
+    messageDiv.remove();
+});

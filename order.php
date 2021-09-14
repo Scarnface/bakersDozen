@@ -11,51 +11,9 @@ require __DIR__ . '/vendor/autoload.php';
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
-$contactArray = [];
-
-
-
 if (isset($_POST['submit'])) {
-
-    if (!empty($_POST['name'])
-    && !empty($_POST['email'])
-    && !empty($_POST['phone'])
-    && !empty($_POST['subject'])
-    && !empty($_POST['message'])
-    && !empty($_POST['gdpr-checkbox'])) {
-
-       $name = $_POST['name'];
-       $email = $_POST['email'];
-       $phone = $_POST['phone'];
-       $subject = cleanHtml($_POST['subject']);
-       $message = cleanHtml($_POST['message']);
-       if (isset($_POST['newsletter-signup'])) {
-            $newsletter = true;
-       } else {
-            $newsletter = false;
-       }
-
-       $dt = new DateTime();
-       $today = $dt->format("Y-m-d H:i:s");
-
-       $contactArray = [
-        "name" => $name,
-        "email" => $email,
-        "phone" => $phone,
-        "subject" => $subject,
-        "message" => $message,
-        "newsletter" => $newsletter,
-        "date" => $today
-       ];
-
-       postContact($db, $contactArray);
-   }
+  $errorArray = validateForm();
 }
-
-var_dump($_POST['submit']);
-
-
-
 
 ?>
 
@@ -78,7 +36,7 @@ var_dump($_POST['submit']);
     <!-- NORMALIZE -->
     <link type="text/css" rel="stylesheet" href="dist/css/normalize.css" />
     <!-- FONTAWESOME -->
-    <script src="https://kit.fontawesome.com/a36ca304f3.js" crossorigin="anonymous" defer></script>
+    <link type="text/css" rel="stylesheet" href="dist/assets/fa/css/all.css" />
     <!-- LEAFLET -->
     <link type="text/css" rel="stylesheet" href="dist/js/plugins/leaflet/leaflet.css">
     <script type="text/javascript" src="dist/js/plugins/leaflet/leaflet.js"></script>
@@ -104,27 +62,71 @@ var_dump($_POST['submit']);
         <a href="tel:01603123987">01603 123 987</a>, email us at <a href="mailto:info@bakersdozen.co.uk">info@bakersdozen.co.uk</a>, or use the contact form
         below. We aim to respond to inquiries within 24 hours.
       </p>
+      
+      <?php
+      if (isset($_POST['submit'])) {
+        echo "<div id='form-message' class='form-message";
+        if (isset($errorArray)) {
+          echo " error'>\n" . "<p><strong>Please complete the following fields:</strong> " . implode(", ", $errorArray) . "</p>\n";
+        } else {
+          echo " success'>\n" . "<p>Success! Your message was sent successfully.</p>\n";
+        }
+        echo '<button id="close-message" class="close-message"><i class="fas fa-times"></i></button>';
+        echo "</div>";
+      }
+      ?>
+      
     </div>
     <div class="form-container">
       <form method="post" id="contact" class="contact-form" action="/order.php">
         <div class="input-group name break">
-          <input type="text" name="name" id="name" required>
+          <input type="text" name="name" id="name"  <?php
+              if (isset($_POST['submit']) && isset($errorArray)) { 
+                if (in_array("name", $errorArray)) {
+                  echo "class='error'";
+                }
+              }
+            ?>required>
           <label for="name" class="required">Name</label>
         </div>
         <div class="input-group phone break">
-          <input type="tel" name="phone" id="phone" required>
+          <input type="tel" name="phone" id="phone"  <?php
+              if (isset($_POST['submit']) && isset($errorArray)) { 
+                if (in_array("phone", $errorArray)) {
+                  echo "class='error'";
+                }
+              }
+            ?>required>
           <label for="phone" class="required">Telephone</label>
         </div>
         <div class="input-group email">
-          <input type="email" name="email" id="email" required>
+          <input type="email" name="email" id="email"  <?php
+              if (isset($_POST['submit']) && isset($errorArray)) { 
+                if (in_array("email", $errorArray)) {
+                  echo "class='error'";
+                }
+              }
+            ?>required>
           <label for="email" class="required">Email</label>
         </div>
         <div class="input-group subject">
-          <input type="text" name="subject" id="subject" required>
+          <input type="text" name="subject" id="subject"  <?php
+              if (isset($_POST['submit']) && isset($errorArray)) { 
+                if (in_array("subject", $errorArray)) {
+                  echo "class='error' ";
+                }
+              }
+            ?>required>
           <label for="subject" class="required">Subject</label>
         </div>
         <div class="input-group message">
-          <textarea id="message" name="message" rows="5" required></textarea>
+          <textarea id="message" name="message" rows="5" <?php
+              if (isset($_POST['submit']) && isset($errorArray)) { 
+                if (in_array("message", $errorArray)) {
+                  echo "class='error'";
+                }
+              }
+            ?>required></textarea>
           <label for="message" class="required">Message</label>
         </div>
         <div class="checkboxes-recaptcha">
@@ -134,11 +136,17 @@ var_dump($_POST['submit']);
             <span class="checkmark"></span>
           </label>
           <label class="checkbox-container">
-            <span>
+            <span class="required">
               By submitting this form you agree with the storage and handling of your
               data by this website in accordance with our <a href="#">Privacy Policy</a>.
             </span>
-            <input type="checkbox" id="gdpr-checkbox" name="gdpr-checkbox">
+            <input type="checkbox" id="gdpr-checkbox" name="gdpr-checkbox" <?php
+              if (isset($_POST['submit']) && isset($errorArray)) { 
+                if (in_array("privacy policy checkbox", $errorArray)) {
+                  echo "class='error'";
+                }
+              }
+            ?>required>
             <span class="checkmark"></span>
           </label>
           <div class="g-recaptcha" data-sitekey="<?php echo $_ENV['RECAPTCHA_SITE'] ?>"></div>
