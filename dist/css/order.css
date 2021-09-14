@@ -79,6 +79,12 @@ label {
   flex-direction: column;
   margin-bottom: 25px;
 }
+@media (min-width: 992px) {
+  .contact-form {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
 
 .input-group {
   width: 100%;
@@ -107,6 +113,21 @@ label {
   background-color: #fff;
   padding: 0 5px 0 5px;
   font-size: 0.75rem;
+}
+
+.input-group.break {
+  flex: 1;
+}
+@media (min-width: 992px) {
+  .input-group.break {
+    width: calc(50% - 30px);
+  }
+  .input-group.break:nth-of-type(n+2) {
+    margin-left: 15px;
+  }
+  .input-group.break:first-of-type {
+    margin-right: 15px;
+  }
 }
 
 .required::after {

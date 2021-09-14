@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+<?php
+require __DIR__ . '/vendor/autoload.php';
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+?>
 
 <html lang="en-GB">
   <head>
@@ -48,17 +52,17 @@
     </div>
     <div class="form-container">
       <form id="contact" class="contact-form" action="dist/inc/connection.php">
-        <div class="input-group name">
+        <div class="input-group name break">
           <input type="text" name="name" id="name" required>
           <label for="name" class="required">Name</label>
+        </div>
+        <div class="input-group phone break">
+          <input type="tel" name="phone" id="phone" required>
+          <label for="phone" class="required">Telephone</label>
         </div>
         <div class="input-group email">
           <input type="email" name="email" id="email" required>
           <label for="email" class="required">Email</label>
-        </div>
-        <div class="input-group phone">
-          <input type="tel" name="phone" id="phone" required>
-          <label for="phone" class="required">Telephone</label>
         </div>
         <div class="input-group subject">
           <input type="text" name="subject" id="subject" required>
@@ -68,22 +72,24 @@
           <textarea id="message" name="message" rows="5" required></textarea>
           <label for="message" class="required">Message</label>
         </div>
-        <label class="checkbox-container">
-          <span>I would like to receive updates and special offers from Baker's Dozen.</span>
-          <input type="checkbox">
-          <span class="checkmark"></span>
-        </label>
-        <label class="checkbox-container">
-          <span>
-            By submitting this form you agree with the storage and handling of your
-            data by this website in accordance with our <a href="#">Privacy Policy</a>.
-          </span>
-          <input type="checkbox">
-          <span class="checkmark"></span>
-        </label>
-        <div class="g-recaptcha" data-sitekey="6LejV2ccAAAAAIsdL1C7WjAKZa-65abSGI0sbNF6"></div>
-        <div class="form-submit">
-          <input type="submit" value="Submit" class="btn">
+        <div class="checkboxes-recaptcha">
+          <label class="checkbox-container">
+            <span>I would like to receive updates and special offers from Baker's Dozen.</span>
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <label class="checkbox-container">
+            <span>
+              By submitting this form you agree with the storage and handling of your
+              data by this website in accordance with our <a href="#">Privacy Policy</a>.
+            </span>
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <div class="g-recaptcha" data-sitekey="<?php echo $_ENV['RECAPTCHA_SITE'] ?>"></div>
+          <div class="form-submit">
+            <input type="submit" value="Submit" class="btn">
+          </div>
         </div>
       </form>
     </div>
