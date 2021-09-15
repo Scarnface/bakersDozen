@@ -32,6 +32,7 @@
   h2 {
     padding-top: 30px;
     padding-bottom: 30px;
+    text-transform: uppercase;
   }
 }
 
@@ -74,7 +75,9 @@
 }
 
 .productsCarousel {
-  width: 80%;
+  width: 100%;
+  display: flex;
+  align-items: center;
   .slide {
     width: 200px;
     text-align: center;
@@ -83,22 +86,28 @@
       border: 4px solid $brand-lightBlue;
       border-radius: 50%;
       object-fit: cover;
-      width: 300px;
-      height: 300px;
+      width: 200px;
+      height: 200px;
     }
     p {
       margin: 0 auto;
-      padding-top: 15px;
+      padding-top: 30px;
       padding-bottom: 30px;
       width: 200px;
       font-family: "Khula";
       font-size: 1rem;
       font-weight: 700;
-      letter-spacing: 0.025rem;
-      line-height: 20px;
-      color: $brand-darkBlue;
+      letter-spacing: 0.035rem;
+      line-height: 1.25rem;
+      color: $brand-lightBlue;
+      text-transform: uppercase;
     }
   }
+}
+
+.slick-prev-arrow,
+.slick-next-arrow {
+  padding-bottom: 50px;
 }
 
 .testimonialsCarousel {
@@ -139,12 +148,54 @@
     }
     button {
       &:before {
-        font-size: 2rem;
+        font-size: .55rem;
         color: $brand-lightBlue;
       }
     }
     &.slick-active button:before {
       color: $brand-lightBlue;
     }
+  }
+}
+
+
+.slick-prev {
+  margin-left: 40px;
+}
+
+.slick-next {
+  margin-right: 40px;
+}
+
+.product-carousel-img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 4px solid $brand-darkBlue;
+  &.savoury-breads {
+    background-image: url("../assets/img/Optimized-bread-min.jpg");
+    background-size: cover;
+  }
+  &.pastries {
+    background-image: url("../assets/img/Optimized-pastries-min.jpg");
+    background-size: cover;
+  }
+  &.cakes {
+    background-image: url("../assets/img/Optimized-cakes-min.jpg");
+    background-size: cover;
+  }
+  &.birthday-cakes {
+    background-image: url("../assets/img/Optimized-bread-min.jpg");
+    background-size: cover;
+  }
+  &.wedding-cakes {
+    background-image: url("../assets/img/Optimized-wedding-min.jpg");
+    background-size: cover;
+  }
+  &.sandwiches {
+    background-image: url("../assets/img/Optimized-sandwiches-min.jpg");
+    background-size: cover;
   }
 }

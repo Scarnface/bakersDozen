@@ -26,8 +26,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Khula:wght@300;400;700&family=Yellowtail&display=swap" rel="stylesheet">
     <!-- SLICK -->
-    <link type="text/css" rel="stylesheet" href="dist/js/plugins/slick/css/slick.css" />
-    <link type="text/css" rel="stylesheet" href="dist/js/plugins/slick/css/slick-theme.css" />
+    <link type="text/css" rel="stylesheet" href="dist/js/plugins/slick/slick.css" />
+    <link type="text/css" rel="stylesheet" href="dist/js/plugins/slick/slick-theme.css" />
     <script type="text/javascript" src="dist/js/plugins/slick/slick.js" defer></script>
     <!-- CUSTOM CSS -->
     <link type="text/css" rel="stylesheet" href="dist/css/style.css" />
@@ -64,7 +64,7 @@
         <div class="aboutInnerWrapper">
           <h3 class="aboutText">Established in 2011, our bread is hand-crafted using the finest local ingredients.</h3>
           <div class="aboutImage">
-            <img src="dist/assets/img/cupcakes-min.jpg" alt="Cupcakes" />
+            <img src="dist/assets/img/Optimized-cupcakes-min.jpg" alt="Cupcakes" />
           </div>
           <div class="aboutDescription">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate molestie lacus ac molestie. Sed commodo 
@@ -82,43 +82,67 @@
     </section>
 
     <section class="productsCarouselWrapper">
-      <h2>OUR PRODUCTS</h2>
+      <div class="container">
+      <h2>Our Products</h2>
 
       <div class="productsCarousel carousel">
+        <!-- <div class="slide">
+          <img src="dist/assets/img/Optimized-bread-min.jpg" alt="Savoury breads" />
+          <p>Savoury Breads</p>
+        </div> -->
         <div class="slide">
-          <img src="dist/assets/img/bread-min.jpg" alt="Savoury breads" />
-          <p>SAVOURY BREADS</p>
+          <div class="product-carousel-img savoury-breads"></div>
+          <p>Savoury Breads</p>
         </div>
 
+        <!-- <div class="slide">
+          <img src="dist/assets/img/Optimized-pastries-min.jpg" alt="Pastries" />
+          <p>Pastries</p>
+        </div> -->
         <div class="slide">
-          <img src="dist/assets/img/pastries-min.jpg" alt="Pastries" />
-          <p>PASTRIES</p>
+          <div class="product-carousel-img pastries"></div>
+          <p>Pastries</p>
         </div>
 
+        <!-- <div class="slide">
+          <img src="dist/assets/img/Optimized-cakes-min.jpg" alt="Cakes" />
+          <p>Cakes</p>
+        </div> -->
         <div class="slide">
-          <img src="dist/assets/img/cakes-min.jpg" alt="Cakes" />
-          <p>CAKES</p>
+          <div class="product-carousel-img cakes"></div>
+          <p>Cakes</p>
         </div>
 
+        <!-- <div class="slide">
+          <img src="dist/assets/img/Optimized-birthday-min.jpg" alt="Birthday cakes" />
+          <p>Birthday Cakes</p>
+        </div> -->
         <div class="slide">
-          <img src="dist/assets/img/birthday-min.jpg" alt="Birthday cakes" />
-          <p>BIRTHDAY CAKES</p>
+          <div class="product-carousel-img birthday-cakes"></div>
+          <p>Birthday Cakes</p>
         </div>
 
+        <!-- <div class="slide">
+          <img src="dist/assets/img/Optimized-wedding-min.jpg" alt="Wedding cakes" />
+          <p>Wedding Cakes</p>
+        </div> -->
         <div class="slide">
-          <img src="dist/assets/img/wedding-min.jpg" alt="Wedding cakes" />
-          <p>WEDDING CAKES</p>
+          <div class="product-carousel-img wedding-cakes"></div>
+          <p>Wedding Cakes</p>
         </div>
 
+        <!-- <div class="slide">
+          <img src="dist/assets/img/Optimized-sandwiches-min.jpg" alt="Sandwiches" />
+          <p>Sandwiches</p>
+        </div> -->
         <div class="slide">
-          <img src="dist/assets/img/sandwiches-min.jpg" alt="Sandwiches" />
-          <p>SANDWICHES</p>
+          <div class="product-carousel-img sandwiches"></div>
+          <p>Sandwiches</p>
         </div>
       </div>
 
       <div class="break"></div>
-
-      <p class="button">FIND OUT MORE</p>
+    </div>
     </section>
 
     <section class="container">
@@ -165,25 +189,25 @@
 
         <p class="testimonialText">Proudly baking for your event, and your breakfast</p>
 
-        <button class="btn">ORDER NOW</button>
+        <a class="btn">ORDER NOW</a>
       </div>
     </section>
 
     <footer>
       <div class="contact">
-        <h3>ADDRESS</h3>
+        <h3>Address</h3>
         <ul>
           <li>107 Gloucester Street</li>
           <li>Norwich, Norfolk</li>
           <li>NR2 2DY</li>
           <li>&nbsp;</li>
-          <li><a href="#">01603 123 987</a></li>
-          <li><a href="#">info@bakersdozen.co.uk</a></li>
+          <li><a href="tel:01603123987">01603 123 987</a></li>
+          <li><a href="mailto:info@bakersdozen.co.uk">info@bakersdozen.co.uk</a></li>
         </ul>
       </div>
 
       <div class="contact">
-        <h3>OPENING TIMES</h3>
+        <h3>Opening Times</h3>
         <ul>
           <li>Monday- Friday 8AM - 4PM</li>
           <li>Saturday 8AM - 3PM</li>
@@ -192,12 +216,12 @@
       </div>
 
       <div class="contact">
-        <h3>SECTIONS</h3>
+        <h3>Sections</h3>
         <ul>
           <li><a href="#"><i class="fa-solid fa-chevron-right"></i> About</a></li>
           <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Products</a></li>
           <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Testimonials</a></li>
-          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Order</a></li>
+          <li><a href="/order.php"><i class="fa-solid fa-chevron-right"></i> Order</a></li>
           <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Privacy Policy</a></li>
         </ul>
       </div>

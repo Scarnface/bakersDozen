@@ -190,6 +190,7 @@ label {
 .productsCarouselWrapper h2 {
   padding-top: 30px;
   padding-bottom: 30px;
+  text-transform: uppercase;
 }
 
 .testimonialsCarouselWrapper {
@@ -231,7 +232,9 @@ label {
 }
 
 .productsCarousel {
-  width: 80%;
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 .productsCarousel .slide {
   width: 200px;
@@ -242,20 +245,26 @@ label {
   border: 4px solid #52658f;
   border-radius: 50%;
   object-fit: cover;
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
 }
 .productsCarousel .slide p {
   margin: 0 auto;
-  padding-top: 15px;
+  padding-top: 30px;
   padding-bottom: 30px;
   width: 200px;
   font-family: "Khula";
   font-size: 1rem;
   font-weight: 700;
-  letter-spacing: 0.025rem;
-  line-height: 20px;
-  color: #333a56;
+  letter-spacing: 0.035rem;
+  line-height: 1.25rem;
+  color: #52658f;
+  text-transform: uppercase;
+}
+
+.slick-prev-arrow,
+.slick-next-arrow {
+  padding-bottom: 50px;
 }
 
 .testimonialsCarousel {
@@ -291,11 +300,52 @@ label {
   padding-right: 50px;
 }
 .slick-dots li button:before {
-  font-size: 2rem;
+  font-size: 0.55rem;
   color: #52658f;
 }
 .slick-dots li.slick-active button:before {
   color: #52658f;
+}
+
+.slick-prev {
+  margin-left: 40px;
+}
+
+.slick-next {
+  margin-right: 40px;
+}
+
+.product-carousel-img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 4px solid #333a56;
+}
+.product-carousel-img.savoury-breads {
+  background-image: url("../assets/img/Optimized-bread-min.jpg");
+  background-size: cover;
+}
+.product-carousel-img.pastries {
+  background-image: url("../assets/img/Optimized-pastries-min.jpg");
+  background-size: cover;
+}
+.product-carousel-img.cakes {
+  background-image: url("../assets/img/Optimized-cakes-min.jpg");
+  background-size: cover;
+}
+.product-carousel-img.birthday-cakes {
+  background-image: url("../assets/img/Optimized-bread-min.jpg");
+  background-size: cover;
+}
+.product-carousel-img.wedding-cakes {
+  background-image: url("../assets/img/Optimized-wedding-min.jpg");
+  background-size: cover;
+}
+.product-carousel-img.sandwiches {
+  background-image: url("../assets/img/Optimized-sandwiches-min.jpg");
+  background-size: cover;
 }
 
 footer {
@@ -314,6 +364,7 @@ footer {
   font-weight: 700;
   letter-spacing: 1.14px;
   line-height: 20px;
+  text-transform: uppercase;
 }
 .contact a {
   color: #f7f5e6;
