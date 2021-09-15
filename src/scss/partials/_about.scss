@@ -1,10 +1,10 @@
-.about {
+.aboutCategories {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
   padding-top: 50px;
-  padding-left: 10%;
-  padding-right: 10%;
+  width: 100%;
 }
 
 .aboutCategory {
@@ -26,35 +26,35 @@
     line-height: 20px;
     text-align: center;
   }
-  &:nth-of-type(2) {
+  &:nth-of-type(3) {
     border-bottom: 3px solid $brand-lightBlue;
   }
 }
 
 .aboutText {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 25px;
   width: 100%;
   font-family: "Khula";
-  font-size: 20px;
+  font-size: 1.25rem;;
   font-weight: 700;
-  letter-spacing: 1.02px;
+  letter-spacing: 0.05rem;
   line-height: 20px;
   text-align: center;
   color: $brand-lightBlue;
+  text-transform: uppercase;
 }
 
 .aboutInnerWrapper {
-  padding-left: 10%;
-  padding-right: 10%;
-  padding-bottom: 75px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  width: 100%;
 }
 
 .aboutImage {
   width: 50%;
+  display: none;
   img {
     border: 4px solid #fff;
     border-radius: 50%;
@@ -64,14 +64,20 @@
   }
 }
 
+.aboutImageFull {
+  margin-top: 50px;
+  background-image: url("../assets/img/cupcakes-min.jpg");
+  background-size: cover;
+  height: 300px;
+  width: 100%;
+}
+
 .aboutDescription {
-  padding-top: 50px;
-  width: 50%;
   font-family: "Khula";
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
-  letter-spacing: 1.02px;
-  line-height: 16px;
+  letter-spacing: 0.025rem;
+  line-height: 1.1rem;
   color: $brand-darkBlue;
   p {
     margin-bottom: 15px;

@@ -16,30 +16,31 @@ input:-webkit-autofill:active {
 }
 
 .container {
-  width: 90%;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
-  display: flex;
-  flex-direction: column;
 }
 
 .btn {
   border-radius: 999em;
   border: 1px solid #f7882f;
-  padding: 18px 15px 15px 15px;
-  width: 50%;
+  padding: 18px 50px 15px 50px;
+  width: 280px;
+  text-align: center;
   font-family: "Khula";
   font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.3rem;
   letter-spacing: 1.19pt;
   text-transform: uppercase;
   background-color: #f7882f;
-  color: #fff;
+  color: #f7f5e6;
   transition: 0.3s ease all;
   cursor: pointer;
 }
 .btn:hover {
   background-color: #fff;
-  color: #404040;
+  color: #666b80;
 }
 .btn:focus {
   border: 1px solid #333a56;
