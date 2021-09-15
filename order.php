@@ -21,6 +21,7 @@ if (isset($_POST['submit'])) {
     sendMail($contactArray);
   } else {
     $errorArray = $array["error array"];
+    $prefill = $array["pre-filled"];
   }
 }
 
@@ -88,46 +89,63 @@ if (isset($_POST['submit'])) {
     </div>
     <div class="form-container">
       <form method="post" id="contact" class="contact-form" action="/order.php">
+
         <div class="input-group name break">
           <input type="text" name="name" id="name" maxlength="100" <?php
               if (isset($_POST['submit']) && isset($errorArray)) { 
                 if (in_array("name", $errorArray)) {
                   echo "class='error'";
                 }
+                if (isset($prefill["name"])) {
+                  echo "value='" . $prefill["name"] . "'";
+                }
               }
             ?>required>
           <label for="name" class="required">Name</label>
         </div>
+
         <div class="input-group phone break">
           <input type="text" name="phone" id="phone" maxlength="18" <?php
               if (isset($_POST['submit']) && isset($errorArray)) { 
                 if (in_array("phone", $errorArray)) {
                   echo "class='error'";
                 }
+                if (isset($prefill["phone"])) {
+                  echo "value='" . $prefill["phone"] . "'";
+                }
               }
             ?>required>
           <label for="phone" class="required">Telephone</label>
         </div>
+
         <div class="input-group email">
           <input type="email" name="email" id="email" maxlength="254" <?php
               if (isset($_POST['submit']) && isset($errorArray)) { 
                 if (in_array("email", $errorArray)) {
                   echo "class='error'";
                 }
+                if (isset($prefill["email"])) {
+                  echo "value='" . $prefill["email"] . "'";
+                }
               }
             ?>required>
           <label for="email" class="required">Email</label>
         </div>
+
         <div class="input-group subject">
           <input type="text" name="subject" id="subject" maxlength="200" <?php
               if (isset($_POST['submit']) && isset($errorArray)) { 
                 if (in_array("subject", $errorArray)) {
                   echo "class='error' ";
                 }
+                if (isset($prefill["subject"])) {
+                  echo "value='" . $prefill["subject"] . "'";
+                }
               }
             ?>required>
           <label for="subject" class="required">Subject</label>
         </div>
+
         <div class="input-group message">
           <textarea id="message" name="message" rows="5" maxlength="2000" <?php
               if (isset($_POST['submit']) && isset($errorArray)) { 
@@ -135,15 +153,29 @@ if (isset($_POST['submit'])) {
                   echo "class='error'";
                 }
               }
-            ?>required></textarea>
+            ?>required><?php
+            if (isset($_POST['submit']) && isset($errorArray)) { 
+              if (isset($prefill["message"])) {
+                echo $prefill["message"];
+              }
+            }
+            ?></textarea>
           <label for="message" class="required">Message</label>
         </div>
+
         <div class="checkboxes-recaptcha">
           <label class="checkbox-container">
             <span>I would like to receive updates and special offers from Baker's Dozen.</span>
-            <input type="checkbox" id="newsletter-signup" name="newsletter-signup">
+            <input type="checkbox" id="newsletter-signup" name="newsletter-signup" <?php 
+            if (isset($_POST['submit']) && isset($errorArray)) { 
+              if (isset($prefill['newsletter']) && $prefill['newsletter']) {
+                echo "checked";
+              }
+            }
+              ?>>
             <span class="checkmark"></span>
           </label>
+
           <label class="checkbox-container">
             <span class="required">
               By submitting this form you agree with the storage and handling of your
@@ -158,6 +190,7 @@ if (isset($_POST['submit'])) {
             ?>required>
             <span class="checkmark" id="gdpr-span"></span>
           </label>
+
           <div class="g-recaptcha" data-sitekey="<?php echo $_ENV['RECAPTCHA_SITE'] ?>"></div>
           <div class="form-submit">
             <input type="submit" name="submit" value="Submit" id="submit" class="btn">

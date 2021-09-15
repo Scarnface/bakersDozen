@@ -123,7 +123,7 @@ function validateForm() {
 
         return ["passed" => true, "contact array" => $contactArray];
     } else {
-        return ["passed" => false, "error array" => $errorArray];
+        return ["passed" => false, "error array" => $errorArray, "pre-filled" => $contactArray];
     }
 }
 

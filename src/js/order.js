@@ -174,7 +174,6 @@ function clientValidate() {
     }
 }
 
-
 // event listener for the button, 
 submitBtn.addEventListener('click', function(e) {
     if (!clientValidate()) {
