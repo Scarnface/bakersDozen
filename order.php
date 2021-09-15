@@ -6,13 +6,22 @@ error_reporting(E_ALL);
 
 require __DIR__ . "/dist/inc/connection.php";
 require __DIR__ . "/dist/inc/functions.php";
+require __DIR__ . "/dist/inc/mailer.php";
 require __DIR__ . '/vendor/autoload.php';
 
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
+// validate the form on the server-side
 if (isset($_POST['submit'])) {
-  $errorArray = validateForm();
+  $array = validateForm();
+  if ($array["passed"]) {
+    $contactArray = $array["contact array"];
+    postContact($GLOBALS["db"], $contactArray);
+    sendMail($contactArray);
+  } else {
+    $errorArray = $array["error array"];
+  }
 }
 
 ?>
@@ -55,7 +64,7 @@ if (isset($_POST['submit'])) {
 <body>
   <div id="map"></div>
   <div class="container">
-    <div class="contact-text">
+    <div class="contact-text" id="contact-text">
       <h1>Contact Us Today</h1>
       <p>Our opening hours are Monday - Friday 8am - 4pm, and 8am-3pm on Saturdays.</p>
       <p>If you wish to get in touch, you can visit us in the shop, phone us on
@@ -90,7 +99,7 @@ if (isset($_POST['submit'])) {
           <label for="name" class="required">Name</label>
         </div>
         <div class="input-group phone break">
-          <input type="tel" name="phone" id="phone"  <?php
+          <input type="text" name="phone" id="phone" <?php
               if (isset($_POST['submit']) && isset($errorArray)) { 
                 if (in_array("phone", $errorArray)) {
                   echo "class='error'";
@@ -147,11 +156,11 @@ if (isset($_POST['submit'])) {
                 }
               }
             ?>required>
-            <span class="checkmark"></span>
+            <span class="checkmark" id="gdpr-span"></span>
           </label>
           <div class="g-recaptcha" data-sitekey="<?php echo $_ENV['RECAPTCHA_SITE'] ?>"></div>
           <div class="form-submit">
-            <input type="submit" name="submit" value="Submit" class="btn">
+            <input type="submit" name="submit" value="Submit" id="submit" class="btn">
           </div>
         </div>
       </form>

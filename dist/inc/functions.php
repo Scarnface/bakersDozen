@@ -24,8 +24,6 @@ function postContact($db, $contactArray) {
     }
 }
 
-
-
 // clean html from a text or textarea input
 function cleanHtml($dirty_html) {
 
@@ -49,18 +47,19 @@ function cleanHtml($dirty_html) {
 function validateForm() {
     $contactArray = [];
     $errorArray = [];
-
+    $phoneRegex = "/^(((\+44\s?\d{4}|\(?0\d{4}\)?)\s?\d{3}\s?\d{3})|((\+44\s?\d{3}|\(?0\d{3}\)?)\s?\d{3}\s?\d{4})|((\+44\s?\d{2}|\(?0\d{2}\)?)\s?\d{4}\s?\d{4}))(\s?\#(\d{4}|\d{3}))?$/";
+    // test if each field is set or not empty, add it to 
     if (isset($_POST['name'])) {
         $name = $_POST['name'];
     } else {
         $errorArray[] = "name";
     }
-    if (isset($_POST['email'])) {
+    if (isset($_POST['email']) && filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
         $email = $_POST['email'];
     } else {
         $errorArray[] = "email";
     }
-    if (isset($_POST['phone'])) {
+    if (isset($_POST['phone']) && preg_match($phoneRegex, $_POST['phone'])) {
         $phone = $_POST['phone'];
     } else {
         $errorArray[] = "phone";
@@ -75,7 +74,6 @@ function validateForm() {
     } else {
         $errorArray[] = "message";
     }
-
     if (isset($_POST['gdpr-checkbox'])) {
         $gdpr = $_POST['gdpr-checkbox'];
     } else {
@@ -88,15 +86,30 @@ function validateForm() {
     }
     if (!empty($_POST['g-recaptcha-response'])) {
         $captcha = $_POST['g-recaptcha-response'];
+
+        // test the validity of the captcha
+        $secretKey = $_ENV['RECAPTCHA_SECRET'];
+        $ip = $_SERVER['REMOTE_ADDR'];
+        // post request to server
+        $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($secretKey) .  '&response=' . urlencode($captcha);
+        $response = file_get_contents($url);
+        $responseKeys = json_decode($response, true);
+        
+        // should return JSON with success as true
+        if (!$responseKeys["success"]) {
+            $errorArray[] = "captcha";
+        }
+
     } else {
         $errorArray[] = "captcha";
     }
 
+    // grab today's date in UK time
     $dt = new DateTime();
     $dt->setTimeZone(new DateTimeZone("Europe/London"));
     $today = $dt->format("Y-m-d H:i:s");
 
-
+    // if no errors showed up, add variables to an array and submit
     if (empty($errorArray)) {
         $contactArray = [
         "name" => $name,
@@ -108,9 +121,9 @@ function validateForm() {
         "date" => $today
         ];
 
-        return postContact($GLOBALS["db"], $contactArray);
+        return ["passed" => true, "contact array" => $contactArray];
     } else {
-        return $errorArray;
+        return ["passed" => false, "error array" => $errorArray];
     }
 }
 
