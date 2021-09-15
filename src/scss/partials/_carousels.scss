@@ -185,17 +185,21 @@
   &.cakes {
     background-image: url("../assets/img/Optimized-cakes-min.jpg");
     background-size: cover;
+    background-position: 65%;
   }
   &.birthday-cakes {
-    background-image: url("../assets/img/Optimized-bread-min.jpg");
+    background-image: url("../assets/img/Optimized-birthday-min.jpg");
     background-size: cover;
+    background-position: 50%;
   }
   &.wedding-cakes {
     background-image: url("../assets/img/Optimized-wedding-min.jpg");
     background-size: cover;
+    background-position: 50% 73%;
   }
   &.sandwiches {
     background-image: url("../assets/img/Optimized-sandwiches-min.jpg");
     background-size: cover;
+    background-position: 50%;
   }
 }

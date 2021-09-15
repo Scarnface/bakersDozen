@@ -334,18 +334,22 @@ label {
 .product-carousel-img.cakes {
   background-image: url("../assets/img/Optimized-cakes-min.jpg");
   background-size: cover;
+  background-position: 65%;
 }
 .product-carousel-img.birthday-cakes {
-  background-image: url("../assets/img/Optimized-bread-min.jpg");
+  background-image: url("../assets/img/Optimized-birthday-min.jpg");
   background-size: cover;
+  background-position: 50%;
 }
 .product-carousel-img.wedding-cakes {
   background-image: url("../assets/img/Optimized-wedding-min.jpg");
   background-size: cover;
+  background-position: 50% 73%;
 }
 .product-carousel-img.sandwiches {
   background-image: url("../assets/img/Optimized-sandwiches-min.jpg");
   background-size: cover;
+  background-position: 50%;
 }
 
 footer {
