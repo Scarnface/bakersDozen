@@ -89,7 +89,7 @@ if (isset($_POST['submit'])) {
     <div class="form-container">
       <form method="post" id="contact" class="contact-form" action="/order.php">
         <div class="input-group name break">
-          <input type="text" name="name" id="name"  <?php
+          <input type="text" name="name" id="name" maxlength="100" <?php
               if (isset($_POST['submit']) && isset($errorArray)) { 
                 if (in_array("name", $errorArray)) {
                   echo "class='error'";
@@ -99,7 +99,7 @@ if (isset($_POST['submit'])) {
           <label for="name" class="required">Name</label>
         </div>
         <div class="input-group phone break">
-          <input type="text" name="phone" id="phone" <?php
+          <input type="text" name="phone" id="phone" maxlength="18" <?php
               if (isset($_POST['submit']) && isset($errorArray)) { 
                 if (in_array("phone", $errorArray)) {
                   echo "class='error'";
@@ -109,7 +109,7 @@ if (isset($_POST['submit'])) {
           <label for="phone" class="required">Telephone</label>
         </div>
         <div class="input-group email">
-          <input type="email" name="email" id="email"  <?php
+          <input type="email" name="email" id="email" maxlength="254" <?php
               if (isset($_POST['submit']) && isset($errorArray)) { 
                 if (in_array("email", $errorArray)) {
                   echo "class='error'";
@@ -119,7 +119,7 @@ if (isset($_POST['submit'])) {
           <label for="email" class="required">Email</label>
         </div>
         <div class="input-group subject">
-          <input type="text" name="subject" id="subject"  <?php
+          <input type="text" name="subject" id="subject" maxlength="200" <?php
               if (isset($_POST['submit']) && isset($errorArray)) { 
                 if (in_array("subject", $errorArray)) {
                   echo "class='error' ";
@@ -129,7 +129,7 @@ if (isset($_POST['submit'])) {
           <label for="subject" class="required">Subject</label>
         </div>
         <div class="input-group message">
-          <textarea id="message" name="message" rows="5" <?php
+          <textarea id="message" name="message" rows="5" maxlength="2000" <?php
               if (isset($_POST['submit']) && isset($errorArray)) { 
                 if (in_array("message", $errorArray)) {
                   echo "class='error'";
