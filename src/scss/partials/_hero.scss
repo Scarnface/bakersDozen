@@ -8,9 +8,21 @@
     position: relative;
     @include media-md {
         height: 350px;
+        background-position: 50% 42%;
     }
     @include media-lg {
         height: 400px;
+        background: url("../assets/img/Optimized-hero-bread.jpg");
+        background-position: 44vw 0%;
+        background-size: 65%;
+        background-repeat: repeat-x;
+    }
+    @include media-xl {
+        background-position: 44vw 15%;
+    }
+    @include media-xxl {
+        background-size: 50%;
+        background-position: 55vw 25%;
     }
 }
 
@@ -30,6 +42,11 @@
     h1 {
         color: $white;
         font-size: 3.5rem;
+        margin-top: -.5rem;
+        @include media-sm {
+            font-size: 4.5rem;
+            margin-top: -.85rem;
+        }
         @include media-lg {
             font-size: 6rem;
             color: $brand-darkBlue;
@@ -49,8 +66,8 @@
             margin-bottom: 1.5rem;
         }
         @include media-xl {
-            margin-top: 25px;
-            margin-bottom: 25px;
+            margin-top: 2rem;
+            margin-bottom: 2.5rem;;
         }
     }
     .btn:hover {
@@ -80,7 +97,7 @@
     background-position: 0% 50%;
     position: absolute;
     top: 0;
-    left: -25%;
+    left: -30%;
     @include media-lg {
         display: block;
     }
