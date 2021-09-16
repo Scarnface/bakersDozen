@@ -18,11 +18,11 @@
         background-repeat: repeat-x;
     }
     @include media-xl {
-        background-position: 44vw 15%;
+        background-position: 42vw 15%;
     }
     @include media-xxl {
         background-size: 50%;
-        background-position: 55vw 25%;
+        background-position: 50vw 25%;
     }
 }
 
@@ -33,8 +33,6 @@
     align-items: center;
     text-align: center;
     height: 100%;
-    // padding-top: 5%;
-    // padding-bottom: 5%;
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -68,6 +66,7 @@
         @include media-xl {
             margin-top: 2rem;
             margin-bottom: 2.5rem;;
+            width: 45%;
         }
     }
     .btn:hover {
@@ -97,8 +96,11 @@
     background-position: 0% 50%;
     position: absolute;
     top: 0;
-    left: -30%;
+    left: -32%;
     @include media-lg {
         display: block;
+    }
+    @include media-xl {
+        left: -40%;
     }
 }

@@ -42,11 +42,11 @@ input:-webkit-autofill:active {
 }
 @media (min-width: 1400px) {
   .container {
-    width: 1300px;
+    width: 1100px;
   }
 }
 
-.btn {
+.btn, .btn2 {
   border-radius: 999em;
   border: 1px solid #f7882f;
   padding: 18px 50px 15px 50px;
@@ -64,41 +64,22 @@ input:-webkit-autofill:active {
   cursor: pointer;
   text-decoration: none;
 }
-.btn:hover {
+.btn:hover, .btn2:hover {
   background-color: transparent;
   color: #666b80;
 }
-.btn:focus {
+.btn:focus, .btn2:focus {
   border: 1px solid #333a56;
   background-color: #333a56;
-  color: #fff;
+  color: #f7f5e6;
 }
 
 .btn2 {
-  border-radius: 999em;
   border: 1px solid #52658f;
-  padding: 18px 50px 15px 50px;
-  width: 280px;
-  text-align: center;
-  font-family: "Khula";
-  font-weight: 700;
-  font-size: 1.25rem;
-  line-height: 1.3rem;
-  letter-spacing: 1.19pt;
-  text-transform: uppercase;
   background-color: #52658f;
-  color: #f7f5e6;
-  transition: 0.3s ease all;
-  cursor: pointer;
 }
 .btn2:hover {
-  background-color: #fff;
-  color: #666b80;
-}
-.btn2:focus {
-  border: 1px solid #333a56;
-  background-color: #333a56;
-  color: #fff;
+  color: #333a56;
 }
 
 h1 {
