@@ -142,6 +142,19 @@
   }
 }
 
+// Offset the main page content by the menu width.
+.main {
+  position: relative;
+  top: 0;
+  left: 0;
+  &.open {
+    height: 100vh;
+    width: 100vw;
+    overflow-y: scroll;
+    left: -275px;
+  }
+}
+
 // The main modal page with a class for toggling its display.
 .menu-banner {
   display: none;
@@ -152,7 +165,6 @@
   z-index: 100;
   width: 100%;
   height: 100%;
-  //overflow: auto;
   background-color: rgba(0, 0, 0, 0.4);
   cursor: pointer;
   &.open {
@@ -168,8 +180,6 @@
   width: 275px;
   height: 100%;
   overflow-y: scroll;
-  // Prevents the user being able to select the text in the gallery.
-  user-select: none;
   background-color: $brand-lightBlue;
   color: $brand-yellow;
   line-height: 1.4;
@@ -177,13 +187,15 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
+    li {
+      padding: 10px 0;
+      &:nth-child(n + 3):hover {
+        border-bottom: 3px solid $brand-orange;
+      }
+    }
   }
   a {
     color: $brand-yellow;
     text-decoration: none;
-    &:hover {
-      text-decoration: underline;
-      text-decoration-color: $brand-orange;
-    }
   }
 }

@@ -238,6 +238,18 @@ label {
   text-align: center;
 }
 
+.main {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.main.open {
+  height: 100vh;
+  width: 100vw;
+  overflow-y: scroll;
+  left: -275px;
+}
+
 .menu-banner {
   display: none;
   justify-content: flex-end;
@@ -261,7 +273,6 @@ label {
   width: 275px;
   height: 100%;
   overflow-y: scroll;
-  user-select: none;
   background-color: #52658f;
   color: #f7f5e6;
   line-height: 1.4;
@@ -271,13 +282,15 @@ label {
   margin: 0;
   padding: 0;
 }
+.menu-wrapper ul li {
+  padding: 10px 0;
+}
+.menu-wrapper ul li:nth-child(n+3):hover {
+  border-bottom: 3px solid #f7882f;
+}
 .menu-wrapper a {
   color: #f7f5e6;
   text-decoration: none;
-}
-.menu-wrapper a:hover {
-  text-decoration: underline;
-  text-decoration-color: #f7882f;
 }
 
 .aboutCategories {
