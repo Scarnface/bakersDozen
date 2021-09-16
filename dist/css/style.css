@@ -139,10 +139,93 @@ label {
   display: flex;
 }
 
+.headerSmall {
+  width: 150px;
+}
+
+.headerBig {
+  display: none;
+}
+
 .logo {
-  width: 40%;
+  margin-top: 15px;
+  width: 80%;
   color: #f7f5e6;
-  font-size: 5rem;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.hamburger-button {
+  float: right;
+  width: 40px;
+  height: 40px;
+  margin: 15px 0;
+  border-radius: 5px;
+  padding: 0;
+  font-size: 0.75rem;
+  color: #52658f;
+  background-color: #f7f5e6;
+  border-color: transparent;
+}
+
+#nav-icon {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out, background-color 0s;
+  cursor: pointer;
+}
+
+#nav-icon span {
+  display: block;
+  position: absolute;
+  height: 2.5px;
+  width: 63%;
+  background: #52658f;
+  border-radius: 9px;
+  opacity: 1;
+  left: 7px;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+}
+
+#nav-icon span:nth-child(1) {
+  top: 12px;
+}
+
+#nav-icon span:nth-child(2),
+#nav-icon span:nth-child(3) {
+  top: 19px;
+}
+
+#nav-icon span:nth-child(4) {
+  top: 26px;
+}
+
+#nav-icon span:nth-child(5) {
+  top: 35px;
+  background-color: #52658f;
+}
+
+#nav-icon.open span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+#nav-icon.open span:nth-child(2) {
+  transform: rotate(45deg);
+}
+
+#nav-icon.open span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+#nav-icon.open span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
 }
 
 .navBar {
@@ -311,6 +394,59 @@ label {
   .heroCircle {
     display: block;
   }
+.main {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.main.open {
+  height: 100vh;
+  width: 100vw;
+  overflow-y: scroll;
+  left: -275px;
+}
+
+.menu-banner {
+  display: none;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+.menu-banner.open {
+  display: flex;
+}
+
+.menu-wrapper {
+  padding: 30px 0 0 15px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 275px;
+  height: 100%;
+  overflow-y: scroll;
+  background-color: #52658f;
+  color: #f7f5e6;
+  line-height: 1.4;
+}
+.menu-wrapper ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.menu-wrapper ul li {
+  padding: 10px 0;
+}
+.menu-wrapper ul li:nth-child(n+3):hover {
+  border-bottom: 3px solid #f7882f;
+}
+.menu-wrapper a {
+  color: #f7f5e6;
+  text-decoration: none;
 }
 
 .aboutCategories {

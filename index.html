@@ -33,26 +33,16 @@
     <link type="text/css" rel="stylesheet" href="dist/css/style.css" />
     <!-- CUSTOM JS -->
     <script type="text/javascript" src="dist/js/plugins/carousel.js" defer></script>
+    <script type="text/javascript" src="dist/js/menu.js" defer></script>
     <!-- FAVICON -->
   </head>
 
   <body>
-    <header class="mainMenu" id="about">
-      <div class="container">
-        <div class="navWrapper">
-          <h1 class="logo">Baker's Dozen</h1>
-          <nav class="navBar">
-            <ul>
-              <li><a href="#about">ABOUT</a></li>
-              <li><a href="#">PRODUCTS</a></li>
-              <li><a href="#">TESTIMONIALS</a></li>
-              <li><a href="#">ORDER</a></li>
-              <li id="phoneIcon"><a href="#"><i class="fa-solid fa-phone-flip"></i></a></li>
-            </ul>
-          </nav>
-         </div>
-      </div>
-    </header>
+    <!-- Non modal content -->
+    <div class="main">
+      <header class="mainMenu" id="about">
+        <div class="container">
+          <div class="navWrapper">
 
     <section class="hero">
       
@@ -71,167 +61,217 @@
           <h3>BREAD BAKED DAILY</h3>
         </div>
 
-        <div class="aboutCategory">
-          <i class="fa-solid fa-cookie-bite"></i>
-          <h3>HANDMADE SWEETS AND PATRIES</h3>
+            <div class="headerSmall">
+              <div id="nav-icon" class="hamburger-button">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+
+            <div class="headerBig">
+              <nav class="navBar">
+                <ul>
+                  <li><a href="#about">ABOUT</a></li>
+                  <li><a href="#">PRODUCTS</a></li>
+                  <li><a href="#">TESTIMONIALS</a></li>
+                  <li><a href="#">ORDER</a></li>
+                  <li id="phoneIcon"><a href="#"><i class="fa-solid fa-phone-flip"></i></a></li>
+                </ul>
+              </nav>
+            </div>
+            
+          </div>
+        </div>
+      </header>
+
+      <section class="about">
+        <div class="aboutCategories container">
+          <div class="aboutCategory">
+            <i class="fa-solid fa-bread-slice"></i>
+            <h3>BREAD BAKED DAILY</h3>
+          </div>
+
+          <div class="aboutCategory">
+            <i class="fa-solid fa-cookie-bite"></i>
+            <h3>HANDMADE SWEETS AND PATRIES</h3>
+          </div>
+
+          <div class="aboutCategory">
+            <i class="fa-solid fa-cake-candles"></i>
+            <h3>SPECIALLY MADE FOR YOUR EVENT</h3>
+          </div>
         </div>
 
-        <div class="aboutCategory">
-          <i class="fa-solid fa-cake-candles"></i>
-          <h3>SPECIALLY MADE FOR YOUR EVENT</h3>
+        <div class="aboutImageFull"></div>
+
+
+        <div class="container">
+          <div class="aboutInnerWrapper">
+            <h3 class="aboutText">Established in 2011, our bread is hand-crafted using the finest local ingredients.</h3>
+            <div class="aboutImage">
+              <img src="dist/assets/img/Optimized-cupcakes-min.jpg" alt="Cupcakes" />
+            </div>
+            <div class="aboutDescription">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate molestie lacus ac molestie. Sed commodo 
+                auctor suscipit. Donec feugiat purus justo, at vehicula mauris eleifend tempus. Duis consequat augue libero. 
+                Sed eu hendrerit est. Donec at nisi nec elit dapibus dapibus. In hac habitasse platea dictumst. Vestibulum ante 
+                ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;</p>
+              <p>Ut volutpat dui vitae mauris tincidunt, ut fermentum nisi lobortis. In volutpat varius feugiat. Morbi ac tortor 
+                lacus. Proin posuere metus urna, eget accumsan sapien congue vel. Praesent enim massa, volutpat at diam ac, 
+                tincidunt vulputate neque. Vivamus quis neque quis diam efficitur tincidunt placerat id nulla. Donec rutrum libero 
+                commodo nisl pellentesque facilisis.</p>
+            </div>
+          </div>
         </div>
+
+      </section>
+
+      <section class="productsCarouselWrapper">
+        <div class="container">
+          <h2>Our Products</h2>
+
+          <div class="productsCarousel carousel">
+            <div class="slide">
+              <div class="product-carousel-img savoury-breads"></div>
+              <p>Savoury Breads</p>
+            </div>
+
+            <div class="slide">
+              <div class="product-carousel-img pastries"></div>
+              <p>Pastries</p>
+            </div>
+
+            <div class="slide">
+              <div class="product-carousel-img cakes"></div>
+              <p>Cakes</p>
+            </div>
+
+            <div class="slide">
+              <div class="product-carousel-img birthday-cakes"></div>
+              <p>Birthday Cakes</p>
+            </div>
+
+            <div class="slide">
+              <div class="product-carousel-img wedding-cakes"></div>
+              <p>Wedding Cakes</p>
+            </div>
+
+            <div class="slide">
+              <div class="product-carousel-img sandwiches"></div>
+              <p>Sandwiches</p>
+            </div>
+          </div>
+          <div class="btnWrapper">
+            <a class="btn2">FIND OUT MORE</a>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="container">
+        <div class="testimonialsCarouselWrapper">
+          <h2>What Our Customers Are Saying</h2>
+
+          <div class="testimonialsCarousel carousel">
+            <div class="slide">
+              <span class="quoteLeft">“</span><span class="quoteRight">”</span></br>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+              <p class="testimonialName">&#8212; Anna Davis</p>
+            </div>
+
+            <div class="slide">
+              <span class="quoteLeft">“</span><span class="quoteRight">”</span></br>
+              <p>
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              <p class="testimonialName">&#8212; Frank Miller</p>
+            </div>
+
+            <div class="slide">
+              <span class="quoteLeft">“</span><span class="quoteRight">”</span></br>
+              <p>
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
+                illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+              </p>
+              <p class="testimonialName">&#8212; Warren Ellis</p>
+            </div>
+
+            <div class="slide">
+              <span class="quoteLeft">“</span><span class="quoteRight">”</span></br>
+              <p>
+                Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat
+                quo voluptas nulla pariatur?
+              </p>
+              <p class="testimonialName">&#8212; Neil Gaiman</p>
+            </div>
+          </div>
+
+          <p class="testimonialText">Proudly baking for your event, and your breakfast</p>
+
+          <a class="btn">Order Now</a>
+        </div>
+      </section>
+
+      <footer>
+        <div class="container">
+        <div class="contact">
+          <h3>Address</h3>
+          <ul>
+            <li>107 Gloucester Street</li>
+            <li>Norwich, Norfolk</li>
+            <li>NR2 2DY</li>
+            <li>&nbsp;</li>
+            <li><a href="tel:01603123987">01603 123 987</a></li>
+            <li><a href="mailto:info@bakersdozen.co.uk">info@bakersdozen.co.uk</a></li>
+          </ul>
+        </div>
+
+        <div class="contact">
+          <h3>Opening Times</h3>
+          <ul>
+            <li>Monday- Friday 8AM - 4PM</li>
+            <li>Saturday 8AM - 3PM</li>
+            <li>Closed Sunday</li>
+          </ul>
+        </div>
+
+        <div class="contact">
+          <h3>Sections</h3>
+          <ul>
+            <li><a href="#"><i class="fa-solid fa-chevron-right"></i> About</a></li>
+            <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Products</a></li>
+            <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Testimonials</a></li>
+            <li><a href="/order.php"><i class="fa-solid fa-chevron-right"></i> Order</a></li>
+            <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <p class="copyright">Copyright &copy; Baker's Dozen. All Rights Reserved 2019</p>
       </div>
+      </footer>
+    </div>
 
-      <div class="aboutImageFull"></div>
-
-
-      <div class="container">
-        <div class="aboutInnerWrapper">
-          <h3 class="aboutText">Established in 2011, our bread is hand-crafted using the finest local ingredients.</h3>
-          <div class="aboutImage">
-            <img src="dist/assets/img/Optimized-cupcakes-min.jpg" alt="Cupcakes" />
-          </div>
-          <div class="aboutDescription">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate molestie lacus ac molestie. Sed commodo 
-              auctor suscipit. Donec feugiat purus justo, at vehicula mauris eleifend tempus. Duis consequat augue libero. 
-              Sed eu hendrerit est. Donec at nisi nec elit dapibus dapibus. In hac habitasse platea dictumst. Vestibulum ante 
-              ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;</p>
-            <p>Ut volutpat dui vitae mauris tincidunt, ut fermentum nisi lobortis. In volutpat varius feugiat. Morbi ac tortor 
-              lacus. Proin posuere metus urna, eget accumsan sapien congue vel. Praesent enim massa, volutpat at diam ac, 
-              tincidunt vulputate neque. Vivamus quis neque quis diam efficitur tincidunt placerat id nulla. Donec rutrum libero 
-              commodo nisl pellentesque facilisis.</p>
-          </div>
-        </div>
-      </div>
-
-    </section>
-
-    <section class="productsCarouselWrapper">
-      <div class="container">
-        <h2>Our Products</h2>
-
-        <div class="productsCarousel carousel">
-          <div class="slide">
-            <div class="product-carousel-img savoury-breads"></div>
-            <p>Savoury Breads</p>
-          </div>
-
-          <div class="slide">
-            <div class="product-carousel-img pastries"></div>
-            <p>Pastries</p>
-          </div>
-
-          <div class="slide">
-            <div class="product-carousel-img cakes"></div>
-            <p>Cakes</p>
-          </div>
-
-          <div class="slide">
-            <div class="product-carousel-img birthday-cakes"></div>
-            <p>Birthday Cakes</p>
-          </div>
-
-          <div class="slide">
-            <div class="product-carousel-img wedding-cakes"></div>
-            <p>Wedding Cakes</p>
-          </div>
-
-          <div class="slide">
-            <div class="product-carousel-img sandwiches"></div>
-            <p>Sandwiches</p>
-          </div>
-        </div>
-        <div class="btnWrapper">
-          <a class="btn2">FIND OUT MORE</a>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="container">
-      <div class="testimonialsCarouselWrapper">
-        <h2>What Our Customers Are Saying</h2>
-
-        <div class="testimonialsCarousel carousel">
-          <div class="slide">
-            <span class="quoteLeft">“</span><span class="quoteRight">”</span></br>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-              minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </p>
-            <p class="testimonialName">&#8212; Anna Davis</p>
-          </div>
-
-          <div class="slide">
-            <span class="quoteLeft">“</span><span class="quoteRight">”</span></br>
-            <p>
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-              non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-            <p class="testimonialName">&#8212; Frank Miller</p>
-          </div>
-
-          <div class="slide">
-            <span class="quoteLeft">“</span><span class="quoteRight">”</span></br>
-            <p>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
-              illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-            </p>
-            <p class="testimonialName">&#8212; Warren Ellis</p>
-          </div>
-
-          <div class="slide">
-            <span class="quoteLeft">“</span><span class="quoteRight">”</span></br>
-            <p>
-              Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat
-              quo voluptas nulla pariatur?
-            </p>
-            <p class="testimonialName">&#8212; Neil Gaiman</p>
-          </div>
-        </div>
-
-        <p class="testimonialText">Proudly baking for your event, and your breakfast</p>
-
-        <a class="btn">Order Now</a>
-      </div>
-    </section>
-
-    <footer>
-      <div class="container">
-      <div class="contact">
-        <h3>Address</h3>
+    <!-- ================================= 
+      MODAL MENU
+    ================================== -->
+    <section class="menu-banner">
+      <nav class="menu-wrapper">
         <ul>
-          <li>107 Gloucester Street</li>
-          <li>Norwich, Norfolk</li>
-          <li>NR2 2DY</li>
+          <li><h3>MENU</h3></li>
           <li>&nbsp;</li>
-          <li><a href="tel:01603123987">01603 123 987</a></li>
-          <li><a href="mailto:info@bakersdozen.co.uk">info@bakersdozen.co.uk</a></li>
-        </ul>
-      </div>
-
-      <div class="contact">
-        <h3>Opening Times</h3>
-        <ul>
-          <li>Monday- Friday 8AM - 4PM</li>
-          <li>Saturday 8AM - 3PM</li>
-          <li>Closed Sunday</li>
-        </ul>
-      </div>
-
-      <div class="contact">
-        <h3>Sections</h3>
-        <ul>
           <li><a href="#"><i class="fa-solid fa-chevron-right"></i> About</a></li>
           <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Products</a></li>
           <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Testimonials</a></li>
           <li><a href="/order.php"><i class="fa-solid fa-chevron-right"></i> Order</a></li>
           <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Privacy Policy</a></li>
         </ul>
-      </div>
-
-      <p class="copyright">Copyright &copy; Baker's Dozen. All Rights Reserved 2019</p>
-    </div>
-    </footer>
+      </nav>
+    </section>
   </body>
 </html>
