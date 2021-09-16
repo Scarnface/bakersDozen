@@ -42,8 +42,8 @@
     <div class="main">
       <header class="mainMenu" id="about">
         <div class="container">
+          <!-- Main Nav -->
           <div class="navWrapper">
-
             <div class="headerSmall">
               <h1 class="logo">Baker's Dozen</h1>
               <div id="nav-icon" class="hamburger-button">
@@ -71,51 +71,69 @@
         </div>
       </header>
 
-      <section class="about">
-        <div class="aboutCategories container">
-          <div class="aboutCategory">
-            <i class="fa-solid fa-bread-slice"></i>
-            <h3>BREAD BAKED DAILY</h3>
-          </div>
 
-          <div class="aboutCategory">
-            <i class="fa-solid fa-cookie-bite"></i>
-            <h3>HANDMADE SWEETS AND PATRIES</h3>
-          </div>
 
-          <div class="aboutCategory">
-            <i class="fa-solid fa-cake-candles"></i>
-            <h3>SPECIALLY MADE FOR YOUR EVENT</h3>
-          </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="heroText container">
+          <h1>Everyday Fresh</h1>
+          <h2>The Finest Breads and Pastries in the Heart of Norwich</h2>
+          <a href="/order.php" class="btn">Order Now</a>
+        </div>
+        <div class="heroCircle"></div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+      <div class="container">
+      <div class="aboutCategories container">
+        <div class="aboutCategory">
+          <i class="fa-solid fa-bread-slice"></i>
+          <h3>Bread Baked Daily</h3>
         </div>
 
-        <div class="aboutImageFull"></div>
+        <div class="aboutCategory">
+          <i class="fa-solid fa-cookie-bite"></i>
+          <h3>Handmade Sweets and Pastries</h3>
+        </div>
 
+        <div class="aboutCategory">
+          <i class="fa-solid fa-cake-candles"></i>
+          <h3>Specially Made for Your Event</h3>
+        </div>
+      </div>
+    </div>
 
-        <div class="container">
-          <div class="aboutInnerWrapper">
+      <!-- Full-width about image for mobile -->
+      <div class="aboutImageFull"></div>
+
+      <!-- About image for desktop with about text -->
+      <div class="container">
+        <div class="aboutInnerWrapper">
+          <div class="aboutText">
             <h3 class="aboutText">Established in 2011, our bread is hand-crafted using the finest local ingredients.</h3>
-            <div class="aboutImage">
-              <img src="dist/assets/img/Optimized-cupcakes-min.jpg" alt="Cupcakes" />
-            </div>
-            <div class="aboutDescription">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate molestie lacus ac molestie. Sed commodo 
-                auctor suscipit. Donec feugiat purus justo, at vehicula mauris eleifend tempus. Duis consequat augue libero. 
-                Sed eu hendrerit est. Donec at nisi nec elit dapibus dapibus. In hac habitasse platea dictumst. Vestibulum ante 
-                ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;</p>
-              <p>Ut volutpat dui vitae mauris tincidunt, ut fermentum nisi lobortis. In volutpat varius feugiat. Morbi ac tortor 
-                lacus. Proin posuere metus urna, eget accumsan sapien congue vel. Praesent enim massa, volutpat at diam ac, 
-                tincidunt vulputate neque. Vivamus quis neque quis diam efficitur tincidunt placerat id nulla. Donec rutrum libero 
-                commodo nisl pellentesque facilisis.</p>
-            </div>
+          </div>
+          <div class="aboutImageCircle">
+            <img src="dist/assets/img/Optimized-cupcakes-min.jpg" alt="Cupcakes" />
+          </div>
+          <div class="aboutBlueCircle"></div>
+          <div class="aboutYellowCircle"></div>
+          <div class="aboutDescription">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut lobre et dole magna
+              aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
+              sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+              aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
+              sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing.</p>
           </div>
         </div>
 
       </section>
 
-      <section class="productsCarouselWrapper">
-        <div class="container">
-          <h2>Our Products</h2>
+    <!-- Product Carousel -->
+    <section class="productsCarouselWrapper">
+      <div class="container">
+        <h2>Our Products</h2>
 
           <div class="productsCarousel carousel">
             <div class="slide">
@@ -148,26 +166,25 @@
               <p>Sandwiches</p>
             </div>
           </div>
-          <div class="btnWrapper">
-            <a class="btn2">FIND OUT MORE</a>
-          </div>
-
         </div>
-      </section>
+        <div class="btnWrapper">
+          <a class="btn2" href="/products.php">Find Out More</a>
+        </div>
+    </section>
+    <!-- Testimonial Carousel -->
+    <section class="container">
+      <div class="testimonialsCarouselWrapper">
+        <h2>What Our Customers Are Saying</h2>
 
-      <section class="container">
-        <div class="testimonialsCarouselWrapper">
-          <h2>What Our Customers Are Saying</h2>
-
-          <div class="testimonialsCarousel carousel">
-            <div class="slide">
-              <span class="quoteLeft">“</span><span class="quoteRight">”</span></br>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              </p>
-              <p class="testimonialName">&#8212; Anna Davis</p>
-            </div>
+        <div class="testimonialsCarousel carousel">
+          <div class="slide">
+            <span class="quoteLeft">“</span><span class="quoteRight">”</span></br>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+              minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <p class="testimonialName">&#8212; Anna Davis</p>
+          </div>
 
             <div class="slide">
               <span class="quoteLeft">“</span><span class="quoteRight">”</span></br>
@@ -203,43 +220,44 @@
         </div>
       </section>
 
-      <footer>
-        <div class="container">
-        <div class="contact">
-          <h3>Address</h3>
-          <ul>
-            <li>107 Gloucester Street</li>
-            <li>Norwich, Norfolk</li>
-            <li>NR2 2DY</li>
-            <li>&nbsp;</li>
-            <li><a href="tel:01603123987">01603 123 987</a></li>
-            <li><a href="mailto:info@bakersdozen.co.uk">info@bakersdozen.co.uk</a></li>
-          </ul>
-        </div>
-
-        <div class="contact">
-          <h3>Opening Times</h3>
-          <ul>
-            <li>Monday- Friday 8AM - 4PM</li>
-            <li>Saturday 8AM - 3PM</li>
-            <li>Closed Sunday</li>
-          </ul>
-        </div>
-
-        <div class="contact">
-          <h3>Sections</h3>
-          <ul>
-            <li><a href="#"><i class="fa-solid fa-chevron-right"></i> About</a></li>
-            <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Products</a></li>
-            <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Testimonials</a></li>
-            <li><a href="/order.php"><i class="fa-solid fa-chevron-right"></i> Order</a></li>
-            <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Privacy Policy</a></li>
-          </ul>
-        </div>
-
-        <p class="copyright">Copyright &copy; Baker's Dozen. All Rights Reserved 2019</p>
+      <!-- Footer -->
+    <footer>
+      <div class="footer-flex container">
+      <div class="contact">
+        <h3>Address</h3>
+        <ul>
+          <li>107 Gloucester Street</li>
+          <li>Norwich, Norfolk</li>
+          <li>NR2 2DY</li>
+          <li>&nbsp;</li>
+          <li><a href="tel:01603123987">01603 123 987</a></li>
+          <li><a href="mailto:info@bakersdozen.co.uk">info@bakersdozen.co.uk</a></li>
+        </ul>
       </div>
-      </footer>
+
+      <div class="contact">
+        <h3>Opening Times</h3>
+        <ul>
+          <li>Monday- Friday 8AM - 4PM</li>
+          <li>Saturday 8AM - 3PM</li>
+          <li>Closed Sunday</li>
+        </ul>
+      </div>
+
+      <div class="contact">
+        <h3>Sections</h3>
+        <ul>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> About</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Products</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Testimonials</a></li>
+          <li><a href="/order.php"><i class="fa-solid fa-chevron-right"></i> Order</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <p class="copyright">Copyright &copy; Baker's Dozen. All Rights Reserved 2019</p>
+    </div>
+    </footer>
     </div>
 
     <!-- ================================= 

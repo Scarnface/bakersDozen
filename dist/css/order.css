@@ -7,6 +7,10 @@
   -webkit-font-smoothing: antialiased;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 /* Change the autofill to any color */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
@@ -21,8 +25,28 @@ input:-webkit-autofill:active {
   margin-left: auto;
   margin-right: auto;
 }
+@media (min-width: 768px) {
+  .container {
+    width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 920px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1050px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    width: 1100px;
+  }
+}
 
-.btn {
+.btn, .btn2 {
   border-radius: 999em;
   border: 1px solid #f7882f;
   padding: 18px 50px 15px 50px;
@@ -38,47 +62,36 @@ input:-webkit-autofill:active {
   color: #f7f5e6;
   transition: 0.3s ease all;
   cursor: pointer;
+  text-decoration: none;
 }
-.btn:hover {
-  background-color: #fff;
+.btn:hover, .btn2:hover {
+  background-color: transparent;
   color: #666b80;
 }
-.btn:focus {
+.btn:focus, .btn2:focus {
   border: 1px solid #333a56;
   background-color: #333a56;
-  color: #fff;
+  color: #f7f5e6;
 }
 
 .btn2 {
-  border-radius: 999em;
   border: 1px solid #52658f;
-  padding: 18px 50px 15px 50px;
-  width: 280px;
-  text-align: center;
-  font-family: "Khula";
-  font-weight: 700;
-  font-size: 1.25rem;
-  line-height: 1.3rem;
-  letter-spacing: 1.19pt;
-  text-transform: uppercase;
   background-color: #52658f;
-  color: #f7f5e6;
-  transition: 0.3s ease all;
-  cursor: pointer;
 }
 .btn2:hover {
-  background-color: #fff;
-  color: #666b80;
-}
-.btn2:focus {
-  border: 1px solid #333a56;
-  background-color: #333a56;
-  color: #fff;
+  color: #333a56;
 }
 
 h1 {
   font-family: "Yellowtail", cursive;
   color: #333a56;
+  font-weight: 400;
+}
+
+h2 {
+  font-family: "Khula", sans-serif;
+  color: #fff;
+  letter-spacing: 0.05rem;
 }
 
 p {
