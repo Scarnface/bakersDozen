@@ -238,6 +238,48 @@ label {
   text-align: center;
 }
 
+.menu-banner {
+  display: none;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+.menu-banner.open {
+  display: flex;
+}
+
+.menu-wrapper {
+  padding: 30px 0 0 15px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 275px;
+  height: 100%;
+  overflow-y: scroll;
+  user-select: none;
+  background-color: #52658f;
+  color: #f7f5e6;
+  line-height: 1.4;
+}
+.menu-wrapper ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.menu-wrapper a {
+  color: #f7f5e6;
+  text-decoration: none;
+}
+.menu-wrapper a:hover {
+  text-decoration: underline;
+  text-decoration-color: #f7882f;
+}
+
 .aboutCategories {
   display: flex;
   flex-wrap: wrap;
