@@ -1,0 +1,104 @@
+.hero {
+    width: 100%;
+    height: 75vh;
+    background: linear-gradient(0deg, $brand-darkBlue 0%, #ffffff44 100%), url("../assets/img/Optimized-hero-bread.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    position: relative;
+    @include media-md {
+        height: 350px;
+        background-position: 50% 42%;
+    }
+    @include media-lg {
+        height: 400px;
+        background: url("../assets/img/Optimized-hero-bread.jpg");
+        background-position: 44vw 0%;
+        background-size: 65%;
+        background-repeat: repeat-x;
+    }
+    @include media-xl {
+        background-position: 44vw 15%;
+    }
+    @include media-xxl {
+        background-size: 50%;
+        background-position: 55vw 25%;
+    }
+}
+
+.heroText {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    // padding-top: 5%;
+    // padding-bottom: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 10;
+    h1 {
+        color: $white;
+        font-size: 3.5rem;
+        margin-top: -.5rem;
+        @include media-sm {
+            font-size: 4.5rem;
+            margin-top: -.85rem;
+        }
+        @include media-lg {
+            font-size: 6rem;
+            color: $brand-darkBlue;
+            margin-top: -1.5rem;
+        }
+    }
+    h2 {
+        text-transform: uppercase;
+        font-size: 1.25rem;
+        @include media-lg {
+            color: $brand-darkBlue;
+            font-size: 1.5rem;
+            line-height: 1.75rem;
+            letter-spacing: 0.12rem;
+            width: 65%;
+            margin-top: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        @include media-xl {
+            margin-top: 2rem;
+            margin-bottom: 2.5rem;;
+        }
+    }
+    .btn:hover {
+        color: $white;
+        @include media-lg {
+            color: $brand-darkBlue;
+        }
+    }
+    @include media-xs {
+        width: 90%;
+        
+    }
+    @include media-lg {
+        text-align: left;
+        align-items: flex-start;
+        justify-content: center;
+    }
+}
+
+.heroCircle {
+    display: none;
+    background: url("../assets/img/circle.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 100%;
+    width: 100%;
+    background-position: 0% 50%;
+    position: absolute;
+    top: 0;
+    left: -30%;
+    @include media-lg {
+        display: block;
+    }
+}
