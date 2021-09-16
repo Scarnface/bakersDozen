@@ -11,6 +11,10 @@
     -webkit-font-smoothing: antialiased;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 /* Change the autofill to any color */
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
@@ -25,6 +29,18 @@ input:-webkit-autofill:active
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+    @include media-md {
+      width: 720px;
+    }
+    @include media-lg {
+      width: 920px;
+    }
+    @include media-xl {
+      width: 1100px;
+    }
+    @include media-xxl {
+      width: 1300px;
+    }
   }
   
 .btn {
@@ -43,8 +59,9 @@ input:-webkit-autofill:active
   color: $brand-yellow;
   transition: .3s ease all;
   cursor: pointer;
+  text-decoration: none;
   &:hover {
-      background-color: $white;
+      background-color: transparent;
       color: tint($brand-darkBlue, 25%);
   }
   &:focus {
@@ -57,6 +74,13 @@ input:-webkit-autofill:active
 h1 {
   font-family: 'Yellowtail', cursive;
   color: $brand-darkBlue;
+  font-weight: 400;
+}
+
+h2 {
+  font-family: 'Khula', sans-serif;
+  color: $white;
+  letter-spacing: 0.05rem;
 }
 
 p {
