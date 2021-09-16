@@ -68,7 +68,6 @@ label {
 /* ================================= 
   Variables
 ==================================== */
-.aboutCategories {
 .mainMenu {
   width: 100%;
   color: #f7f5e6;
@@ -128,7 +127,7 @@ label {
   text-align: center;
 }
 
-.about {
+.aboutCategories {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
