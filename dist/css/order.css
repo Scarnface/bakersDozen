@@ -48,6 +48,33 @@ input:-webkit-autofill:active {
   color: #fff;
 }
 
+.btn2 {
+  border-radius: 999em;
+  border: 1px solid #52658f;
+  padding: 18px 50px 15px 50px;
+  width: 280px;
+  text-align: center;
+  font-family: "Khula";
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.3rem;
+  letter-spacing: 1.19pt;
+  text-transform: uppercase;
+  background-color: #52658f;
+  color: #f7f5e6;
+  transition: 0.3s ease all;
+  cursor: pointer;
+}
+.btn2:hover {
+  background-color: #fff;
+  color: #666b80;
+}
+.btn2:focus {
+  border: 1px solid #333a56;
+  background-color: #333a56;
+  color: #fff;
+}
+
 h1 {
   font-family: "Yellowtail", cursive;
   color: #333a56;
