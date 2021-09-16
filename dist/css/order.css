@@ -1,6 +1,350 @@
 /* ================================= 
   Variables
 ==================================== */
+.mainMenu {
+  width: 100%;
+  color: #f7f5e6;
+  background-color: #52658f;
+}
+
+.navWrapper {
+  width: 100%;
+  display: flex;
+}
+
+.logo {
+  width: 40%;
+  color: #f7f5e6;
+  font-size: 5rem;
+}
+
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  width: 60%;
+}
+.navBar a {
+  color: #f7f5e6;
+  text-decoration: none;
+}
+.navBar a:current {
+  border-bottom: 3px solid #f7882f;
+}
+.navBar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.navBar ul li {
+  padding-left: 20px;
+  padding-right: 20px;
+  display: inline;
+  font-family: "Khula";
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1.14px;
+  line-height: 20px;
+}
+
+#phoneIcon a {
+  width: 75px;
+  height: 75px;
+}
+#phoneIcon a i {
+  border-radius: 50%;
+  padding: 20px;
+  color: #f7882f;
+  background-color: #333a56;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 50px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.aboutCategory {
+  padding-bottom: 50px;
+  width: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: #52658f;
+}
+.aboutCategory i {
+  padding-bottom: 15px;
+  font-size: 3rem;
+}
+.aboutCategory h3 {
+  font-family: "Khula";
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1.02px;
+  line-height: 20px;
+  text-align: center;
+}
+.aboutCategory:nth-of-type(2) {
+  border-bottom: 3px solid #52658f;
+}
+
+.aboutText {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width: 100%;
+  font-family: "Khula";
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1.02px;
+  line-height: 20px;
+  text-align: center;
+  color: #52658f;
+}
+
+.aboutInnerWrapper {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 75px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.aboutImage {
+  width: 50%;
+}
+.aboutImage img {
+  border: 4px solid #fff;
+  border-radius: 50%;
+  object-fit: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.aboutDescription {
+  padding-top: 50px;
+  width: 50%;
+  font-family: "Khula";
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1.02px;
+  line-height: 16px;
+  color: #333a56;
+}
+.aboutDescription p {
+  margin-bottom: 15px;
+}
+
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+.productsCarouselWrapper,
+.testimonialsCarouselWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  height: fit-content;
+}
+.productsCarouselWrapper h2,
+.testimonialsCarouselWrapper h2 {
+  width: 100%;
+  font-family: "Khula";
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1.02px;
+  line-height: 20px;
+  text-align: center;
+  color: #52658f;
+}
+.productsCarouselWrapper .button,
+.testimonialsCarouselWrapper .button {
+  border-radius: 25px;
+  padding: 15px 50px;
+  width: 280px;
+  text-align: center;
+  font-family: "Khula";
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 20px;
+  color: #f7f5e6;
+  background-color: #52658f;
+  cursor: pointer;
+}
+
+.productsCarouselWrapper {
+  background-color: #f7f5e6;
+}
+.productsCarouselWrapper .button {
+  margin-bottom: 30px;
+  color: #f7f5e6;
+  background-color: #52658f;
+}
+.productsCarouselWrapper h2 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.testimonialsCarouselWrapper .button {
+  margin-bottom: 75px;
+  color: #f7f5e6;
+  background-color: #f7882f;
+}
+.testimonialsCarouselWrapper h2 {
+  padding-top: 75px;
+  padding-bottom: 30px;
+}
+.testimonialsCarouselWrapper .testimonialText {
+  padding-top: 50px;
+  padding-bottom: 30px;
+  width: 100%;
+  font-family: "Khula";
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1.14px;
+  line-height: 20px;
+  text-align: center;
+  color: #52658f;
+}
+.testimonialsCarouselWrapper .quoteLeft {
+  font-family: "Yellowtail";
+  font-size: 3rem;
+  float: left;
+  padding-left: 5%;
+}
+.testimonialsCarouselWrapper .quoteRight {
+  font-family: "Yellowtail";
+  font-size: 3rem;
+  float: right;
+  padding-right: 5%;
+}
+
+.productsCarousel {
+  width: 80%;
+}
+.productsCarousel .slide {
+  width: 200px;
+  text-align: center;
+}
+.productsCarousel .slide img {
+  margin: 0 auto;
+  border: 4px solid #52658f;
+  border-radius: 50%;
+  object-fit: cover;
+  width: 300px;
+  height: 300px;
+}
+.productsCarousel .slide p {
+  margin: 0 auto;
+  padding-top: 15px;
+  padding-bottom: 30px;
+  width: 200px;
+  font-family: "Khula";
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 20px;
+  color: #333a56;
+}
+
+.testimonialsCarousel {
+  width: 80%;
+}
+.testimonialsCarousel .slide p {
+  margin: 0 auto;
+  padding-top: 10px;
+  width: 80%;
+  font-family: "Khula";
+  font-weight: 400;
+  letter-spacing: 2px;
+  line-height: 1.2;
+  text-align: center;
+  color: #333a56;
+}
+.testimonialsCarousel .slide .testimonialName {
+  padding-top: 30px;
+  padding-bottom: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-align: right;
+  color: #52658f;
+}
+
+.slick-arrow {
+  color: #52658f;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.slick-dots li:not(:nth-of-type(4)) {
+  padding-right: 50px;
+}
+.slick-dots li button:before {
+  font-size: 2rem;
+  color: #52658f;
+}
+.slick-dots li.slick-active button:before {
+  color: #52658f;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  color: #f7f5e6;
+  background-color: #52658f;
+}
+
+.contact h3 {
+  padding: 30px 0 20px;
+  font-family: "Khula";
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1.14px;
+  line-height: 20px;
+}
+.contact a {
+  color: #f7f5e6;
+  text-decoration: none;
+}
+.contact a:hover {
+  text-decoration: underline;
+}
+.contact ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.contact ul li {
+  font-family: "Khula";
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 1.14px;
+  line-height: 20px;
+}
+
+.copyright {
+  width: 100%;
+  padding: 30px 0;
+  color: #f7f5e6;
+  text-align: center;
+  font-family: "Khula";
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+/* ================================= 
+  Base Element Styles
+==================================== */
 * {
   box-sizing: border-box;
   margin: 0;
