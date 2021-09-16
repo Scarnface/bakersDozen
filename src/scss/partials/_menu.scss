@@ -1,28 +1,102 @@
 .mainMenu {
+  display: flex;
+  align-items: center;
   width: 100%;
   color: $brand-yellow;
   background-color: $brand-lightBlue;
+  @include media-md {
+    height: 75px;
+  }
 }
 
 .navWrapper {
   width: 100%;
-  display: flex;
 }
 
 .headerSmall {
-  width: 150px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  @include media-md {
+    display: none;
+  }
 }
 
 .headerBig {
   display: none;
+  @include media-md {
+    display: inline;
+    width: 100%;
+  }
 }
 
 .logo {
-  margin-top: 15px;
-  width: 80%;
+  margin: 15px 0;
   color: $brand-yellow;
   font-size: 2rem;
   font-weight: 400;
+  @include media-md {
+    margin: 0px;
+    font-size: 2rem;
+  }
+  @include media-lg {
+    font-size: 3rem;
+  }
+}
+
+.navBar {
+  width: 100%;
+  a {
+    color: $brand-yellow;
+    text-decoration: none;
+    &:current {
+      border-bottom: 3px solid $brand-orange;
+    }
+  }
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    li {
+      display: inline;
+      font-family: "Khula";
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: 1.14px;
+      line-height: 16px;
+      @include media-xl {
+        font-size: 20px;
+        line-height: 20px;
+      }
+    }
+  }
+}
+
+#phoneIcon {
+  a {
+    width: 20px;
+    height: 20px;
+    i {
+      border-radius: 50%;
+      padding: 10px;
+      color: $brand-orange;
+      background-color: $brand-darkBlue;
+      font-size: 1rem;
+      text-align: center;
+      @include media-lg {
+        padding: 15px;
+        font-size: 1.25rem;
+      }
+      @include media-xl {
+        padding: 17.5px;
+        font-size: 1.5rem;
+      }
+    }
+  }
 }
 
 .hamburger-button {
@@ -96,50 +170,6 @@
   top: 18px;
   width: 0%;
   left: 50%;
-}
-
-.navBar {
-  display: flex;
-  align-items: center;
-  justify-content: right;
-  width: 60%;
-  a {
-    color: $brand-yellow;
-    text-decoration: none;
-    &:current {
-      border-bottom: 3px solid $brand-orange;
-    }
-  }
-  ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    li {
-      padding-left: 20px;
-      padding-right: 20px;
-      display: inline;
-      font-family: "Khula";
-      font-size: 20px;
-      font-weight: 700;
-      letter-spacing: 1.14px;
-      line-height: 20px;
-    }
-  }
-}
-
-#phoneIcon {
-  a {
-    width: 75px;
-    height: 75px;
-    i {
-      border-radius: 50%;
-      padding: 20px;
-      color: $brand-orange;
-      background-color: $brand-darkBlue;
-      font-size: 2rem;
-      text-align: center;
-    }
-  }
 }
 
 // Offset the main page content by the menu width.
