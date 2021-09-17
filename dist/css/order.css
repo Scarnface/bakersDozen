@@ -46,6 +46,11 @@ input:-webkit-autofill:active {
   }
 }
 
+a {
+  text-decoration: none;
+  color: initial;
+}
+
 .btn, .btn2 {
   border-radius: 999em;
   border: 1px solid #f7882f;
@@ -80,11 +85,6 @@ input:-webkit-autofill:active {
 }
 .btn2:hover {
   color: #333a56;
-}
-
-a {
-  text-decoration: none;
-  color: initial;
 }
 
 h1 {
