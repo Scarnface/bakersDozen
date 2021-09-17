@@ -96,6 +96,7 @@ $uri = $_SERVER['REQUEST_URI'];
         <meta name="keywords" content="Baker, Handmade, Breads, Pastries, Norwich" />
         <meta name="description" content="The finest breads and pastries in the heart of Norwich." />
         <meta name="author" content="Adam Pearson & Marc Clare" />
+
         <!-- ================================= 
         SITE RESOURCES
         ================================== -->
@@ -104,6 +105,10 @@ $uri = $_SERVER['REQUEST_URI'];
         <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js" defer></script>
         <!-- FONTAWESOME -->
         <link type="text/css" rel="stylesheet" href="dist/assets/fa/css/all.css" />
+        <!-- FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E" />
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Khula:wght@300;400;700&family=Yellowtail&display=swap" rel="stylesheet" />
         <!-- SLICK -->
         <link type="text/css" rel="stylesheet" href="dist/js/plugins/slick/slick.css" />
         <link type="text/css" rel="stylesheet" href="dist/js/plugins/slick/slick-theme.css" />
@@ -111,13 +116,9 @@ $uri = $_SERVER['REQUEST_URI'];
         <!-- CUSTOM CSS -->
         <link type="text/css" rel="stylesheet" href="dist/css/style.css" />
         <!-- CUSTOM JS -->
+        <script type="text/javascript" src="dist/js/plugins/carousel.js" defer></script>
         <script type="text/javascript" src="dist/js/menu.js" defer></script>
         <!-- FAVICON -->
-
-        <!-- FONTS -->
-        <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
-        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Khula:wght@300;400;700&family=Yellowtail&display=swap" rel="stylesheet">
 
     <?php } elseif ($uri == "/products.php") {?>
 
