@@ -42,6 +42,11 @@ if (isset($_POST['submit'])) {
         <a href="tel:01603123987">01603 123 987</a>, email us at <a href="mailto:info@bakersdozen.co.uk">info@bakersdozen.co.uk</a>, or use the contact form
         below. We aim to respond to inquiries within 24 hours.
       </p>
+      <div class="contactCircle">
+          <div class="contactImageCircle"></div>
+          <div class="aboutBlueCircle"></div>
+          <div class="aboutYellowCircle"></div>
+      </div>
       
       <?php
       if (isset($_POST['submit'])) {

@@ -6,6 +6,17 @@
 
 <!-- Body content goes here -->
 
+<div class="container">
+    <div class="testimonialsHero">
+        <div class="testimonialsLeftBox">
+
+        </div>
+        <div class="testimonialsRightBox">
+            
+        </div>
+    </div>
+</div>
+
 <!-- End body content -->
 
 <?php include "./dist/inc/footer.php" ?>
