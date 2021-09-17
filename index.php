@@ -1,76 +1,8 @@
-<!DOCTYPE html>
+<?php include "./dist/inc/head.php" ?>
 
-<html lang="en-GB">
-  <head>
-    <!-- ================================= 
-      SITE DATA
-    ================================== -->
-    <title>Baker's Dozen</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- SEO Data -->
-    <meta name="keywords" content="Baker, Handmade, Breads, Pastries, Norwich" />
-    <meta name="description" content="The finest breads and pastries in the heart of Norwich." />
-    <meta name="author" content="Adam Pearson & Marc Clare" />
+<?php include "./dist/inc/header.php" ?>
 
-    <!-- ================================= 
-      SITE RESOURCES
-    ================================== -->
-    <!-- JQUERY -->
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js" defer></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js" defer></script>
-    <!-- FONTAWESOME -->
-    <link type="text/css" rel="stylesheet" href="dist/assets/fa/css/all.css" />
-    <!-- FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Khula:wght@300;400;700&family=Yellowtail&display=swap" rel="stylesheet">
-    <!-- SLICK -->
-    <link type="text/css" rel="stylesheet" href="dist/js/plugins/slick/slick.css" />
-    <link type="text/css" rel="stylesheet" href="dist/js/plugins/slick/slick-theme.css" />
-    <script type="text/javascript" src="dist/js/plugins/slick/slick.js" defer></script>
-    <!-- CUSTOM CSS -->
-    <link type="text/css" rel="stylesheet" href="dist/css/style.css" />
-    <!-- CUSTOM JS -->
-    <script type="text/javascript" src="dist/js/plugins/carousel.js" defer></script>
-    <script type="text/javascript" src="dist/js/menu.js" defer></script>
-    <!-- FAVICON -->
-  </head>
-
-  <body>
-    <!-- Non modal content -->
-    <div class="main">
-      <header class="mainMenu" id="about">
-        <div class="container">
-          <!-- Main Nav -->
-          <div class="navWrapper">
-            <div class="headerSmall">
-              <span class="logo"><a href="/">Baker's Dozen</a></span>
-              <div id="nav-icon" class="hamburger-button">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-            </div>
-
-            <div class="headerBig">
-              <nav class="navBar">
-                <ul>
-                  <li><span class="logo"><a href="/">Baker's Dozen</a></span></li>
-                  <li><a href="#about">ABOUT</a></li>
-                  <li><a href="/products.php">PRODUCTS</a></li>
-                  <li><a href="/testimonials.php">TESTIMONIALS</a></li>
-                  <li><a href="/order.php">ORDER</a></li>
-                  <li id="phoneIcon"><a href="#"><i class="fa-solid fa-phone-flip"></i></a></li>
-                </ul>
-              </nav>
-            </div>
-            
-          </div>
-        </div>
-      </header>
-
+<?php include "./dist/inc/menu.php" ?>
 
 
     <!-- Hero Section -->
@@ -84,7 +16,7 @@
     </section>
 
     <!-- About Section -->
-    <section class="about">
+    <section class="about" id="about-us">
       <div class="container">
       <div class="aboutCategories container">
         <div class="aboutCategory">
@@ -220,61 +152,4 @@
         </div>
       </section>
 
-      <!-- Footer -->
-    <footer>
-      <div class="footer-flex container">
-      <div class="contact">
-        <h3>Address</h3>
-        <ul>
-          <li>107 Gloucester Street</li>
-          <li>Norwich, Norfolk</li>
-          <li>NR2 2DY</li>
-          <li>&nbsp;</li>
-          <li><a href="tel:01603123987">01603 123 987</a></li>
-          <li><a href="mailto:info@bakersdozen.co.uk">info@bakersdozen.co.uk</a></li>
-        </ul>
-      </div>
-
-      <div class="contact">
-        <h3>Opening Times</h3>
-        <ul>
-          <li>Monday- Friday 8AM - 4PM</li>
-          <li>Saturday 8AM - 3PM</li>
-          <li>Closed Sunday</li>
-        </ul>
-      </div>
-
-      <div class="contact">
-        <h3>Sections</h3>
-        <ul>
-          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> About</a></li>
-          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Products</a></li>
-          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Testimonials</a></li>
-          <li><a href="/order.php"><i class="fa-solid fa-chevron-right"></i> Order</a></li>
-          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Privacy Policy</a></li>
-        </ul>
-      </div>
-
-      <p class="copyright">Copyright &copy; Baker's Dozen. All Rights Reserved 2019</p>
-    </div>
-    </footer>
-    </div>
-
-    <!-- ================================= 
-      MODAL MENU
-    ================================== -->
-    <section class="menu-banner">
-      <nav class="menu-wrapper">
-        <ul>
-          <li><h3>MENU</h3></li>
-          <li>&nbsp;</li>
-          <li><a href="#about"><i class="fa-solid fa-chevron-right"></i> About</a></li>
-          <li><a href="/products.php"><i class="fa-solid fa-chevron-right"></i> Products</a></li>
-          <li><a href="/testimonials.php"><i class="fa-solid fa-chevron-right"></i> Testimonials</a></li>
-          <li><a href="/order.php"><i class="fa-solid fa-chevron-right"></i> Order</a></li>
-          <li><a href="/privacy.php"><i class="fa-solid fa-chevron-right"></i> Privacy Policy</a></li>
-        </ul>
-      </nav>
-    </section>
-  </body>
-</html>
+<?php include "./dist/inc/footer.php" ?>

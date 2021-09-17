@@ -177,9 +177,6 @@ label {
   color: #f7f5e6;
   text-decoration: none;
 }
-.navBar a:current {
-  border-bottom: 3px solid #f7882f;
-}
 .navBar ul {
   display: flex;
   justify-content: space-between;
@@ -201,8 +198,13 @@ label {
 }
 .navBar ul li:nth-of-type(n+2):not(#phoneIcon) {
   padding-top: 0.4rem;
+  text-transform: uppercase;
 }
 .navBar ul li:nth-of-type(n+2):not(#phoneIcon):hover {
+  padding-top: calc(.4rem + 2px);
+  border-bottom: 2px solid #f7882f;
+}
+.navBar ul li:nth-of-type(n+2).activePage {
   padding-top: calc(.4rem + 2px);
   border-bottom: 2px solid #f7882f;
 }
@@ -350,7 +352,8 @@ label {
   padding: 10px 0;
 }
 .menu-wrapper ul li:nth-child(n+3):hover {
-  border-bottom: 3px solid #f7882f;
+  padding-top: 12px;
+  border-bottom: 2px solid #f7882f;
 }
 .menu-wrapper a {
   color: #f7f5e6;

@@ -27,42 +27,12 @@ if (isset($_POST['submit'])) {
 
 ?>
 
-<html lang="en-GB">
-  <head>
-    <!-- ================================= 
-      SITE DATA
-    ================================== -->
-    <title>Bakers Dozen</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- SEO Data -->
-    <meta name="keywords" content="Baker, Handmade, Breads, Pastries, Norwich" />
-    <meta name="description" content="The finest breads and pastries in the heart of Norwich." />
-    <meta name="author" content="Adam Pearson & Marc Clare" />
+<?php include "./dist/inc/head.php" ?>
 
-    <!-- ================================= 
-      SITE RESOURCES
-    ================================== -->
-    <!-- NORMALIZE -->
-    <link type="text/css" rel="stylesheet" href="dist/css/normalize.css" />
-    <!-- FONTAWESOME -->
-    <link type="text/css" rel="stylesheet" href="dist/assets/fa/css/all.css" />
-    <!-- LEAFLET -->
-    <link type="text/css" rel="stylesheet" href="dist/js/plugins/leaflet/leaflet.css">
-    <script type="text/javascript" src="dist/js/plugins/leaflet/leaflet.js"></script>
-    <!-- CUSTOM CSS -->
-    <link type="text/css" rel="stylesheet" href="dist/css/order.css" />
-    <!-- FAVICON -->
-    <script type="text/javascript" src="dist/js/order.js" defer></script>
-    <!-- RECAPTCHA -->
-    <script src="https://www.google.com/recaptcha/api.js" async="" defer=""></script>
-    <!-- FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Khula:wght@400;700&family=Yellowtail&display=swap" rel="stylesheet">
-</head>
+<?php include "./dist/inc/header.php" ?>
 
-<body>
+<?php include "./dist/inc/menu.php" ?>
+
   <div id="map"></div>
   <div class="container">
     <div class="contact-text" id="contact-text">
@@ -200,5 +170,5 @@ if (isset($_POST['submit'])) {
     </div>
   </div>
 
-</body>
-</html>
+<?php include "./dist/inc/footer.php" ?>
+
