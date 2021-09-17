@@ -712,7 +712,7 @@ footer {
   top: -165px;
   left: 50%;
   margin-left: -100px;
-  box-shadow: 0 0 0 5px #333a56;
+  box-shadow: 0 0 0 5px #333a56, 0 0 0 12px #f7f5e6;
 }
 
 .card1 > .testCardImg {

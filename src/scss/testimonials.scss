@@ -3,76 +3,6 @@
 @import "partials/footer";
 @import "partials/hero";
 
-// .testimonialsHero {
-//     width: 80%;
-//     margin-top: 50px;
-//     margin-left: auto;
-//     margin-right: auto;
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     @include media-lg {
-//         flex-direction: row;
-//         justify-content: space-between;
-//         margin-left: 0;
-//         margin-right: 0;
-//         width: auto;
-//     }
-// }
-
-// .testimonialsLeftBox {
-//     width: 100%;
-//     text-align: center;
-//     display: flex;
-//     flex-direction: column;
-//     h1 {
-//         font-size: 3rem;
-//         margin-bottom: 25px;
-//         @include media-lg {
-//             font-size: 3rem;
-//         }
-//     }
-//     h2 {
-//         font-size: 1.5rem;
-//         color: $brand-darkBlue;
-//         @include media-lg {
-//             font-size: 1.3rem;
-//         }
-//     }
-//     @include media-lg {
-//         width: 50%;
-//         margin-right: auto;
-//         text-align: left;
-//         justify-content: center;
-//         background-color: $brand-yellow;
-//         padding: 25px;
-//     }
-// }
-
-// .testimonialBtn {
-//     display: block;
-//     margin-top: 25px;
-//     margin-left: auto;
-//     margin-right: auto;
-//     @include media-lg {
-//         margin-left: 0;
-//     }
-// }
-
-// .testimonialsRightBox {
-//     display: none;
-//     background-image: url("/dist/assets/img/Optimized-baker.jpeg");
-//     height: 420px;
-//     width: 420px;
-//     background-repeat: no-repeat;
-//     background-size: cover;
-//     background-position: 76%;
-//     @include media-lg {
-//         display: block;
-//         margin-left: auto;
-//     }
-// }
-
 // Hero Section
 
 .hero {
@@ -218,7 +148,7 @@
     top: -165px;
     left: 50%;
     margin-left: -100px;
-    box-shadow: 0 0 0 5px $brand-darkBlue;
+    box-shadow: 0 0 0 5px $brand-darkBlue, 0 0 0 12px $brand-yellow ;
 }
 
 .card {
