@@ -439,6 +439,11 @@ footer {
   margin-bottom: 15px;
 }
 
+.contact-cont {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
 .contact-form {
   display: flex;
   flex-direction: column;

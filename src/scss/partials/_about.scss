@@ -9,6 +9,7 @@
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
+    margin-top: 40px;
   }
 }
 
@@ -41,13 +42,14 @@
   @include media-md {
     &:nth-of-type(2) {
       border-bottom: 2px solid $brand-lightBlue;
+      width: 20%;
     }
   }
 }
 
 
 .aboutInnerWrapper {
-  padding-top: 25px;
+  padding-top: 50px;
   padding-bottom: 25px;
   display: flex;
   flex-wrap: wrap;

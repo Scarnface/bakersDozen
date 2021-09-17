@@ -34,7 +34,7 @@ if (isset($_POST['submit'])) {
 <?php include "./dist/inc/menu.php" ?>
 
   <div id="map"></div>
-  <div class="container">
+  <div class="contact-cont container">
     <div class="contact-text" id="contact-text">
       <h1>Contact Us Today</h1>
       <p>Our opening hours are Monday - Friday 8am - 4pm, and 8am-3pm on Saturdays.</p>
