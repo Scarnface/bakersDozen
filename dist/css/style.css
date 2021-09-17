@@ -85,6 +85,11 @@ input:-webkit-autofill:active {
   color: #333a56;
 }
 
+a {
+  text-decoration: none;
+  color: initial;
+}
+
 h1 {
   font-family: "Yellowtail", cursive;
   color: #333a56;
@@ -118,7 +123,7 @@ label {
 }
 @media (min-width: 768px) {
   .mainMenu {
-    height: 75px;
+    height: 65px;
   }
 }
 
@@ -147,21 +152,27 @@ label {
   }
 }
 
-.logo {
+.logo > a {
+  font-family: "Yellowtail", cursive;
   margin: 15px 0;
   color: #f7f5e6;
   font-size: 2rem;
   font-weight: 400;
+  display: block;
+  transition: 0.3s ease transform;
 }
 @media (min-width: 768px) {
-  .logo {
+  .logo > a {
     margin: 0px;
     font-size: 2rem;
   }
+  .logo > a:hover {
+    transform: scale(1.05);
+  }
 }
 @media (min-width: 992px) {
-  .logo {
-    font-size: 3rem;
+  .logo > a {
+    font-size: 2.2rem;
   }
 }
 
@@ -188,40 +199,40 @@ label {
   display: inline;
   font-family: "Khula";
   font-weight: 700;
-  font-size: 16px;
+  font-size: 0.875rem;
   letter-spacing: 1.14px;
   line-height: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.navBar ul li:nth-of-type(n+2):not(#phoneIcon) {
+  padding-top: 0.4rem;
+}
+.navBar ul li:nth-of-type(n+2):not(#phoneIcon):hover {
+  padding-top: calc(.4rem + 2px);
+  border-bottom: 2px solid #f7882f;
 }
 @media (min-width: 1200px) {
   .navBar ul li {
-    font-size: 20px;
+    font-size: 1rem;
     line-height: 20px;
   }
 }
 
-#phoneIcon a {
-  width: 20px;
-  height: 20px;
-}
 #phoneIcon a i {
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
-  padding: 10px;
   color: #f7882f;
   background-color: #333a56;
-  font-size: 1rem;
+  font-size: 1.6rem;
+  padding-top: 1rem;
   text-align: center;
+  transition: 0.3s ease background-color, color;
 }
-@media (min-width: 992px) {
-  #phoneIcon a i {
-    padding: 15px;
-    font-size: 1.25rem;
-  }
-}
-@media (min-width: 1200px) {
-  #phoneIcon a i {
-    padding: 17.5px;
-    font-size: 1.5rem;
-  }
+#phoneIcon a i:hover {
+  background-color: #f7f5e6;
+  color: #333a56;
 }
 
 .hamburger-button {

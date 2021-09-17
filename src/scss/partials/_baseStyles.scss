@@ -79,6 +79,11 @@ input:-webkit-autofill:active {
   }
 }
 
+a {
+  text-decoration: none;
+  color: initial;
+}
+
 h1 {
   font-family: "Yellowtail", cursive;
   color: $brand-darkBlue;
