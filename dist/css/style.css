@@ -922,4 +922,83 @@ footer {
   font-size: 12px;
   letter-spacing: 1px;
 }
+
+.meetTitle {
+  padding: 50px 0;
+  width: 100%;
+  font-family: "Yellowtail", cursive;
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 1.14px;
+  line-height: 2rem;
+  text-align: center;
+  color: #52658f;
+  background-color: #f7f5e6;
+}
+@media (min-width: 992px) {
+  .meetTitle {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+}
+@media (min-width: 1200px) {
+  .meetTitle {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+}
+
+.profile,
+.profile2 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.profile {
+  background-color: #f7f5e6;
+}
+
+.profileImage {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+.profileImage img {
+  border: 4px solid #52658f;
+  border-radius: 50%;
+  object-fit: cover;
+  width: 260px;
+  height: 260px;
+}
+
+.profileDescription h3 {
+  padding-bottom: 30px;
+  font-family: "Khula";
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 1.14px;
+  text-align: center;
+  color: #f7882f;
+}
+.profileDescription p {
+  margin-bottom: 30px;
+  font-family: "Khula";
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.025rem;
+  line-height: 1rem;
+  color: #333a56;
+}
+@media (min-width: 768px) {
+  .profileDescription p {
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+  }
+}
+@media (min-width: 1200px) {
+  .profileDescription p {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+}
 /*# sourceMappingURL=maps/style.css.map */
