@@ -2,7 +2,7 @@
 .hero {
     position: relative;
     width: 100%;
-    height: calc(100vh - 65px);
+    height: calc(100vh - 74px);
     @include media-md {
         height: 350px;
     }
@@ -14,6 +14,12 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 90%;
+    @include media-ie {
+        background: url("../assets/img/Optimized-hero-bread.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 90%;
+    }
     @include media-md {
         height: 350px;
         background-position: 50% 42%;
@@ -38,6 +44,12 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 90%;
+    @include media-ie {
+        background: url("/dist/assets/img/Optimized-staff-lg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 90%;
+    }
     @include media-lg {
         background: url("/dist/assets/img/Optimized-staff-lg.jpg");
         background-size: 60%;
@@ -55,6 +67,12 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50%;
+    @include media-ie {
+        background:url("/dist/assets/img/Optimized-bakery-lg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50%;   
+    }
     @include media-lg {
         background: url("/dist/assets/img/Optimized-bakery-lg.jpg");
         background-size: 50%;
@@ -67,6 +85,12 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50%;
+    @include media-ie {
+        background: url("/dist/assets/img/Optimized-baker.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50%;
+    }
     @include media-lg {
         background: url("/dist/assets/img/Optimized-baker.jpeg");
         background-position: 120% 80%;
@@ -100,6 +124,7 @@
         color: $white;
         font-size: 3.5rem;
         margin-top: -.5rem;
+        width: 100%;
         @include media-sm {
             font-size: 4.5rem;
             margin-top: -.85rem;
@@ -112,6 +137,7 @@
     h2 {
         text-transform: uppercase;
         font-size: 1.25rem;
+        width: 100%;
         @include media-lg {
             color: $brand-darkBlue;
             line-height: 1.75rem;
@@ -124,6 +150,13 @@
             margin-top: 1rem;
             margin-bottom: 2.5rem;;
             width: 45%;
+        }
+    }
+    .btn {
+        @include media-md {
+            @include media-ie {
+                margin-top: 1rem;
+            }
         }
     }
     .btn:hover {
@@ -152,6 +185,7 @@
     width: 100%;
     background-position: 0% 50%;
     position: absolute;
+    z-index: 9;
     top: 0;
     left: -13%;
     @include media-lg {
@@ -159,5 +193,28 @@
     }
     @include media-xl {
         left: -25%;
+    }
+    @include media-ie {
+        background: url("../assets/img/circle.png");
+        background-size: 85%;
+        background-repeat: no-repeat;
+        background-position: 0% 50%;
+    }
+}
+
+.ie-colour {
+    display: none;
+    @include media-ie {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: fade-out($brand-darkBlue, 0.25);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 8;
+        @include media-lg {
+            display: none;
+        }
     }
 }

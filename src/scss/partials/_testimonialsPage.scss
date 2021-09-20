@@ -20,6 +20,12 @@
     @include media-xxl {
         left: -20%;
     }
+    @include media-ie {
+        background: url("../assets/img/circle.png");
+        background-repeat: no-repeat;
+        background-size: 85%;
+        background-position: 0% 50%;
+    }
 }
 
 .heroText.heroTestText {
@@ -38,6 +44,11 @@
     h2 {
         margin-top: .5rem;
         margin-bottom: 1.5rem;
+        @include media-md {
+            @include media-ie {
+                margin-top: 5rem;
+            }
+        }
         @include media-xl {
             margin-bottom: 1.5rem;
         }

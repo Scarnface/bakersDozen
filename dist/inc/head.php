@@ -15,6 +15,7 @@ $uri = $_SERVER['REQUEST_URI'];
         ================================== -->
         <title>Baker's Dozen</title>
         <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <!-- SEO Data -->
         <meta name="keywords" content="Baker, Handmade, Breads, Pastries, Norwich" />
@@ -54,6 +55,7 @@ $uri = $_SERVER['REQUEST_URI'];
         ================================== -->
         <title>Bakers Dozen</title>
         <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <!-- SEO Data -->
         <meta name="keywords" content="Baker, Handmade, Breads, Pastries, Norwich" />
@@ -97,6 +99,7 @@ $uri = $_SERVER['REQUEST_URI'];
         ================================== -->
         <title>Baker's Dozen</title>
         <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <!-- SEO Data -->
         <meta name="keywords" content="Baker, Handmade, Breads, Pastries, Norwich" />
@@ -142,6 +145,7 @@ $uri = $_SERVER['REQUEST_URI'];
         ================================== -->
         <title>Baker's Dozen</title>
         <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <!-- SEO Data -->
         <meta name="keywords" content="Baker, Handmade, Breads, Pastries, Norwich" />
@@ -181,6 +185,7 @@ $uri = $_SERVER['REQUEST_URI'];
         ================================== -->
         <title>Baker's Dozen</title>
         <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <!-- SEO Data -->
         <meta name="keywords" content="Baker, Handmade, Breads, Pastries, Norwich" />
@@ -220,6 +225,7 @@ $uri = $_SERVER['REQUEST_URI'];
         ================================== -->
         <title>Baker's Dozen</title>
         <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <!-- SEO Data -->
         <meta name="keywords" content="Baker, Handmade, Breads, Pastries, Norwich" />

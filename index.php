@@ -54,7 +54,7 @@
 
     <!-- Product Carousel -->
     <section class="productsCarouselWrapper">
-      <div class="container">
+      <div class="prodCont container">
         <h2>Our Products</h2>
 
           <div class="productsCarousel carousel">

@@ -9,6 +9,7 @@ if (strpos($uri, "/index") !== false || $uri == "/") { ?>
         <a href="/order.php" class="btn">Order Now</a>
     </div>
     <div class="heroCircle heroHomeCircle"></div>
+    <div class="ie-colour"></div>
 </section>
 
 <?php } elseif (strpos($uri, "/about") !== false) { ?>
@@ -21,6 +22,7 @@ if (strpos($uri, "/index") !== false || $uri == "/") { ?>
         <a href="/order.php" class="btn">Order Now</a>
     </div>
     <div class="heroCircle heroAboutCircle"></div>
+    <div class="ie-colour"></div>
 </section>
 
 <?php } elseif (strpos($uri, "/products") !== false) { ?>
@@ -33,6 +35,7 @@ if (strpos($uri, "/index") !== false || $uri == "/") { ?>
         <a href="/order.php" class="btn">Order Now</a>
     </div>
     <div class="heroCircle heroProductsCircle"></div>
+    <div class="ie-colour"></div>
 </section>
 
 <?php } elseif (strpos($uri, "/testimonials") !== false) { ?>
@@ -45,6 +48,7 @@ if (strpos($uri, "/index") !== false || $uri == "/") { ?>
         <a href="/order.php" class="btn">Order Now</a>
     </div>
     <div class="heroCircle heroTestCircle"></div>
+    <div class="ie-colour"></div>
 </section>
 
 <?php } ?>

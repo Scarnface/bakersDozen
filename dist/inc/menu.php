@@ -3,7 +3,7 @@
 ================================== -->
 <div class="menu-banner">
     <nav class="menu-wrapper">
-        <h3>Menu</h3>
+        <h3><a href="/">Baker's Dozen</a></h3>
         <ul>
             <li><a href="/about.php"><i class="fa-solid fa-chevron-right"></i> About</a></li>
             <li><a href="/products.php"><i class="fa-solid fa-chevron-right"></i> Products</a></li>

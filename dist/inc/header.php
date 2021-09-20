@@ -7,11 +7,6 @@
           <div class="navWrapper">
             <div class="headerSmall">
               <span class="logo"><a href="/">Baker's Dozen</a></span>
-              <!-- <div id="nav-icon" class="hamburger-button">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span> -->
               <button id="nav-icon" class="hamburger hamburger--spin" type="button">
                 <span class="hamburger-box">
                   <span class="hamburger-inner"></span>
