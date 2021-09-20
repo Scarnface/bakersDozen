@@ -7,9 +7,9 @@
 
 .hero {
     background: linear-gradient(0deg, $brand-darkBlue 0%, #ffffff44 100%), url("/dist/assets/img/Optimized-baker.jpeg");
-    // @include media-md {
-    //     height: 400px;
-    // }
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
     @include media-lg {
         background: url("/dist/assets/img/Optimized-baker.jpeg");
         background-position: 44vw 0%;
@@ -17,11 +17,11 @@
         background-repeat: repeat-x;
     }
     @include media-xl {
-        background-position: 42vw 15%;
+        background-position: 42vw 65%;
     }
     @include media-xxl {
         background-size: 50%;
-        background-position: 51vw 28%;
+        background-position: 51vw 58%;
     }
 }
 

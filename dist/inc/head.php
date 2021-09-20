@@ -32,6 +32,8 @@ $uri = $_SERVER['REQUEST_URI'];
         <link type="text/css" rel="stylesheet" href="dist/js/plugins/slick/slick.css" />
         <link type="text/css" rel="stylesheet" href="dist/js/plugins/slick/slick-theme.css" />
         <script type="text/javascript" src="dist/js/plugins/slick/slick.js" defer></script>
+        <!-- HAMBURGER -->
+        <link type="text/css" rel="stylesheet" href="dist/css/hamburgers.css">
         <!-- CUSTOM CSS -->
         <link type="text/css" rel="stylesheet" href="dist/css/style.css" />
         <!-- CUSTOM JS -->
@@ -69,6 +71,8 @@ $uri = $_SERVER['REQUEST_URI'];
         <!-- LEAFLET -->
         <link type="text/css" rel="stylesheet" href="dist/js/plugins/leaflet/leaflet.css">
         <script type="text/javascript" src="dist/js/plugins/leaflet/leaflet.js"></script>
+        <!-- HAMBURGER -->
+        <link type="text/css" rel="stylesheet" href="dist/css/hamburgers.css">
         <!-- CUSTOM CSS -->
         <link type="text/css" rel="stylesheet" href="dist/css/order.css" />
         <!-- CUSTOM JS -->
@@ -113,6 +117,8 @@ $uri = $_SERVER['REQUEST_URI'];
         <link type="text/css" rel="stylesheet" href="dist/js/plugins/slick/slick.css" />
         <link type="text/css" rel="stylesheet" href="dist/js/plugins/slick/slick-theme.css" />
         <script type="text/javascript" src="dist/js/plugins/slick/slick.js" defer></script>
+        <!-- HAMBURGER -->
+        <link type="text/css" rel="stylesheet" href="dist/css/hamburgers.css">
         <!-- CUSTOM CSS -->
         <link type="text/css" rel="stylesheet" href="dist/css/style.css" />
         <!-- CUSTOM JS -->
@@ -144,6 +150,8 @@ $uri = $_SERVER['REQUEST_URI'];
         <link type="text/css" rel="stylesheet" href="dist/js/plugins/slick/slick.css" />
         <link type="text/css" rel="stylesheet" href="dist/js/plugins/slick/slick-theme.css" />
         <script type="text/javascript" src="dist/js/plugins/slick/slick.js" defer></script>
+        <!-- HAMBURGER -->
+        <link type="text/css" rel="stylesheet" href="dist/css/hamburgers.css">
         <!-- CUSTOM CSS -->
         <link type="text/css" rel="stylesheet" href="dist/css/style.css" />
         <!-- CUSTOM JS -->
@@ -179,6 +187,8 @@ $uri = $_SERVER['REQUEST_URI'];
         <link type="text/css" rel="stylesheet" href="dist/js/plugins/slick/slick.css" />
         <link type="text/css" rel="stylesheet" href="dist/js/plugins/slick/slick-theme.css" />
         <script type="text/javascript" src="dist/js/plugins/slick/slick.js" defer></script>
+        <!-- HAMBURGER -->
+        <link type="text/css" rel="stylesheet" href="dist/css/hamburgers.css">
         <!-- CUSTOM CSS -->
         <link type="text/css" rel="stylesheet" href="dist/css/testimonials.css" />
         <!-- CUSTOM JS -->
@@ -214,6 +224,8 @@ $uri = $_SERVER['REQUEST_URI'];
         <link type="text/css" rel="stylesheet" href="dist/js/plugins/slick/slick.css" />
         <link type="text/css" rel="stylesheet" href="dist/js/plugins/slick/slick-theme.css" />
         <script type="text/javascript" src="dist/js/plugins/slick/slick.js" defer></script>
+        <!-- HAMBURGER -->
+        <link type="text/css" rel="stylesheet" href="dist/css/hamburgers.css">
         <!-- CUSTOM CSS -->
         <link type="text/css" rel="stylesheet" href="dist/css/privacy.css" />
         <!-- CUSTOM JS -->

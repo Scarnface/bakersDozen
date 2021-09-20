@@ -1,7 +1,7 @@
 $(document).ready(function () {
   $("#nav-icon").click(function () {
     // Toggle the main menu button between bars and cross styling.
-    $("#nav-icon").toggleClass("open");
+    $("#nav-icon").toggleClass("is-active");
     // Toggle the modal menu
     $(".menu-banner").toggleClass("open");
     // Adjust main page width for menu.
@@ -12,7 +12,7 @@ $(document).ready(function () {
   $(".menu-banner").click(function (event) {
     if (!$(event.target).closest(".menu-wrapper").length) {
       // Toggle the main menu button between bars and cross styling.
-      $("#nav-icon").toggleClass("open");
+      $("#nav-icon").toggleClass("is-active");
       // Toggle the modal menu
       $(".menu-banner").toggleClass("open");
       // Adjust main page width for menu.
