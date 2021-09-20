@@ -5,8 +5,16 @@
 <?php include "./dist/inc/menu.php" ?>
 
     <!-- ABOUT -->
+    <section class="hero">
+      <div class="heroText container">
+        <h1 class="productTitle">Meet The Team</h1>
+        <h2>Our master bakers.</h2>
+        <a href="/order.php" class="btn">Order Now</a>
+      </div>
+      <div class="heroCircle"></div>
+    </section>
+
     <section class="meetTeam">
-      <h1 class="meetTitle">Meet The Team</h1>
 
       <div class="profile">
         <div class="container">
