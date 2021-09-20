@@ -1665,6 +1665,12 @@ footer {
   display: flex;
   background-color: #52658f;
 }
+@media (min-width: 1200px) {
+  .form-message {
+    width: 95%;
+    margin-left: auto;
+  }
+}
 
 .close-message {
   background-color: transparent;

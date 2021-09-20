@@ -71,7 +71,8 @@ if (isset($_GET['id'])) {
           <div class="contactBlueCircle"></div>
           <div class="contactYellowCircle"></div>
       </div>
-      
+    </div>
+    <div id="form-container" class="form-container">
       <?php
       if (isset($_POST['submit'])) {
         echo "<div id='form-message' class='form-message";
@@ -84,9 +85,7 @@ if (isset($_GET['id'])) {
         echo "</div>";
       }
       ?>
-      
-    </div>
-    <div class="form-container">
+    
       <form method="post" id="contact" class="contact-form" action="/order.php">
 
         <div class="input-group name break">

@@ -39,7 +39,9 @@ var messageField = document.getElementById("message");
 var gdprCheck = document.getElementById("gdpr-checkbox");
 var gdprSpan = document.getElementById("gdpr-span");
 var submitBtn = document.getElementById("submit");
-var contactTextDiv = document.getElementById("contact-text"); // track the current phone value, only allow certain characters
+var contactTextDiv = document.getElementById("contact-text");
+var formDiv = document.getElementById("form-container");
+var form = document.getElementById("contact"); // track the current phone value, only allow certain characters
 
 var currentPhoneValue = phoneField.value || ''; //track the cursor position
 
@@ -82,7 +84,7 @@ function addErrorMessage(errorArray) {
   errDiv.appendChild(errClose);
   errClose.appendChild(errCloseBtn);
   errCont.appendChild(errMsg);
-  contactTextDiv.appendChild(errDiv);
+  formDiv.insertBefore(errDiv, form);
 }
 
 function clientValidate() {
@@ -99,9 +101,6 @@ function clientValidate() {
     "privacy policy checkbox": gdprCheck
   }; // loops through the fields and adds errors to the errorArray
   // also adds the error class to the input field for 3 seconds
-
-  console.log(messageField);
-  console.log(messageField.value);
 
   for (var _i = 0, _Object$entries = Object.entries(fieldArray); _i < _Object$entries.length; _i++) {
     var _Object$entries$_i = _slicedToArray(_Object$entries[_i], 2),
@@ -177,6 +176,9 @@ function clientValidate() {
     setTimeout(function () {
       _messageDiv.remove();
     }, 10000);
+    setTimeout(function () {
+      window.location = ("" + window.location).replace(/#[A-Za-z0-9_-]*$/, '') + "#form-message";
+    }, 1);
     return false;
   } else {
     return true;

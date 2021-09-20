@@ -209,6 +209,10 @@
         display: flex;
         background-color: $brand-lightBlue;
     }
+    @include media-xl {
+        width: 95%;
+        margin-left: auto;
+    }
 }
 
 .close-message {

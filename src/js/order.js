@@ -31,6 +31,8 @@ const gdprCheck = document.getElementById("gdpr-checkbox");
 const gdprSpan = document.getElementById("gdpr-span");
 const submitBtn = document.getElementById("submit");
 const contactTextDiv = document.getElementById("contact-text");
+const formDiv = document.getElementById("form-container");
+const form = document.getElementById("contact");
 
 // track the current phone value, only allow certain characters
 let currentPhoneValue = phoneField.value || '';
@@ -83,7 +85,7 @@ function addErrorMessage(errorArray) {
     errClose.appendChild(errCloseBtn);
     errCont.appendChild(errMsg);
 
-    contactTextDiv.appendChild(errDiv);
+    formDiv.insertBefore(errDiv, form);
 }
 
 function clientValidate() {
@@ -103,8 +105,7 @@ function clientValidate() {
 
     // loops through the fields and adds errors to the errorArray
     // also adds the error class to the input field for 3 seconds
-    console.log(messageField);
-    console.log(messageField.value);
+
     for (const [field, value] of Object.entries(fieldArray)) {
         if (field == "name" && !value.value) {
             errorArray.push(field);
@@ -158,6 +159,8 @@ function clientValidate() {
 
         // adds a new error message using the error array
         addErrorMessage(errorArray);
+        
+
 
         // allows the message to be closed, auto-closes after 10s
         let closeMessage = document.getElementById("close-message");
@@ -168,6 +171,7 @@ function clientValidate() {
         setTimeout(function(){
             messageDiv.remove();
         }, 10000);
+        setTimeout(function() {window.location = (""+window.location).replace(/#[A-Za-z0-9_-]*$/,'')+"#form-message"}, 1);
         return false;
     } else {
         return true;
