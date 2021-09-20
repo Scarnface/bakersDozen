@@ -215,7 +215,7 @@ $uri = $_SERVER['REQUEST_URI'];
         <link type="text/css" rel="stylesheet" href="dist/js/plugins/slick/slick-theme.css" />
         <script type="text/javascript" src="dist/js/plugins/slick/slick.js" defer></script>
         <!-- CUSTOM CSS -->
-        <link type="text/css" rel="stylesheet" href="dist/css/style.css" />
+        <link type="text/css" rel="stylesheet" href="dist/css/privacy.css" />
         <!-- CUSTOM JS -->
         <script type="text/javascript" src="dist/js/menu.js" defer></script>
         <!-- FAVICON -->

@@ -99,7 +99,12 @@ h2 {
   letter-spacing: 0.05rem;
 }
 
-p {
+h3, h4 {
+  font-family: "Khula", sans-serif;
+  letter-spacing: 0.05rem;
+}
+
+p, li {
   font-family: "Khula", sans-serif;
   color: #333a56;
 }
@@ -402,6 +407,7 @@ footer {
   font-weight: 300;
   letter-spacing: 1.14px;
   line-height: 20px;
+  color: #fff;
 }
 @media (min-width: 576px) {
   .contact {
