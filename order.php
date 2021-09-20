@@ -181,7 +181,7 @@ if (isset($_GET['id'])) {
           <label class="checkbox-container">
             <span class="required">
               By submitting this form you agree with the storage and handling of your
-              data by this website in accordance with our <a href="#">Privacy Policy</a>.
+              data by this website in accordance with our <a href="/privacy.php">Privacy Policy</a>.
             </span>
             <input type="checkbox" id="gdpr-checkbox" name="gdpr-checkbox" <?php
               if (isset($_POST['submit']) && isset($errorArray)) { 

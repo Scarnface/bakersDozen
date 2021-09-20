@@ -25,8 +25,8 @@ $uri = $_SERVER['REQUEST_URI'];
         SITE RESOURCES
         ================================== -->
         <!-- JQUERY -->
-        <script src="//code.jquery.com/jquery-1.11.0.min.js" defer></script>
-        <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js" defer></script>
+        <script src="https://code.jquery.com/jquery-1.11.0.min.js" defer></script>
+        <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js" defer></script>
         <!-- FONTAWESOME -->
         <link type="text/css" rel="stylesheet" href="dist/assets/fa/css/all.css" />
         <!-- SLICK -->
@@ -38,6 +38,7 @@ $uri = $_SERVER['REQUEST_URI'];
         <!-- CUSTOM CSS -->
         <link type="text/css" rel="stylesheet" href="dist/css/style.css" />
         <!-- CUSTOM JS -->
+        <script src="dist/js/polyfills.js" defer></script>
         <script src="dist/js/plugins/carousel.js" defer></script>
         <script src="dist/js/menu.js" defer></script>
         <!-- FAVICON -->
@@ -79,6 +80,7 @@ $uri = $_SERVER['REQUEST_URI'];
         <!-- CUSTOM CSS -->
         <link type="text/css" rel="stylesheet" href="dist/css/style.css" />
         <!-- CUSTOM JS -->
+        <script src="dist/js/polyfills.js" defer></script>
         <script src="dist/js/menu.js" defer></script>
         <script src="dist/js/order.js" defer></script>
         <!-- FAVICON -->
@@ -118,16 +120,12 @@ $uri = $_SERVER['REQUEST_URI'];
         <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E" />
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Khula:wght@300;400;700&family=Yellowtail&display=swap" rel="stylesheet" />
-        <!-- SLICK -->
-        <link type="text/css" rel="stylesheet" href="dist/js/plugins/slick/slick.css" />
-        <link type="text/css" rel="stylesheet" href="dist/js/plugins/slick/slick-theme.css" />
-        <script src="dist/js/plugins/slick/slick.js" defer></script>
         <!-- HAMBURGER -->
         <link type="text/css" rel="stylesheet" href="dist/css/hamburgers.css">
         <!-- CUSTOM CSS -->
         <link type="text/css" rel="stylesheet" href="dist/css/style.css" />
         <!-- CUSTOM JS -->
-        <script src="dist/js/plugins/carousel.js" defer></script>
+        <script src="dist/js/polyfills.js" defer></script>
         <script src="dist/js/menu.js" defer></script>
         <!-- FAVICON -->
         <link rel="apple-touch-icon" sizes="180x180" href="dist/assets/img/apple-touch-icon.png">
@@ -168,6 +166,7 @@ $uri = $_SERVER['REQUEST_URI'];
         <!-- CUSTOM CSS -->
         <link type="text/css" rel="stylesheet" href="dist/css/style.css" />
         <!-- CUSTOM JS -->
+        <script src="dist/js/polyfills.js" defer></script>
         <script src="dist/js/menu.js" defer></script>
         <!-- FAVICON -->
         <link rel="apple-touch-icon" sizes="180x180" href="dist/assets/img/apple-touch-icon.png">
@@ -199,15 +198,12 @@ $uri = $_SERVER['REQUEST_URI'];
         <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js" defer></script>
         <!-- FONTAWESOME -->
         <link type="text/css" rel="stylesheet" href="dist/assets/fa/css/all.css" />
-        <!-- SLICK -->
-        <link type="text/css" rel="stylesheet" href="dist/js/plugins/slick/slick.css" />
-        <link type="text/css" rel="stylesheet" href="dist/js/plugins/slick/slick-theme.css" />
-        <script src="dist/js/plugins/slick/slick.js" defer></script>
         <!-- HAMBURGER -->
         <link type="text/css" rel="stylesheet" href="dist/css/hamburgers.css">
         <!-- CUSTOM CSS -->
         <link type="text/css" rel="stylesheet" href="dist/css/style.css" />
         <!-- CUSTOM JS -->
+        <script src="dist/js/polyfills.js" defer></script>
         <script src="dist/js/menu.js" defer></script>
         <!-- FAVICON -->
         <link rel="apple-touch-icon" sizes="180x180" href="dist/assets/img/apple-touch-icon.png">
@@ -239,15 +235,12 @@ $uri = $_SERVER['REQUEST_URI'];
         <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js" defer></script>
         <!-- FONTAWESOME -->
         <link type="text/css" rel="stylesheet" href="dist/assets/fa/css/all.css" />
-        <!-- SLICK -->
-        <link type="text/css" rel="stylesheet" href="dist/js/plugins/slick/slick.css" />
-        <link type="text/css" rel="stylesheet" href="dist/js/plugins/slick/slick-theme.css" />
-        <script src="dist/js/plugins/slick/slick.js" defer></script>
         <!-- HAMBURGER -->
         <link type="text/css" rel="stylesheet" href="dist/css/hamburgers.css">
         <!-- CUSTOM CSS -->
         <link type="text/css" rel="stylesheet" href="dist/css/style.css" />
         <!-- CUSTOM JS -->
+        <script src="dist/js/polyfills.js" defer></script>
         <script src="dist/js/menu.js" defer></script>
         <!-- FAVICON -->
         <link rel="apple-touch-icon" sizes="180x180" href="dist/assets/img/apple-touch-icon.png">
