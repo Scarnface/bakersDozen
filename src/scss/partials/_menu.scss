@@ -38,6 +38,7 @@
   font-weight: 400;
   display: block;
   transition: .3s ease transform;
+  white-space: nowrap;
   @include media-md {
     margin: 0px;
     font-size: 2rem;
@@ -100,8 +101,6 @@
 
 #phoneIcon {
   a {
-    // width: 20px;
-    // height: 20px;
     i {
       height: 50px;
       width: 50px;
@@ -120,8 +119,8 @@
   }
 }
 
-.hamburger-button {
-  float: right;
+.hamburger {
+  display: flex;
   width: 40px;
   height: 40px;
   margin: 15px 0;
@@ -130,68 +129,77 @@
   font-size: 0.75rem;
   color: $brand-lightBlue;
   background-color: $brand-yellow;
-  border-color: transparent;
+  align-items: center;
+  justify-content: center;
+  transition: .3s ease all;
+  &:hover {
+    border: 1px solid $brand-orange;
+  }
 }
 
-#nav-icon {
-  width: 40px;
-  height: 40px;
-  position: relative;
-  transform: rotate(0deg);
-  transition: 0.5s ease-in-out, background-color 0s;
-  cursor: pointer;
+.hamburger-box {
+  span {
+    width: 30px;
+  }
 }
 
-#nav-icon span {
-  display: block;
-  position: absolute;
-  height: 2.5px;
-  width: 63%;
-  background: $brand-lightBlue;
-  border-radius: 9px;
-  opacity: 1;
-  left: 7px;
-  transform: rotate(0deg);
-  transition: 0.5s ease-in-out;
-}
+// #nav-icon {
+//   width: 40px;
+//   height: 40px;
+//   position: relative;
+//   cursor: pointer;
+// }
 
-#nav-icon span:nth-child(1) {
-  top: 12px;
-}
+// #nav-icon span {
+//   display: block;
+//   position: absolute;
+//   height: 2.5px;
+//   width: 63%;
+//   background: $brand-lightBlue;
+//   border-radius: 9px;
+//   opacity: 1;
+//   left: 7px;
+//   transform: rotate(0deg);
+//   transition: 0.5s ease-in-out top;
+// }
 
-#nav-icon span:nth-child(2),
-#nav-icon span:nth-child(3) {
-  top: 19px;
-}
+// #nav-icon span:nth-child(1) {
+//   top: 12px;
+// }
 
-#nav-icon span:nth-child(4) {
-  top: 26px;
-}
+// #nav-icon span:nth-child(2),
+// #nav-icon span:nth-child(3) {
+//   top: 19px;
+// }
 
-#nav-icon span:nth-child(5) {
-  top: 35px;
-  background-color: $brand-lightBlue;
-}
+// #nav-icon span:nth-child(4) {
+//   top: 26px;
+// }
 
-#nav-icon.open span:nth-child(1) {
-  top: 18px;
-  width: 0%;
-  left: 50%;
-}
+// #nav-icon span:nth-child(5) {
+//   top: 35px;
+//   background-color: $brand-lightBlue;
+// }
 
-#nav-icon.open span:nth-child(2) {
-  transform: rotate(45deg);
-}
+// #nav-icon.open span:nth-child(1) {
+//   top: 18px;
+//   width: 0%;
+//   left: 50%;
+// }
 
-#nav-icon.open span:nth-child(3) {
-  transform: rotate(-45deg);
-}
+// #nav-icon.open span:nth-child(2) {
+//   transform: rotate(45deg);
+// }
 
-#nav-icon.open span:nth-child(4) {
-  top: 18px;
-  width: 0%;
-  left: 50%;
-}
+// #nav-icon.open span:nth-child(3) {
+//   transform: rotate(-45deg);
+// }
+
+// #nav-icon.open span:nth-child(4) {
+//   top: 18px;
+//   width: 0%;
+//   left: 50%;
+// }
 
 // Offset the main page content by the menu width.
 .main {
@@ -225,29 +233,39 @@
 
 // The menu wrapper.
 .menu-wrapper {
-  padding: 30px 0 0 15px;
+  padding: 30px 0 0 0;
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   width: 275px;
   height: 100%;
   overflow-y: scroll;
   background-color: $brand-lightBlue;
   color: $brand-yellow;
   line-height: 1.4;
+  h3 {
+    text-transform: uppercase;
+    color: $white;
+    padding-left: 1rem;
+  }
   ul {
     list-style-type: none;
-    margin: 0;
+    margin-top: 50px;
     padding: 0;
+    border-top: 2px solid tint($brand-lightBlue, 5%);
     li {
-      padding: 10px 0;
-      &:nth-child(n + 3):hover {
-        padding-top: 12px;
-        border-bottom: 2px solid $brand-orange;
+      border-bottom: 2px solid tint($brand-lightBlue, 5%);
+      transition: .2s ease background-color;
+      display: block;
+      &:hover {
+        background-color: $brand-orange;
       }
     }
   }
   a {
+    padding: 0.625rem 1rem;
     color: $brand-yellow;
     text-decoration: none;
+    display: block;
   }
 }

@@ -159,6 +159,7 @@ label {
   font-weight: 400;
   display: block;
   transition: 0.3s ease transform;
+  white-space: nowrap;
 }
 @media (min-width: 768px) {
   .logo > a {
@@ -236,8 +237,8 @@ label {
   color: #333a56;
 }
 
-.hamburger-button {
-  float: right;
+.hamburger {
+  display: flex;
   width: 40px;
   height: 40px;
   margin: 15px 0;
@@ -246,67 +247,16 @@ label {
   font-size: 0.75rem;
   color: #52658f;
   background-color: #f7f5e6;
-  border-color: transparent;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease all;
+}
+.hamburger:hover {
+  border: 1px solid #f7882f;
 }
 
-#nav-icon {
-  width: 40px;
-  height: 40px;
-  position: relative;
-  transform: rotate(0deg);
-  transition: 0.5s ease-in-out, background-color 0s;
-  cursor: pointer;
-}
-
-#nav-icon span {
-  display: block;
-  position: absolute;
-  height: 2.5px;
-  width: 63%;
-  background: #52658f;
-  border-radius: 9px;
-  opacity: 1;
-  left: 7px;
-  transform: rotate(0deg);
-  transition: 0.5s ease-in-out;
-}
-
-#nav-icon span:nth-child(1) {
-  top: 12px;
-}
-
-#nav-icon span:nth-child(2),
-#nav-icon span:nth-child(3) {
-  top: 19px;
-}
-
-#nav-icon span:nth-child(4) {
-  top: 26px;
-}
-
-#nav-icon span:nth-child(5) {
-  top: 35px;
-  background-color: #52658f;
-}
-
-#nav-icon.open span:nth-child(1) {
-  top: 18px;
-  width: 0%;
-  left: 50%;
-}
-
-#nav-icon.open span:nth-child(2) {
-  transform: rotate(45deg);
-}
-
-#nav-icon.open span:nth-child(3) {
-  transform: rotate(-45deg);
-}
-
-#nav-icon.open span:nth-child(4) {
-  top: 18px;
-  width: 0%;
-  left: 50%;
+.hamburger-box span {
+  width: 30px;
 }
 
 .main {
@@ -338,9 +288,10 @@ label {
 }
 
 .menu-wrapper {
-  padding: 30px 0 0 15px;
+  padding: 30px 0 0 0;
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   width: 275px;
   height: 100%;
   overflow-y: scroll;
@@ -348,21 +299,30 @@ label {
   color: #f7f5e6;
   line-height: 1.4;
 }
+.menu-wrapper h3 {
+  text-transform: uppercase;
+  color: #fff;
+  padding-left: 1rem;
+}
 .menu-wrapper ul {
   list-style-type: none;
-  margin: 0;
+  margin-top: 50px;
   padding: 0;
+  border-top: 2px solid #5b6d95;
 }
 .menu-wrapper ul li {
-  padding: 10px 0;
+  border-bottom: 2px solid #5b6d95;
+  transition: 0.2s ease background-color;
+  display: block;
 }
-.menu-wrapper ul li:nth-child(n+3):hover {
-  padding-top: 12px;
-  border-bottom: 2px solid #f7882f;
+.menu-wrapper ul li:hover {
+  background-color: #f7882f;
 }
 .menu-wrapper a {
+  padding: 0.625rem 1rem;
   color: #f7f5e6;
   text-decoration: none;
+  display: block;
 }
 
 footer {
@@ -432,7 +392,7 @@ footer {
 
 .hero {
   width: 100%;
-  height: 75vh;
+  height: calc(100vh - 74px);
   background: linear-gradient(0deg, #333a56 0%, #ffffff44 100%), url("../assets/img/Optimized-hero-bread.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -563,6 +523,9 @@ footer {
 
 .hero {
   background: linear-gradient(0deg, #333a56 0%, #ffffff44 100%), url("/dist/assets/img/Optimized-baker.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
 }
 @media (min-width: 992px) {
   .hero {
@@ -574,13 +537,13 @@ footer {
 }
 @media (min-width: 1200px) {
   .hero {
-    background-position: 42vw 15%;
+    background-position: 42vw 65%;
   }
 }
 @media (min-width: 1400px) {
   .hero {
     background-size: 50%;
-    background-position: 51vw 28%;
+    background-position: 51vw 58%;
   }
 }
 
