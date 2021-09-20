@@ -1,51 +1,162 @@
-@import "partials/baseStyles";
-@import "partials/menu";
-@import "partials/footer";
-@import "partials/hero";
+@import "partials/variables";
+@import "partials/mixins";
+@import "partials/functions";
+
+// .products {
+//   padding-top: 30px;
+//   padding-bottom: 30px;
+// }
+
+// .productImage {
+//   display: flex;
+//   justify-content: center;
+//   padding-bottom: 30px;
+//   img {
+//     border: 4px solid $brand-lightBlue;
+//     border-radius: 50%;
+//     object-fit: cover;
+//     width: 260px;
+//     height: 260px;
+//   }
+// }
+
+// .productDescription {
+//   h3 {
+//     padding-bottom: 30px;
+//     font-family: "Khula";
+//     font-weight: 700;
+//     font-size: 2rem;
+//     letter-spacing: 1.14px;
+//     text-align: center;
+//     color: $brand-orange;
+//   }
+//   p {
+//     margin-bottom: 30px;
+//     font-family: "Khula";
+//     font-size: 1rem;
+//     font-weight: 400;
+//     letter-spacing: 0.025rem;
+//     line-height: 1rem;
+//     color: $brand-darkBlue;
+//     @include media-md {
+//       font-size: 1.25rem;
+//       line-height: 1.25rem;
+//     }
+//     @include media-xl {
+//       font-size: 1.5rem;
+//       line-height: 1.5rem;
+//     }
+//   }
+// }
+
+
+// .productsWrapper
+//   .products.container
+//     .prodCard.prodCard1
+//       .prodCardImg
+//         <img>
+//       .prodCardText
+//       <h3>
+//       <p>
+//       <a>
 
 .products {
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-
-.productImage {
+  margin-top: 2rem;
   display: flex;
-  justify-content: center;
-  padding-bottom: 30px;
-  img {
-    border: 4px solid $brand-lightBlue;
-    border-radius: 50%;
-    object-fit: cover;
-    width: 260px;
-    height: 260px;
+  flex-direction: column;
+  @include media-md {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 
-.productDescription {
+.prodCard {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.09), 0 6px 6px rgba(0,0,0,0.13);
+  margin-bottom: 2rem;
+  @include media-md {
+    flex-grow: 1;
+    margin-left: 0;
+    margin-right: 0;
+    width: calc(50% - 2rem);
+    &:nth-of-type(odd) {
+      margin-right: 1rem;
+    }
+    &:nth-of-type(even) {
+      margin-left: 1rem;
+    }
+  }
+  @include media-lg {
+    flex-grow: 1;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 3rem;
+    width: calc(30% - 2rem);
+    &:nth-of-type(1) {
+      margin-right: 1rem;
+    }
+    &:nth-of-type(2) {
+      margin-right: 1rem;
+      margin-left: 1rem;
+    }
+    &:nth-of-type(3) {
+      margin-right: 0;
+      margin-left: 1rem;
+    }
+    &:nth-of-type(4) {
+      margin-left: 0;
+      margin-right: 1rem;
+    }
+    &:nth-of-type(5) {
+      margin-right: 1rem;
+      margin-left: 1rem;
+    }
+    &:nth-of-type(6) {
+      margin-left: 1rem;
+    }
+  }
+}
+
+.prodCard {
+  .prodCardImgCont {
+    overflow: hidden;
+    .prodCardImg {
+      display: block;
+      width: 100%;
+      height: 200px;
+      background-size: cover;
+      background-position: 50%;
+      transition: .3s ease transform;
+      cursor: pointer;
+      &1 { background-image: url("/dist/assets/img/Optimized-bread-min.jpg"); }
+      &2 { background-image: url("/dist/assets/img/Optimized-pastries-min.jpg"); }
+      &3 { background-image: url("/dist/assets/img/Optimized-cakes-min.jpg");}
+      &4 { background-image: url("/dist/assets/img/Optimized-birthday-min.jpg"); }
+      &5 { background-image: url("/dist/assets/img/Optimized-wedding-min.jpg");  }
+      &6 { background-image: url("/dist/assets/img/Optimized-sandwiches-min.jpg"); }
+      &:hover {
+        transform: scale(1.1);
+      }
+      @include media-xl {
+        height: 250px;
+      }
+    }
+  }
+}
+
+.prodCardText {
+  padding: 1.5rem;
   h3 {
-    padding-bottom: 30px;
-    font-family: "Khula";
-    font-weight: 700;
+    font-family: "Yellowtail", cursive;
+    color: $brand-darkBlue;
     font-size: 2rem;
-    letter-spacing: 1.14px;
-    text-align: center;
-    color: $brand-orange;
+    padding-bottom: 1rem;
   }
   p {
-    margin-bottom: 30px;
-    font-family: "Khula";
-    font-size: 1rem;
-    font-weight: 400;
-    letter-spacing: 0.025rem;
-    line-height: 1rem;
     color: $brand-darkBlue;
-    @include media-md {
-      font-size: 1.25rem;
-      line-height: 1.25rem;
-    }
-    @include media-xl {
-      font-size: 1.5rem;
-      line-height: 1.5rem;
-    }
+    padding-bottom: .5rem;
   }
 }

@@ -1,5 +1,5 @@
 <?php
-if ($uri == "/" || $uri == "/index.php") { ?>
+if (strpos($uri, "/index") !== false || $uri == "/") { ?>
 
 <!-- Hero Section -->
 <section class="hero heroHome">
@@ -11,7 +11,7 @@ if ($uri == "/" || $uri == "/index.php") { ?>
     <div class="heroCircle heroHomeCircle"></div>
 </section>
 
-<?php } elseif ($uri == "/about.php") { ?>
+<?php } elseif (strpos($uri, "/about") !== false) { ?>
 
 <!-- Hero Section -->
 <section class="hero heroAbout">
@@ -23,7 +23,7 @@ if ($uri == "/" || $uri == "/index.php") { ?>
     <div class="heroCircle heroAboutCircle"></div>
 </section>
 
-<?php } elseif ($uri == "/products.php") { ?>
+<?php } elseif (strpos($uri, "/products") !== false) { ?>
 
 <!-- Hero Section -->
 <section class="hero heroProducts">
@@ -35,7 +35,7 @@ if ($uri == "/" || $uri == "/index.php") { ?>
     <div class="heroCircle heroProductsCircle"></div>
 </section>
 
-<?php } elseif ($uri == "/testimonials.php") { ?>
+<?php } elseif (strpos($uri, "/testimonials") !== false) { ?>
 
 <!-- Hero Section -->
 <section class="hero heroTest">

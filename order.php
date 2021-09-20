@@ -25,6 +25,30 @@ if (isset($_POST['submit'])) {
   }
 }
 
+// Find out product the GET evaluates to
+if (isset($_GET['id'])) {
+  switch ($_GET['id']) {
+    case 1:
+      $product = "Savoury Breads";
+      break;
+    case 2: 
+      $product = "Pastries";
+      break;
+    case 3:
+      $product = "Cakes";
+      break;
+    case 4:
+      $product = "Birthday Cakes";
+      break;
+    case 5:
+      $product = "Wedding Cakes";
+      break;
+    case 6:
+      $product = "Sandwiches";
+      break;
+  }
+}
+
 ?>
 
 <?php include "./dist/inc/head.php" ?>
@@ -116,6 +140,8 @@ if (isset($_POST['submit'])) {
                 if (isset($prefill["subject"])) {
                   echo "value='" . $prefill["subject"] . "'";
                 }
+              } elseif (isset($product)) {
+                echo "value='I would like to make an enquiry about your " . strtolower($product) . "'";
               }
             ?>required>
           <label for="subject" class="required">Subject</label>
@@ -133,6 +159,8 @@ if (isset($_POST['submit'])) {
               if (isset($prefill["message"])) {
                 echo $prefill["message"];
               }
+            } elseif (isset($product)) {
+              echo "Hello, your " . strtolower($product) . " have intrigued me! Could you please tell me more about them?";
             }
             ?></textarea>
           <label for="message" class="required">Message</label>

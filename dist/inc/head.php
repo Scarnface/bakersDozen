@@ -9,7 +9,7 @@ $uri = $_SERVER['REQUEST_URI'];
 <html lang="en-GB">
   <head>
 
-    <?php if ($uri == "/" || $uri == "/index.php") {?>
+    <?php if (strpos($uri, "/index") !== false || $uri == "/") {?>
         <!-- ================================= 
         SITE DATA
         ================================== -->
@@ -48,8 +48,7 @@ $uri = $_SERVER['REQUEST_URI'];
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Khula:wght@300;400;700&family=Yellowtail&display=swap" rel="stylesheet">
 
-    <?php } elseif ($uri == "/order.php") {?>
-     
+    <?php } elseif (strpos($uri, '/order') !== false) {?>
         <!-- ================================= 
         SITE DATA
         ================================== -->
@@ -91,7 +90,7 @@ $uri = $_SERVER['REQUEST_URI'];
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Khula:wght@400;700&family=Yellowtail&display=swap" rel="stylesheet">
 
-    <?php } elseif ($uri == "/about.php") {?>
+    <?php } elseif (strpos($uri, "/about") !== false) {?>
 
         <!-- ================================= 
         SITE DATA
@@ -136,7 +135,7 @@ $uri = $_SERVER['REQUEST_URI'];
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Khula:wght@300;400;700&family=Yellowtail&display=swap" rel="stylesheet" />
 
-    <?php } elseif ($uri == "/products.php") {?>
+    <?php } elseif (strpos($uri, "/products") !== false) {?>
 
         <!-- ================================= 
         SITE DATA
@@ -175,7 +174,7 @@ $uri = $_SERVER['REQUEST_URI'];
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Khula:wght@300;400;700&family=Yellowtail&display=swap" rel="stylesheet">
 
-    <?php } elseif ($uri == "/testimonials.php") {?>
+    <?php } elseif (strpos($uri, "/testimonials") !== false) {?>
 
         <!-- ================================= 
         SITE DATA
@@ -214,7 +213,7 @@ $uri = $_SERVER['REQUEST_URI'];
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Khula:wght@300;400;700&family=Yellowtail&display=swap" rel="stylesheet">
 
-    <?php } elseif ($uri == "/privacy.php") {?>
+    <?php } elseif (strpos($uri, "/privacy") !== false) {?>
 
         <!-- ================================= 
         SITE DATA
