@@ -98,7 +98,13 @@ h2 {
   letter-spacing: 0.05rem;
 }
 
-p {
+h3, h4 {
+  font-family: 'Khula', sans-serif;
+  letter-spacing: 0.05rem;
+
+}
+
+p, li {
   font-family: "Khula", sans-serif;
   color: $brand-darkBlue;
 }

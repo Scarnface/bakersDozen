@@ -1,0 +1,23 @@
+@import "partials/baseStyles";
+@import "partials/menu";
+@import "partials/footer";
+
+.privacy {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    height: 500px;
+    overflow-y: scroll;
+    background-color: $brand-yellow;
+    padding: 25px;
+    h1, h2, p, li {
+        color: $brand-darkBlue;
+    }
+    h1, h2 {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    h3, h4 {
+        margin-top: .75rem;
+        margin-bottom: .75rem;
+    }
+}
