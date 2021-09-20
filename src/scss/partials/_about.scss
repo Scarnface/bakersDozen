@@ -21,15 +21,15 @@
   justify-content: center;
   color: $brand-lightBlue;
   i {
-    padding-bottom: 15px;
+    padding-bottom: 1rem;
     font-size: 3rem;
   }
   h3 {
     font-family: "Khula";
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 700;
     letter-spacing: 1.02px;
-    line-height: 20px;
+    line-height: 1.25rem;
     text-align: center;
     text-transform: uppercase;
   }
@@ -82,7 +82,7 @@
   font-size: 1.25rem;;
   font-weight: 700;
   letter-spacing: 0.05rem;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-align: center;
   color: $brand-lightBlue;
   text-transform: uppercase;
@@ -109,7 +109,7 @@
   color: $brand-darkBlue;
   position: relative;
   p {
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
   }
   @include media-md {
     width: 45%;

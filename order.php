@@ -44,8 +44,8 @@ if (isset($_POST['submit'])) {
       </p>
       <div class="contactCircle">
           <div class="contactImageCircle"></div>
-          <div class="aboutBlueCircle"></div>
-          <div class="aboutYellowCircle"></div>
+          <div class="contactBlueCircle"></div>
+          <div class="contactYellowCircle"></div>
       </div>
       
       <?php

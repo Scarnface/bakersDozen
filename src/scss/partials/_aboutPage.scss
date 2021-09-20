@@ -1,65 +1,101 @@
-@import "partials/baseStyles";
-@import "partials/menu";
-@import "partials/footer";
-@import "partials/hero";
+@import "partials/variables";
+@import "partials/mixins";
+@import "partials/functions";
 
-// Hero Section
-
-.hero {
-  background: linear-gradient(0deg, $brand-darkBlue 0%, #ffffff44 100%), url("/dist/assets/img/Optimized-staff.jpg");
-  @include media-lg {
-    background: url("/dist/assets/img/Optimized-staff.jpg");
-  }
-}
-
-.profile,
-.profile2 {
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-
-.profile2 {
+.profileRight {
   background-color: $brand-yellow;
 }
 
-.profileImage {
+.profileLeft {
+  background-color: $white;
+}
+
+.profileGroup {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   display: flex;
-  justify-content: center;
-  padding-bottom: 30px;
-  img {
-    border: 4px solid $brand-lightBlue;
-    border-radius: 50%;
-    object-fit: cover;
-    width: 260px;
-    height: 260px;
+  flex-direction: column;
+  &.profile1 {
+    .profileImage {
+      background: url("/dist/assets/img/lee_min.jpg");
+      background-size: cover;
+      background-position: 50%;
+      @include media-md {
+        margin-left: 0;
+        align-self: end;
+      }
+    }
   }
+  &.profile2 {
+    .profileImage {
+      background: url("/dist/assets/img/rhonda_min.jpg");
+      background-size: cover;
+      background-position: 50%;
+      @include media-md {
+        margin-right: 0;
+        align-self: end;
+      }
+    }
+    @include media-md {
+      flex-direction: row-reverse;
+    }
+  }
+  &.profile3 {
+    .profileImage {
+      background: url("/dist/assets/img/daniel_min.jpg");
+      background-size: cover;
+      background-position: 50%;
+      @include media-md {
+        margin-left: 0;
+        align-self: end;
+      }
+    }
+  }
+  // Media queries for profile group
+  @include media-md {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+}
+
+
+
+.profileImage {
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  box-shadow: 0 0 0 5px $brand-darkBlue;
+  border: 4px solid $white;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .profileDescription {
   h3 {
-    padding-bottom: 30px;
-    font-family: "Khula";
+    padding-bottom: 1rem;
+    font-family: "Yellowtail", cursive;
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 2.5rem;
     letter-spacing: 1.14px;
     text-align: center;
-    color: $brand-orange;
+    color: $brand-darkBlue;
+    @include media-md {
+      text-align: left;
+    }
   }
   p {
-    margin-bottom: 30px;
+    margin-bottom: 1rem;
     font-family: "Khula";
     font-size: 1rem;
     font-weight: 400;
     letter-spacing: 0.025rem;
     line-height: 1rem;
     color: $brand-darkBlue;
-    @include media-md {
-      font-size: 1.25rem;
-      line-height: 1.25rem;
-    }
-    @include media-xl {
-      font-size: 1.5rem;
-      line-height: 1.5rem;
-    }
+  }
+
+  // Media queries for profile description
+  @include media-md {
+    width: 65%;
   }
 }

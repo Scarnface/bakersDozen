@@ -1,7 +1,7 @@
 <!-- ================================= 
     MODAL MENU
 ================================== -->
-<section class="menu-banner">
+<div class="menu-banner">
     <nav class="menu-wrapper">
         <h3>Menu</h3>
         <ul>
@@ -12,4 +12,4 @@
             <li><a href="/privacy.php"><i class="fa-solid fa-chevron-right"></i> Privacy Policy</a></li>
         </ul>
     </nav>
-</section>
+</div>
