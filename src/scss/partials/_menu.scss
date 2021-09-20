@@ -77,17 +77,19 @@
       // selecting the menu items without logo and phone
       &:nth-of-type(n+2) {
         &:not(#phoneIcon) {
-          padding-top: .4rem;
+          padding-top: calc(.4rem + 2px);
           text-transform: uppercase;
+          border-bottom: 2px solid $brand-lightBlue;
           &:hover {
+            // padding-top: calc(.4rem + 2px);
+            border-bottom: 2px solid $brand-orange;
+          }
+          &.activePage {
             padding-top: calc(.4rem + 2px);
             border-bottom: 2px solid $brand-orange;
           }
       }
-      &.activePage {
-        padding-top: calc(.4rem + 2px);
-        border-bottom: 2px solid $brand-orange;
-      }
+
     }
       @include media-xl {
         font-size: 1rem;

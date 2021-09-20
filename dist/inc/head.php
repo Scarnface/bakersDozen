@@ -74,7 +74,7 @@ $uri = $_SERVER['REQUEST_URI'];
         <!-- HAMBURGER -->
         <link type="text/css" rel="stylesheet" href="dist/css/hamburgers.css">
         <!-- CUSTOM CSS -->
-        <link type="text/css" rel="stylesheet" href="dist/css/order.css" />
+        <link type="text/css" rel="stylesheet" href="dist/css/style.css" />
         <!-- CUSTOM JS -->
         <script type="text/javascript" src="dist/js/menu.js" defer></script>
         <script type="text/javascript" src="dist/js/order.js" defer></script>
@@ -190,7 +190,7 @@ $uri = $_SERVER['REQUEST_URI'];
         <!-- HAMBURGER -->
         <link type="text/css" rel="stylesheet" href="dist/css/hamburgers.css">
         <!-- CUSTOM CSS -->
-        <link type="text/css" rel="stylesheet" href="dist/css/testimonials.css" />
+        <link type="text/css" rel="stylesheet" href="dist/css/style.css" />
         <!-- CUSTOM JS -->
         <script type="text/javascript" src="dist/js/menu.js" defer></script>
         <!-- FAVICON -->
@@ -227,7 +227,7 @@ $uri = $_SERVER['REQUEST_URI'];
         <!-- HAMBURGER -->
         <link type="text/css" rel="stylesheet" href="dist/css/hamburgers.css">
         <!-- CUSTOM CSS -->
-        <link type="text/css" rel="stylesheet" href="dist/css/privacy.css" />
+        <link type="text/css" rel="stylesheet" href="dist/css/style.css" />
         <!-- CUSTOM JS -->
         <script type="text/javascript" src="dist/js/menu.js" defer></script>
         <!-- FAVICON -->

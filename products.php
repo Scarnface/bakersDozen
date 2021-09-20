@@ -4,15 +4,7 @@
 
 <?php include "./dist/inc/menu.php" ?>
 
-<!-- PRODUCTS -->
-<section class="hero">
-  <div class="heroText container">
-    <h1 class="productTitle">Our Products</h1>
-    <h2>The best recipes. The healthiest ingredients.</h2>
-    <a href="/order.php" class="btn">Order Now</a>
-  </div>
-  <div class="heroCircle"></div>
-</section>
+<?php include "./dist/inc/hero.php" ?>
 
 <section class="productOverview">
   

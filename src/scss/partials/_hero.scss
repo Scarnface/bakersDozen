@@ -1,11 +1,19 @@
+// Base hero styles
 .hero {
-    width: 100%;
-    height: calc(100vh - 74px);
-    background: linear-gradient(0deg, $brand-darkBlue 0%, #ffffff44 100%), url("../assets/img/Optimized-hero-bread.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50%;
     position: relative;
+    width: 100%;
+    height: calc(100vh - 65px);
+    @include media-md {
+        height: 350px;
+    }
+}
+
+// Different hero banners
+.heroHome {
+    background: linear-gradient(0deg, $brand-darkBlue 0%, #ffffff44 100%), url("../assets/img/Optimized-hero-bread.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 90%;
     @include media-md {
         height: 350px;
         background-position: 50% 42%;
@@ -24,6 +32,56 @@
         background-position: 51vw 28%;
     }
 }
+
+.heroAbout {
+    background: linear-gradient(0deg, $brand-darkBlue 0%, #ffffff44 100%), url("/dist/assets/img/Optimized-staff-lg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 90%;
+    @include media-lg {
+        background: url("/dist/assets/img/Optimized-staff-lg.jpg");
+        background-size: 60%;
+        background-position: 110% 80%;
+    }
+    @include media-xl {
+        background: url("/dist/assets/img/Optimized-staff-lg.jpg");
+        background-size: 50%;
+        background-position: 100% 80%;
+    }
+}
+
+.heroProducts {
+    background: linear-gradient(0deg, $brand-darkBlue 0%, #ffffff44 100%), url("/dist/assets/img/Optimized-bakery-lg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    @include media-lg {
+        background: url("/dist/assets/img/Optimized-bakery-lg.jpg");
+        background-size: 50%;
+        background-position: 100% 80%;
+    }
+}
+
+.heroTest {
+    background: linear-gradient(0deg, $brand-darkBlue 0%, #ffffff44 100%), url("/dist/assets/img/Optimized-baker.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    @include media-lg {
+        background: url("/dist/assets/img/Optimized-baker.jpeg");
+        background-position: 120% 80%;
+        background-size: 65%;
+        background-repeat: repeat-x;
+    }
+    @include media-xl {
+        background-position: 42vw 65%;
+    }
+    @include media-xxl {
+        background-size: 50%;
+        background-position: 51vw 58%;
+    }
+}
+
 
 .heroText {
     display: flex;

@@ -4,28 +4,9 @@
 
 <?php include "./dist/inc/menu.php" ?>
 
-<!-- Body content goes here -->
-
-<section class="hero">
-        <div class="heroText container">
-          <h1>See What Our Customers Are Saying</h1>
-          <h2>Customer satisfaction is our number one priority.</h2>
-          <a href="/order.php" class="btn">Order Now</a>
-        </div>
-        <div class="heroCircle"></div>
-    </section>
+<?php include "./dist/inc/hero.php" ?>
 
 <div class=" testimonialsCont container">
-    <!-- <div class="testimonialsHero">
-        <div class="testimonialsLeftBox">
-            <h1>See What Our Customers Are Saying</h1>
-            <h2>Customer satisfaction is our number one priority.</h2>
-            <a class="testimonialBtn btn" href="/order.php">Order Now</a>
-        </div>
-        <div class="testimonialsRightBox"></div>
-    </div> -->
-
-
 
     <div class="testimonialsCards">
         <div class="testCard card1">

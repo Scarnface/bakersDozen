@@ -4,16 +4,7 @@
 
 <?php include "./dist/inc/menu.php" ?>
 
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="heroText container">
-          <h1>Everyday Fresh</h1>
-          <h2>The Finest Breads and Pastries in the Heart of Norwich</h2>
-          <a href="/order.php" class="btn">Order Now</a>
-        </div>
-        <div class="heroCircle"></div>
-    </section>
+<?php include "./dist/inc/hero.php" ?>
 
     <!-- About Section -->
     <section class="about" id="about-us">
