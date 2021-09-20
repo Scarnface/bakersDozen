@@ -25,47 +25,6 @@
   }
 }
 
-.heroCircle {
-  display: none;
-  background: url("../assets/img/circle.svg");
-  background-repeat: no-repeat;
-  background-size: 85%;
-  height: 100%;
-  width: 100%;
-  background-position: 0% 50%;
-  position: absolute;
-  top: 0;
-  left: -18%;
-  @include media-lg {
-    display: block;
-  }
-  @include media-xl {
-    left: -25%;
-  }
-  @include media-xxl {
-    left: -20%;
-  }
-}
-
-.heroText {
-  h1 {
-    @include media-sm {
-      font-size: 3.5rem;
-    }
-    @include media-lg {
-      width: 70%;
-    }
-    @include media-lg {
-      width: 50%;
-    }
-  }
-  h2 {
-    @include media-xl {
-      margin-bottom: 1.5rem;
-    }
-  }
-}
-
 .products {
   padding-top: 30px;
   padding-bottom: 30px;
