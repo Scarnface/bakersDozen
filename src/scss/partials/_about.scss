@@ -127,13 +127,13 @@
   display: none;
   position: relative;
   z-index: 10;
-  img {
-    border: 4px solid #fff;
-    border-radius: 50%;
-    object-fit: cover;
-    width: 260px;
-    height: 260px;
-  }
+  background: url("/dist/assets/img/Optimized-cupcakes-min.jpg");
+  border-radius: 50%;
+  background-position: 50%;
+  background-size: cover;
+  width: 260px;
+  height: 260px;
+  border: 4px solid #fff;
   @include media-md {
     display: block;
   }

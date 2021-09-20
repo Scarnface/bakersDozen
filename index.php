@@ -45,9 +45,7 @@
           <div class="aboutText">
             <h3 class="aboutText">Established in 2011, our bread is hand-crafted using the finest local ingredients.</h3>
           </div>
-          <div class="aboutImageCircle">
-            <img src="dist/assets/img/Optimized-cupcakes-min.jpg" alt="Cupcakes" />
-          </div>
+          <div class="aboutImageCircle"></div>
           <div class="aboutBlueCircle"></div>
           <div class="aboutYellowCircle"></div>
           <div class="aboutDescription">

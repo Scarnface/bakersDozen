@@ -41,7 +41,12 @@ input:-webkit-autofill:active {
       width: 1100px;
     }
   }
-  
+
+  a {
+    text-decoration: none;
+    color: initial;
+  }
+
 .btn {
   border-radius: 999em;
   border: 1px solid $brand-orange;
@@ -79,10 +84,7 @@ input:-webkit-autofill:active {
   }
 }
 
-a {
-  text-decoration: none;
-  color: initial;
-}
+
 
 h1 {
   font-family: "Yellowtail", cursive;
