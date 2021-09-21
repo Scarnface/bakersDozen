@@ -36,5 +36,13 @@ SMTP_PASSWORD=""
   - SMTP_PORT should stay the same if using office365. If using a different mail provider it *may* not work, but feel free to try looking up these values for a different provider.
   - SMTP_SECURE and SMTP_AUTH again should stay the same if using office365.
   - SMTP_USERNAME and SMTP_PASSWORD are your account credentials for the mail account
-  
-6) Make sure the .env file is added to .gitignore, as this file contains secret information that you don't exactly want showing up on GitHub.
+
+6) Go to dist/inc/mailer.php and change the "SetFrom()" address to your own, and the same with "addAddress()"
+7) Make sure the .env file is added to .gitignore, as this file contains secret information that you don't exactly want showing up on GitHub.
+
+If you want to use PHP.ini for environment variables instead, here is where the ENVs are used:
+
+- /dist/inc/functions.php - line 104 (recaptcha secret key)
+- /dist/inc/connection.php - lines 9 through 14 (database info)
+- /dist/inc/mailer.php - lines 24 through 29 (SMTP info)
+- /order.php - line 196 (recaptcha site key)
