@@ -42,6 +42,19 @@ function cleanHtml($dirty_html) {
     
 }
 
+// function to replace file_get_contents with CURL
+function curl_get_file_contents($URL) {
+    $c = curl_init();
+    curl_setopt($c, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($c, CURLOPT_URL, $URL);
+    $contents = curl_exec($c);
+    curl_close($c);
+
+    if ($contents) return $contents;
+    else return FALSE;
+}
+
+
 // verify and post contact form data
 
 function validateForm() {
@@ -92,7 +105,7 @@ function validateForm() {
         $ip = $_SERVER['REMOTE_ADDR'];
         // post request to server
         $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($secretKey) .  '&response=' . urlencode($captcha);
-        $response = file_get_contents($url);
+        $response = curl_get_file_contents($url);
         $responseKeys = json_decode($response, true);
         
         // should return JSON with success as true
