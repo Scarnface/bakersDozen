@@ -9,7 +9,7 @@ $uri = $_SERVER['REQUEST_URI'];
 <html lang="en-GB">
   <head>
 
-    <?php if (strpos($uri, "/index") !== false || $uri == "/") {?>
+    <?php if (strpos($uri, "/index") !== false || $uri == "/" || $uri == "") {?>
         <!-- ================================= 
         SITE DATA
         ================================== -->
