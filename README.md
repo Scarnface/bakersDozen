@@ -2,7 +2,7 @@
 A collaborative and timed portfolio project.
 
 # Instructions
-1) Clone the repo on your drive
+1) Clone the repo on your drive and/or server
 2) Set up recaptcha v2 by going here: https://www.google.com/recaptcha and clicking v3 admin console, then clicking the + in the top right, and setting up a new site with v2.
    Add whatever domain it'll be hosted on, as well as localhost and 127.0.0.1 for testing. Mine looks like this:
    
