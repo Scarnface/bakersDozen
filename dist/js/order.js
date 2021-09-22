@@ -47,7 +47,7 @@ var currentPhoneValue = phoneField.value || ''; //track the cursor position
 
 var selection = phoneField;
 phoneField.addEventListener('input', function (e) {
-  var allowedChars = /^[0-9\+\(\)]*$/;
+  var allowedChars = /^[0-9\+]*$/;
   var target = e.target;
 
   if (allowedChars.test(target.value)) {

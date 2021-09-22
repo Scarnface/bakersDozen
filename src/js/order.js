@@ -40,7 +40,7 @@ const selection = phoneField;
 phoneField.addEventListener('input', function(e) {
 
     
-    const allowedChars = /^[0-9\+\(\)]*$/;
+    const allowedChars = /^[0-9\+]*$/;
     const target = e.target;
 
     if (allowedChars.test(target.value)) {
