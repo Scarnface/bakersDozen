@@ -36,11 +36,11 @@ const form = document.getElementById("contact");
 // track the current phone value, only allow certain characters
 let currentPhoneValue = phoneField.value || '';
 //track the cursor position
-const selection = {};
+const selection = phoneField;
 phoneField.addEventListener('input', function(e) {
 
     
-    const allowedChars = /^[0-9\s\+\(\)]*$/;
+    const allowedChars = /^[0-9\+\(\)]*$/;
     const target = e.target;
 
     if (allowedChars.test(target.value)) {

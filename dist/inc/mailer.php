@@ -19,6 +19,7 @@ function sendMail($contactArray) {
 
     $message .= "</ul>\n";
 
+    try {
     $mail = new PHPMailer(true);
     $mail->isSMTP();
     $mail->Host = $_ENV['SMTP_HOST'];
@@ -37,4 +38,9 @@ function sendMail($contactArray) {
     $mail->AltBody = $message;
 
     $mail->send();
+    return true;
+    } catch (Exception $e) {
+        echo $e->getMessage();
+        return false;
+    }
 }

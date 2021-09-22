@@ -17,8 +17,8 @@ if (isset($_POST['submit'])) {
   $array = validateForm();
   if ($array["passed"]) {
     $contactArray = $array["contact array"];
-    postContact($GLOBALS["db"], $contactArray);
-    sendMail($contactArray);
+    $mailSuccess = sendMail($contactArray);
+    $dbSuccess = postContact($GLOBALS["db"], $contactArray, $mailSuccess);
   } else {
     $errorArray = $array["error array"];
     $prefill = $array["pre-filled"];
@@ -78,7 +78,9 @@ if (isset($_GET['id'])) {
         echo "<div id='form-message' class='form-message";
         if (isset($errorArray)) {
           echo " error'>\n" . "<p><strong>Please complete the following fields:</strong> " . implode(", ", $errorArray) . "</p>\n";
-        } else {
+        } elseif (!$dbSuccess) {
+          echo " error'>\n" . "<p>Error: there was an error with your request</p>\n";
+        } elseif ($dbSuccess) {
           echo " success'>\n" . "<p>Success! Your message was sent successfully.</p>\n";
         }
         echo '<button id="close-message" class="close-message"><i class="fas fa-times"></i></button>';

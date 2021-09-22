@@ -45,9 +45,9 @@ var form = document.getElementById("contact"); // track the current phone value,
 
 var currentPhoneValue = phoneField.value || ''; //track the cursor position
 
-var selection = {};
+var selection = phoneField;
 phoneField.addEventListener('input', function (e) {
-  var allowedChars = /^[0-9\s\+\(\)]*$/;
+  var allowedChars = /^[0-9\+\(\)]*$/;
   var target = e.target;
 
   if (allowedChars.test(target.value)) {

@@ -5,22 +5,28 @@ require __DIR__ . "/connection.php";
 
 // post to contact database
 
-function postContact($db, $contactArray) {
-    try {
-        $query = "INSERT INTO contact (email, name, phone, subject, message, newsletter, date)
-                 VALUES (:email, :name, :phone, :subject, :message, :newsletter, :date)";
-        $stmt = $db->prepare($query);
-        $stmt->bindParam(":email", $contactArray['email']);
-        $stmt->bindParam(":name", $contactArray['name']);
-        $stmt->bindParam(":phone", $contactArray['phone']);
-        $stmt->bindParam(":subject", $contactArray['subject']);
-        $stmt->bindParam(":message", $contactArray['message']);
-        $stmt->bindParam(":newsletter", $contactArray['newsletter']);
-        $stmt->bindParam(":date", $contactArray['date']);
-        $stmt->execute();
-    } catch (Exception $e) {
-        echo "Unable to connect - ";
-        echo $e->getMessage();
+function postContact($db, $contactArray, $mailSuccess) {
+    if ($mailSuccess) {
+        try {
+            $query = "INSERT INTO contact (email, name, phone, subject, message, newsletter, date)
+                    VALUES (:email, :name, :phone, :subject, :message, :newsletter, :date)";
+            $stmt = $db->prepare($query);
+            $stmt->bindParam(":email", $contactArray['email']);
+            $stmt->bindParam(":name", $contactArray['name']);
+            $stmt->bindParam(":phone", $contactArray['phone']);
+            $stmt->bindParam(":subject", $contactArray['subject']);
+            $stmt->bindParam(":message", $contactArray['message']);
+            $stmt->bindParam(":newsletter", $contactArray['newsletter']);
+            $stmt->bindParam(":date", $contactArray['date']);
+            $stmt->execute();
+            return true;
+        } catch (Exception $e) {
+            echo "Unable to connect - ";
+            echo $e->getMessage();
+            return false;
+        }
+    } elseif (!$mailSuccess) {
+        return false;
     }
 }
 
