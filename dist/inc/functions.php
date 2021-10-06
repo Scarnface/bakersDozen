@@ -99,9 +99,9 @@ function validateForm() {
         $errorArray[] = "privacy policy checkbox";
     }
     if (isset($_POST['newsletter-signup'])) {
-        $newsletter = true;
+        $newsletter = 1;
     } else {
-        $newsletter = false;
+        $newsletter = 0;
     }
     if (!empty($_POST['g-recaptcha-response'])) {
         $captcha = $_POST['g-recaptcha-response'];

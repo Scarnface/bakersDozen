@@ -32,6 +32,7 @@ function sendMail($contactArray) {
     $mail->addAddress($contactArray["email"], $contactArray["name"]);
     $mail->addAddress("adam@adampearson.design", "Baker's Dozen");
     $mail->IsHTML(true);
+    $mail->CharSet = 'UTF-8';
 
     $mail->Subject = 'Your Enquiry with Baker\'s Dozen';
     $mail->Body    = $message;
