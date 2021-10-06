@@ -140,9 +140,18 @@ function validateForm() {
         "date" => $today
         ];
 
-        return ["passed" => true, "contact array" => $contactArray];
+        return ["passed" => true, "array" => $contactArray];
     } else {
-        return ["passed" => false, "error array" => $errorArray, "pre-filled" => $contactArray];
+        return ["passed" => false, "array" => $errorArray, "pre-filled" => $contactArray];
     }
 }
 
+function createMessage($array) {
+    if ($array["passed"]) {
+      $message = "Form was submitted successfully!";
+    } else {
+      $message = "Error: please enter a valid ";
+      $message .= implode(", ",$array["array"]);
+    }
+    return $message;
+  }

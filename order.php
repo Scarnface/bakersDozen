@@ -15,12 +15,13 @@ $dotenv->load();
 // validate the form on the server-side
 if (isset($_POST['submit'])) {
   $array = validateForm();
+  $message = createMessage($array);
   if ($array["passed"]) {
-    $contactArray = $array["contact array"];
+    $contactArray = $array["array"];
     $mailSuccess = sendMail($contactArray);
-    $dbSuccess = postContact($GLOBALS["db"], $contactArray, $mailSuccess);
+    $dbSuccess = postContact($GLOBALS["db"], $array["array"], $mailSuccess);
   } else {
-    $errorArray = $array["error array"];
+    $errorArray = $array["array"];
     $prefill = $array["pre-filled"];
   }
 }
