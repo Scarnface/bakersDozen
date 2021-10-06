@@ -39,10 +39,3 @@ SMTP_PASSWORD=""
 
 6) Go to dist/inc/mailer.php and change the "SetFrom()" address to your own, and the same with "addAddress()"
 7) Make sure the .env file is added to .gitignore, as this file contains secret information that you don't exactly want showing up on GitHub.
-
-If you want to use PHP.ini for environment variables instead, here is where the ENVs are used:
-
-- /dist/inc/functions.php - line 104 (recaptcha secret key)
-- /dist/inc/connection.php - lines 9 through 14 (database info)
-- /dist/inc/mailer.php - lines 24 through 29 (SMTP info)
-- /order.php - line 196 (recaptcha site key)
